@@ -582,18 +582,18 @@ h6 {
 }
 .main-left ul li a.active {
   background-color: #1c282c;
-  border-left: 4px solid #3c8dbc;
+  border-left: 4px solid lightgreen;
   color: #fff;
-  /*                a::after{
-                                        right: 0;
-                                        border: 9px solid transparent;
-                                        content: "";
-                                        position: absolute;
-                                        pointer-events: none;
-                                        border-right-color: #ecf0f5;
-                                        top: 50%;
-                                        margin-top: -9px;
-                                    }*/
+}
+.main-left ul li a.active::after {
+  right: 0;
+  border: 9px solid transparent;
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  border-right-color: #ecf0f5;
+  top: 50%;
+  margin-top: -9px;
 }
 .main-left ul li a:hover {
   color: #fff;
