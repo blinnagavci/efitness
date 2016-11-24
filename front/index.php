@@ -1,4 +1,4 @@
-Blini
+floni
 <?php require('parts/header.php'); ?>
 <div class="left-content">
     <div class="main-left">
