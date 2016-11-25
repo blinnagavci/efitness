@@ -544,8 +544,10 @@ h6 {
 }
 .main-left {
   width: 15%;
-  float: left;
   height: 100vh;
+  position: fixed;
+  overflow: hidden;
+  z-index: 5;
   background-color: #222d32;
 }
 .main-left h2 {
@@ -656,7 +658,7 @@ h6 {
 .main-right {
   width: 85%;
   float: left;
-  height: 100vh;
+  height: 100%;
   background-color: #ecf0f5;
   padding: 25px;
 }

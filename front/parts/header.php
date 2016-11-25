@@ -23,7 +23,3 @@
     </head>
     <body>
         <div class="se-pre-con"></div>
-        <div class="entire-wrapper">
-            <div class="header">
-
-            </div>

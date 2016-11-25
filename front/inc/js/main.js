@@ -4,6 +4,8 @@ $(document).ready(function () {
 //            $(this).addClass("right-arrow");
 //        }
 //    });
+
+    $(".main-right").css("margin-left", $(".main-left").width());
     $('.main-left>ul>li a').click(function () {
         var innerList = $(this).parent().find("ul");
         var innerList2 = $(this).parent();
@@ -30,4 +32,8 @@ $(document).ready(function () {
         $(this).addClass("active");
     });
     $(".date-picker").datepicker();
+});
+
+$(window).resize(function () {
+    $(".main-right").css("margin-left", $(".main-left").width());
 });
