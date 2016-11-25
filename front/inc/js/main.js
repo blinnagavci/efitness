@@ -5,7 +5,7 @@ $(document).ready(function () {
         innerList.slideToggle();
         if (innerList.length > 0) {
             innerList.find("a").removeClass("active");
-            innerList.children().children().first().addClass("active");
+            innerList.find("a").first().addClass("active");
         }
         $(this).parent().siblings().find("ul").slideUp();
         $(this).addClass("active");
