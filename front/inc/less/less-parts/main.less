@@ -99,6 +99,10 @@
                         border-left: none;
                         &.active{
                             border-left: none;
+                            &::after{
+                                border: 8px solid transparent;
+                                border-right-color: #ecf0f5;
+                            }
                         }
                         i{
                             margin-right: 4px;
@@ -121,4 +125,81 @@
     float: left;
     height: 100vh;
     background-color: #ecf0f5;
+    padding: 25px;
+    h1{
+        color: #333333;
+        font-size: 28px;
+        font-weight: 300;
+        margin-top: 0.4em;
+    }
+    .main-box{
+        float: left;
+        width: 100%;
+        background-color: #fff;
+        padding: 4px;
+        padding-top: 10px;
+        border-radius: 3px;
+        box-shadow: 0 0 4px grey;
+        .left-form-content, .right-form-content{
+            width: 50%;
+            float: left;
+            padding: 0 10px;
+            label{
+                float: left;
+                width: 100%;
+                padding: 20px 0 5px 0;
+                font-weight: 600;
+                color: #333333;
+                font-size: 14px;
+                &:first-child{
+                    padding-top: 0;
+                }
+            }
+            span.telephone{
+                width: 100%;
+                float: left;
+                position: relative;
+                &::after{
+                    content: "\f095";
+                    position: absolute;
+                    font-family: 'FontAwesome';
+                    right: 15px;
+                    top: 10px;  
+                    color: #555555;
+                }
+            }
+            span.email{
+                width: 100%;
+                float: left;
+                position: relative;
+                &::after{
+                    content: "\f0e0";
+                    position: absolute;
+                    font-family: 'FontAwesome';
+                    right: 15px;
+                    top: 10px;  
+                    color: #555555;
+                }
+            }
+            input{
+                width: 100%;
+                float: left;
+                border-radius: 3px;
+                padding: 7px;
+                position: relative;
+                &:focus{
+                    box-shadow: 0 0 5px #719ECE;
+                }
+                &[type="file"]{
+                    border: none;
+                    padding-left: 0;
+                }
+            }
+            img{
+                float: left;
+                width: 250px;
+                height: 250px;
+            }
+        }
+    }
 }

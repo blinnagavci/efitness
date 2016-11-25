@@ -623,6 +623,10 @@ h6 {
 .main-left ul li ul li a.active {
   border-left: none;
 }
+.main-left ul li ul li a.active::after {
+  border: 8px solid transparent;
+  border-right-color: #ecf0f5;
+}
 .main-left ul li ul li a i {
   margin-right: 4px;
   width: 15px;
@@ -638,5 +642,93 @@ h6 {
   float: left;
   height: 100vh;
   background-color: #ecf0f5;
+  padding: 25px;
+}
+.main-right h1 {
+  color: #333333;
+  font-size: 28px;
+  font-weight: 300;
+  margin-top: 0.4em;
+}
+.main-right .main-box {
+  float: left;
+  width: 100%;
+  background-color: #fff;
+  padding: 4px;
+  padding-top: 10px;
+  border-radius: 3px;
+  box-shadow: 0 0 4px grey;
+}
+.main-right .main-box .left-form-content,
+.main-right .main-box .right-form-content {
+  width: 50%;
+  float: left;
+  padding: 0 10px;
+}
+.main-right .main-box .left-form-content label,
+.main-right .main-box .right-form-content label {
+  float: left;
+  width: 100%;
+  padding: 20px 0 5px 0;
+  font-weight: 600;
+  color: #333333;
+  font-size: 14px;
+}
+.main-right .main-box .left-form-content label:first-child,
+.main-right .main-box .right-form-content label:first-child {
+  padding-top: 0;
+}
+.main-right .main-box .left-form-content span.telephone,
+.main-right .main-box .right-form-content span.telephone {
+  width: 100%;
+  float: left;
+  position: relative;
+}
+.main-right .main-box .left-form-content span.telephone::after,
+.main-right .main-box .right-form-content span.telephone::after {
+  content: "\f095";
+  position: absolute;
+  font-family: 'FontAwesome';
+  right: 15px;
+  top: 10px;
+  color: #555555;
+}
+.main-right .main-box .left-form-content span.email,
+.main-right .main-box .right-form-content span.email {
+  width: 100%;
+  float: left;
+  position: relative;
+}
+.main-right .main-box .left-form-content span.email::after,
+.main-right .main-box .right-form-content span.email::after {
+  content: "\f0e0";
+  position: absolute;
+  font-family: 'FontAwesome';
+  right: 15px;
+  top: 10px;
+  color: #555555;
+}
+.main-right .main-box .left-form-content input,
+.main-right .main-box .right-form-content input {
+  width: 100%;
+  float: left;
+  border-radius: 3px;
+  padding: 7px;
+  position: relative;
+}
+.main-right .main-box .left-form-content input:focus,
+.main-right .main-box .right-form-content input:focus {
+  box-shadow: 0 0 5px #719ECE;
+}
+.main-right .main-box .left-form-content input[type="file"],
+.main-right .main-box .right-form-content input[type="file"] {
+  border: none;
+  padding-left: 0;
+}
+.main-right .main-box .left-form-content img,
+.main-right .main-box .right-form-content img {
+  float: left;
+  width: 250px;
+  height: 250px;
 }
 /*# sourceMappingURL=style.css.map */
