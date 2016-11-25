@@ -5,9 +5,11 @@
         <!--<link href="inc/css/vendor/bootstrap.min.css" rel="stylesheet">-->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
         <link href="inc/css/style.css" rel="stylesheet">
+        <link href="inc/css/vendor/datepicker.css" rel="stylesheet" type="text/css"/>
         <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i" rel="stylesheet">
         <link rel="icon" href="repository/favicon.ico">
         <script type="text/javascript" src="inc/js/vendor/jquery-3.1.0.min.js"></script>
+        <script src="inc/js/vendor/bootstrap-datepicker.js" type="text/javascript"></script>
         <script>
             $(window).load(function () {
                 // Animate loader off screen

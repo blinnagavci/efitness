@@ -567,6 +567,22 @@ h6 {
 .main-left ul li {
   float: left;
   width: 100%;
+  position: relative;
+}
+.main-left ul li.right-arrow:after,
+.main-left ul li.down-arrow:after {
+  font-family: 'FontAwesome';
+  right: 15px;
+  cursor: pointer;
+  top: 17px;
+  position: absolute;
+  color: #a9c2ba;
+}
+.main-left ul li.right-arrow:after {
+  content: "\f105";
+}
+.main-left ul li.down-arrow:after {
+  content: "\f107";
 }
 .main-left ul li a {
   padding: 15px 12px;
@@ -707,6 +723,15 @@ h6 {
   top: 10px;
   color: #555555;
 }
+.main-right .main-box .left-form-content select,
+.main-right .main-box .right-form-content select {
+  float: left;
+  width: 100%;
+  border-radius: 3px;
+  padding: 7px;
+  border: 1px solid #ccc;
+  height: 36px;
+}
 .main-right .main-box .left-form-content input,
 .main-right .main-box .right-form-content input {
   width: 100%;
@@ -723,11 +748,12 @@ h6 {
 .main-right .main-box .right-form-content input[type="file"] {
   border: none;
   padding-left: 0;
+  padding-bottom: 0;
 }
 .main-right .main-box .left-form-content img,
 .main-right .main-box .right-form-content img {
   float: left;
-  width: 250px;
-  height: 250px;
+  width: 200px;
+  height: 200px;
 }
 /*# sourceMappingURL=style.css.map */

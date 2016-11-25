@@ -63,12 +63,21 @@
                 <span class="email">
                     <input type="email" id="member_email" placeholder="Enter Email"/>
                 </span>
+                <label>Birth Date</label>
+                <input class="date-picker" type="date" id="member_date"/>
             </div>
             <div class="right-form-content">
                 <label>Member Photo</label>
                 <img class="member-photo" src="repository/no_image.png" alt="Photo"/>
                 <label>Upload from Computer</label>
                 <input type="file" id="member_upload"/>
+                <label>Membership Type</label>
+                <select>
+                    <option value="select">Select</option>
+                    <option value="yearly">Yearly</option>
+                    <option value="monthly">Monthly</option>
+                    <option value="weekly">Weekly</option>
+                </select>
             </div>
         </form>
     </div>
