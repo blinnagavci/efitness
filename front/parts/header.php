@@ -8,7 +8,6 @@
         <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i" rel="stylesheet">
         <link rel="icon" href="repository/favicon.ico">
         <script type="text/javascript" src="inc/js/vendor/jquery-3.1.0.min.js"></script>
-        <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
         <script>
             $(window).load(function () {
                 // Animate loader off screen

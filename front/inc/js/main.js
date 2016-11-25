@@ -1,7 +1,12 @@
 $(document).ready(function () {
     $('.main-left>ul>li a').click(function () {
+        var innerList = $(this).parent().find("ul");
         $(this).parent().siblings().children().removeClass("active");
-        $(this).parent().children("ul").slideToggle();
+        innerList.slideToggle();
+        if (innerList.length > 0) {
+            innerList.find("a").removeClass("active");
+            innerList.children().children().first().addClass("active");
+        }
         $(this).parent().siblings().find("ul").slideUp();
         $(this).addClass("active");
     });
