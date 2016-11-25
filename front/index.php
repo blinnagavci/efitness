@@ -1,5 +1,4 @@
 <?php require('parts/header.php'); ?>
-
 <div class="main-left">
     <h2>Main navigation</h2>
     <ul>
@@ -64,7 +63,7 @@
                     <input type="email" id="member_email" placeholder="Enter Email"/>
                 </span>
                 <label>Birth Date</label>
-<!--                <input class="date-picker" type="date" id="member_date"/>-->
+                <input class="date-picker" type="text" id="member_date">
             </div>
             <div class="right-form-content">
                 <label>Member Photo</label>
