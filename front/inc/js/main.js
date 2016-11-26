@@ -4,7 +4,7 @@ $(document).ready(function () {
 //            $(this).addClass("right-arrow");
 //        }
 //    });
-
+//    $(".main-left-after").width($('.main-left').width());
     $(".main-right").css("margin-left", $(".main-left").width());
     $('.main-left>ul>li a').click(function () {
         var innerList = $(this).parent().find("ul");
@@ -31,9 +31,28 @@ $(document).ready(function () {
         $(this).parent().siblings().find("ul").slideUp();
         $(this).addClass("active");
     });
-    $(".date-picker").datepicker();
-});
 
+    $(".date-picker").datepicker({maxDate: new Date()});
+    $("span.birth-date:after").click(function () {
+        $(".date-picker").datepicker("show");
+    });
+
+    validateMemberForm();
+
+});
 $(window).resize(function () {
     $(".main-right").css("margin-left", $(".main-left").width());
+//    $(".main-left-after").width($('.main-left').width());
 });
+
+function validateMemberForm() {
+    jQuery.validator.setDefaults({
+        debug: true,
+        success: "valid"
+    });
+    $("#member-form").validate({
+        errorPlacement: function () {
+            return false; 
+        }
+    });
+}

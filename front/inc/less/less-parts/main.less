@@ -25,9 +25,13 @@
 .entire-wrapper{
     width: 100%;
 }
+/*.main-left-after{
+    float: left;
+    height: 100vh;
+}*/
 .main-left{
     width: 15%;
-    height: 100vh;
+    height: 100%;
     position: fixed;
     overflow: hidden;
     z-index: 5;
@@ -172,7 +176,7 @@
                     padding-top: 0;
                 }
             }
-            span.telephone{
+            span.telephone, span.mobile{
                 width: 100%;
                 float: left;
                 position: relative;
@@ -198,6 +202,20 @@
                     color: #555555;
                 }
             }
+            span.birth-date{
+                width: 100%;
+                float: left;
+                position: relative;
+                &::after{
+                    content: "\f073";
+                    position: absolute;
+                    font-family: 'FontAwesome';
+                    right: 15px;
+                    top: 10px;
+                    color: #555555;
+                    pointer-events: none;
+                }
+            }
             select{
                 float: left;
                 width: 100%;
@@ -212,6 +230,7 @@
                 border-radius: 3px;
                 padding: 7px;
                 position: relative;
+                .transition(all 0.35s);
                 &:focus{
                     box-shadow: 0 0 5px #719ECE;
                 }
@@ -219,6 +238,21 @@
                     border: none;
                     padding-left: 0;
                     padding-bottom: 0;
+                }
+                &.error{
+                    border-color: red;
+                }
+                &[type="submit"]{
+                    margin: 15px 0;
+                    color: #fff;
+                    border-color: white;
+                    background-color: #3c8dbc;
+                    .transition(all 0.2s);
+                    &:hover{
+                        background: #fff;
+                        border-color: #3c8dbc;
+                        color: #3c8dbc;
+                    }
                 }
             }
             img{

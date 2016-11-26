@@ -10,6 +10,7 @@
         <link rel="icon" href="repository/favicon.ico">
         <script type="text/javascript" src="inc/js/vendor/jquery-3.1.0.min.js"></script>
         <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script src="inc/js/vendor/jquery.validate.min.js" type="text/javascript"></script>
         <script>
             $(window).load(function () {
                 // Animate loader off screen
