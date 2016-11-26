@@ -718,6 +718,12 @@ h6 {
   top: 10px;
   color: #555555;
 }
+.main-right .main-box .left-form-content span.error,
+.main-right .main-box .right-form-content span.error {
+  float: left;
+  padding-top: 5px;
+  color: red;
+}
 .main-right .main-box .left-form-content span.email,
 .main-right .main-box .right-form-content span.email {
   width: 100%;
@@ -757,6 +763,14 @@ h6 {
   padding: 7px;
   border: 1px solid #ccc;
   height: 36px;
+  -webkit-transition: all 0.35s;
+  -moz-transition: all 0.35s;
+  -ms-transition: all 0.35s;
+  -o-transition: all 0.35s;
+}
+.main-right .main-box .left-form-content select.error,
+.main-right .main-box .right-form-content select.error {
+  border-color: red;
 }
 .main-right .main-box .left-form-content input,
 .main-right .main-box .right-form-content input {
@@ -780,9 +794,22 @@ h6 {
   padding-left: 0;
   padding-bottom: 0;
 }
+.main-right .main-box .left-form-content input[type="file"].error,
+.main-right .main-box .right-form-content input[type="file"].error {
+  color: red;
+}
+.main-right .main-box .left-form-content input[type="file"].valid,
+.main-right .main-box .right-form-content input[type="file"].valid {
+  color: #000;
+}
 .main-right .main-box .left-form-content input.error,
 .main-right .main-box .right-form-content input.error {
   border-color: red;
+}
+.main-right .main-box .left-form-content input#remove,
+.main-right .main-box .right-form-content input#remove {
+  width: 20%;
+  padding: 5px;
 }
 .main-right .main-box .left-form-content input[type="submit"],
 .main-right .main-box .right-form-content input[type="submit"] {
@@ -800,6 +827,10 @@ h6 {
   background: #fff;
   border-color: #3c8dbc;
   color: #3c8dbc;
+}
+.main-right .main-box .left-form-content input.hide,
+.main-right .main-box .right-form-content input.hide {
+  display: none;
 }
 .main-right .main-box .left-form-content img,
 .main-right .main-box .right-form-content img {

@@ -38,6 +38,7 @@ $(document).ready(function () {
     });
 
     validateMemberForm();
+    controlImg();
 
 });
 $(window).resize(function () {
@@ -52,7 +53,56 @@ function validateMemberForm() {
     });
     $("#member-form").validate({
         errorPlacement: function () {
-            return false; 
+            return false;
         }
+    });
+}
+
+function controlImg() {
+    $('input[type="file"]').change(function () {
+        var ext = this.value.match(/\.(.+)$/)[1];
+        switch (ext) {
+            case 'jpg':
+            case 'jpeg':
+            case 'png':
+                $('#member-upload').attr('disabled', false);
+                $("span.error").remove();
+                break;
+            default:
+                if (!($("span.error").is(":visible"))) {
+                    $("#member-upload").after("<span class='error'>Wrong file format</span>");
+                }
+                $('#member-photo').attr('src', 'repository/no_image.png');
+                $("#member-upload").val('');
+        }
+    });
+    $('#remove').hide();
+    function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                $('#member-photo').attr('src', e.target.result);
+            },
+                    reader.readAsDataURL(input.files[0]);
+        }
+    }
+
+    $("#member-upload").change(function () {
+        if ($('#member-upload').val() !== "") {
+
+            $('#remove').show();
+            $('#member-photo').show('slow');
+        } else {
+            $('#remove').hide();
+        }
+        readURL(this);
+    });
+
+
+    $('#remove').click(function () {
+        $('#member-upload').val('');
+        $(this).hide();
+        $('#member-photo').attr('src', 'repository/no_image.png');
     });
 }

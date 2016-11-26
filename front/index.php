@@ -70,17 +70,17 @@
             </div>
             <div class="right-form-content">
                 <label>Member Photo</label>
-                <img class="member-photo" src="repository/no_image.png" alt="Photo"/>
+                <img id="member-photo" src="repository/no_image.png" alt="Photo"/>
                 <label>Upload from Computer</label>
-                <input type="file" name="member_upload" id="member_upload"/>
+                <input type="file" name="member_upload" id="member-upload" required/>
+                <input type="button" name="hide_button" id="remove" value="remove" class="hide"/>
                 <label>Membership Type</label>
-                <select name="member_subscription" required">
-                        <option value="select">Select</option>
+                <select name="member_subscription" required>
+                    <option value="" selected="">Select</option>
                     <option value="yearly">Yearly</option>
                     <option value="monthly">Monthly</option>
                     <option value="weekly">Weekly</option>
                 </select>
-
                 <input type="submit" id="member_submit"/>
             </div>
         </form>
