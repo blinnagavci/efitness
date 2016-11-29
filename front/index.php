@@ -1,43 +1,8 @@
-<?php require('parts/header.php'); ?>
-<div class="main-left">
-    <h2>Main navigation</h2>
-    <ul>
-        <li>
-            <a href="javascript:void(0)" title="Dashboard" class="active">
-                <i class="fa dashboard"></i>
-                Dashboard
-            </a>
-        </li>
-        <li>
-            <a href="javascript:void(0)" title="Members">
-                <i class="fa members"></i>
-                Members
-            </a>
-            <ul>
-                <li>
-                    <a href="javascript:void(0)" title="Manage Members">
-                        <i class="fa member"></i>
-                        Manage Members
-                    </a>
-                </li>
-                <li>
-                    <a href="javascript:void(0)" title="Member Settings">
-                        <i class="fa settings"></i>
-                        Settings
-                    </a>
-                </li>
-            </ul>
-        </li>
-        <li>
-            <a href="javascript:void(0)" title="settings">
-                <i class="fa settings"></i>
-                Settings
-            </a>
-        </li>
-    </ul>
-</div>
+<?php
+require('parts/header.php');
+require('parts/navigation.php');
+?>
 <!--<div class="main-left-after"></div>-->
-</div>
 <div class="main-right">
     <h1>Manage Member</h1>
     <div class="main-box">
@@ -88,3 +53,4 @@
 </div>
 <?php
 require('parts/footer.php');
+
