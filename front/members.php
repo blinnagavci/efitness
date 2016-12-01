@@ -29,7 +29,7 @@ require('parts/navigation.php');
                 </span>
                 <label>Birth Date</label>
                 <span class="birth-date">
-                    <input class="date-picker" type="text" name="member_date" id="member_date" placeholder="Enter Birth Date" required/>
+                    <input class="date-picker readonly" type="text" name="member_date" id="member_date" placeholder="Enter Birth Date" required/>
                 </span>
             </div>
             <div class="right-form-content">

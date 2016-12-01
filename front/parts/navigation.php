@@ -1,6 +1,6 @@
 <?php include ('functions.php'); ?>
 <div class="main-left">
-    <h2>Main navigation</h2>
+    <h2>E-Fitness</h2>
     <ul>
         <li>
             <a class="<?php active('') ? 'active' : NULL ?>" href="./" title="Dashboard">
@@ -8,7 +8,7 @@
             </a>
         </li>
         <li>
-            <a class="<?php active('members') ? 'active' : NULL ?>" href="members" title="Members">
+            <a class="<?php active('members') || active('members_settings') ? 'active' : NULL ?>" href="members" title="Members">
                 <i class="fa members"></i>Members
             </a>
             <ul>
@@ -19,7 +19,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="javascript:void(0)" title="Member Settings">
+                    <a class="<?php active('members_settings') ? 'active' : NULL ?>" href="members_settings" title="Member Settings">
                         <i class="fa settings"></i>
                         Settings
                     </a>
