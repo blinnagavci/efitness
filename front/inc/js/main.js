@@ -62,6 +62,7 @@ $(window).resize(function () {
 });
 
 function validateMemberForm() {
+
     $("#member-form").validate({
         errorPlacement: function () {
             return false;

@@ -1,4 +1,4 @@
-<?php
+<?php require('db_connect.php');
 
 if (isset($_POST['add'])) {
     $firstname = $_POST['member_firstname'];
@@ -11,7 +11,7 @@ if (isset($_POST['add'])) {
 //    $comment = addslashes($_POST['comment']);
 
 
-    $sql = "INSERT INTO member (firstname) 
+    $sql = "INSERT INTO member (first_name) 
     VALUES ('$firstname')";
 
     $retval = mysqli_query($conn, $sql);
@@ -21,6 +21,6 @@ if (isset($_POST['add'])) {
         echo "<script type='text/javascript'> window.alert('Member added successfully!.'); </script>";
     }
     mysqli_close($conn);
-    header("refresh:0; url=../index.php");
+    header("refresh:0; url=../../members.php");
 }
 ?>
