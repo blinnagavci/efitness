@@ -62,10 +62,6 @@ $(window).resize(function () {
 });
 
 function validateMemberForm() {
-    jQuery.validator.setDefaults({
-        debug: true,
-        success: "valid"
-    });
     $("#member-form").validate({
         errorPlacement: function () {
             return false;

@@ -5,7 +5,7 @@ require('parts/navigation.php');
 <div class="main-right">
     <h1>Manage Member</h1>
     <div class="main-box">
-        <form action='inc/database/add_member.php' id="member-form" method="POST">
+        <form action='inc/database/add_member.php' name="member-form" id="member-form" method="POST">
             <div class="left-form-content">
                 <label>First Name</label>
                 <input type="text" name="member_firstname" id="member_firstname" placeholder="First Name" required> 
@@ -45,7 +45,7 @@ require('parts/navigation.php');
                     <option value="monthly">Monthly</option>
                     <option value="weekly">Weekly</option>
                 </select>
-                <input type="submit" name="add" id="member_submit"/>
+                <input type="submit" value="submit" name="add" id="member_submit"/>
             </div>
         </form>
     </div>

@@ -12,7 +12,7 @@ if (isset($_POST['add'])) {
 
 
     $sql = "INSERT INTO member (firstname) 
-	  			VALUES ('$firstname')";
+    VALUES ('$firstname')";
 
     $retval = mysqli_query($conn, $sql);
     if (!$retval) {
