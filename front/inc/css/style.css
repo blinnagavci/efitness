@@ -613,7 +613,7 @@ h6 {
   content: "";
   position: absolute;
   pointer-events: none;
-  border-right-color: #ecf0f5;
+  border-right-color: #F;
   top: 50%;
   margin-top: -9px;
 }

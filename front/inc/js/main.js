@@ -1,10 +1,10 @@
 $(document).ready(function () {
-//    $(".main-left>ul>li").each(function () {
-//        if ($(this).find("ul").length > 0) {
-//            $(this).addClass("right-arrow");
-//        }
-//    });
-//    $(".main-left-after").width($('.main-left').width());
+    $(".main-left>ul>li").each(function () {
+        if ($(this).find("ul").length > 0 && $(this).children().hasClass("active")) {
+            $(this).find("ul").slideToggle();
+        }
+    });
+    $(".main-left-after").width($('.main-left').width());
     $(".main-right").css("margin-left", $(".main-left").width());
     $('.main-left>ul>li a').click(function () {
         var innerList = $(this).parent().find("ul");
