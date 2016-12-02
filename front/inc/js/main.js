@@ -73,11 +73,11 @@ function validateMemberForm() {
         errorPlacement: function () {
             return false;
         },
+        focusInvalid:false,
         invalidHandler: function (form, validator) {
             var errors = validator.numberOfInvalids();
             if (errors) {
-                $("html, body").animate({scrollTop: 0}, "fast");
-                console.log("asd0");
+                $("html, body").animate({scrollTop: 0}, 500);
             }
         }
     });

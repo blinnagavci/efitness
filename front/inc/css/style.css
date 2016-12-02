@@ -794,13 +794,13 @@ h6 {
   padding-left: 0;
   padding-bottom: 0;
 }
+.main-right .main-box .left-form-content input[type="file"].valid,
+.main-right .main-box .right-form-content input[type="file"].valid {
+  color: black;
+}
 .main-right .main-box .left-form-content input[type="file"].error,
 .main-right .main-box .right-form-content input[type="file"].error {
   color: red;
-}
-.main-right .main-box .left-form-content input[type="file"].valid,
-.main-right .main-box .right-form-content input[type="file"].valid {
-  color: #000;
 }
 .main-right .main-box .left-form-content input.error,
 .main-right .main-box .right-form-content input.error {
@@ -810,6 +810,7 @@ h6 {
 .main-right .main-box .right-form-content input#remove {
   width: 20%;
   padding: 5px;
+  margin-top: 10px;
 }
 .main-right .main-box .left-form-content input.number::after,
 .main-right .main-box .right-form-content input.number::after {

@@ -248,12 +248,13 @@
                     border: none;
                     padding-left: 0;
                     padding-bottom: 0;
+                    &.valid{
+                        color: black;
+                    }
                     &.error{
                         color: red;
                     }
-                    &.valid{
-                        color: #000;
-                    }
+
                 }
 
                 &.error{
@@ -262,6 +263,7 @@
                 &#remove{
                     width: 20%;
                     padding: 5px;
+                    margin-top: 10px;
                 }
                 &.number::after{
                     content: "€";
