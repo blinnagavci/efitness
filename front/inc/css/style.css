@@ -739,14 +739,14 @@ h6 {
   top: 10px;
   color: #555555;
 }
-.main-right .main-box .left-form-content span.birth-date,
-.main-right .main-box .right-form-content span.birth-date {
+.main-right .main-box .left-form-content span.date,
+.main-right .main-box .right-form-content span.date {
   width: 100%;
   float: left;
   position: relative;
 }
-.main-right .main-box .left-form-content span.birth-date::after,
-.main-right .main-box .right-form-content span.birth-date::after {
+.main-right .main-box .left-form-content span.date::after,
+.main-right .main-box .right-form-content span.date::after {
   content: "\f073";
   position: absolute;
   font-family: 'FontAwesome';
@@ -810,6 +810,10 @@ h6 {
 .main-right .main-box .right-form-content input#remove {
   width: 20%;
   padding: 5px;
+}
+.main-right .main-box .left-form-content input.number::after,
+.main-right .main-box .right-form-content input.number::after {
+  content: "€";
 }
 .main-right .main-box .left-form-content input[type="submit"],
 .main-right .main-box .right-form-content input[type="submit"] {

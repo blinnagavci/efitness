@@ -38,9 +38,15 @@ $(document).ready(function () {
         changeMonth: true,
         yearRange: "-100:+0"
     });
-    $("#datepicker").datepicker("option", "dateFormat", 'dd-mm-yy');
-    $("span.birth-date:after").click(function () {
-        $(".date-picker").datepicker("show");
+    $(".membership-date-picker").datepicker({
+        minDate: new Date(),
+        changeYear: true,
+        changeMonth: true,
+        yearRange: "-0:+50"
+    });
+//    $(".date-picker, .membership-date-picker").datepicker("option", "dateFormat", 'dd-mm-yy');
+    $("span.date:after").click(function () {
+        $(".date-picker, .membership-date-picker").datepicker("show");
     });
 
     validateMemberForm();
@@ -67,6 +73,15 @@ function validateMemberForm() {
         errorPlacement: function () {
             return false;
         }
+    });
+//    if (!($("#member-form").valid())) {
+//        $('html, body').animate({
+//            scrollTop: ($('.error').offset().top - 300)
+//        }, 2000);
+//        console.log("asd");
+//    }
+    $("input[class='number']").on('keydown paste', function (e) {
+        -1 !== $.inArray(e.keyCode, [46, 8, 9, 27, 13, 110, 190]) || /65|67|86|88/.test(e.keyCode) && (!0 === e.ctrlKey || !0 === e.metaKey) || 35 <= e.keyCode && 40 >= e.keyCode || (e.shiftKey || 48 > e.keyCode || 57 < e.keyCode) && (96 > e.keyCode || 105 < e.keyCode) && e.preventDefault();
     });
 }
 

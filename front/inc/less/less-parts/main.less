@@ -208,7 +208,7 @@
                     color: #555555;
                 }
             }
-            span.birth-date{
+            span.date{
                 width: 100%;
                 float: left;
                 position: relative;
@@ -262,6 +262,9 @@
                 &#remove{
                     width: 20%;
                     padding: 5px;
+                }
+                &.number::after{
+                    content: "€";
                 }
                 &[type="submit"]{
                     margin: 15px 0;
