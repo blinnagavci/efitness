@@ -72,14 +72,15 @@ function validateMemberForm() {
     $("#member-form").validate({
         errorPlacement: function () {
             return false;
+        },
+        invalidHandler: function (form, validator) {
+            var errors = validator.numberOfInvalids();
+            if (errors) {
+                $("html, body").animate({scrollTop: 0}, "fast");
+                console.log("asd0");
+            }
         }
     });
-//    if (!($("#member-form").valid())) {
-//        $('html, body').animate({
-//            scrollTop: ($('.error').offset().top - 300)
-//        }, 2000);
-//        console.log("asd");
-//    }
     $("input[class='number']").on('keydown paste', function (e) {
         -1 !== $.inArray(e.keyCode, [46, 8, 9, 27, 13, 110, 190]) || /65|67|86|88/.test(e.keyCode) && (!0 === e.ctrlKey || !0 === e.metaKey) || 35 <= e.keyCode && 40 >= e.keyCode || (e.shiftKey || 48 > e.keyCode || 57 < e.keyCode) && (96 > e.keyCode || 105 < e.keyCode) && e.preventDefault();
     });

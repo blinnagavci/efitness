@@ -1,7 +1,7 @@
 <?php
 
 require('db_connect.php');
-if (isset($_POST['add'])) {
+if (isset($_POST['submit'])) {
     $firstname = $_POST['member_firstname'];
     $lastname = ($_POST['member_surname']);
     $address = addslashes($_POST['member_address']);
@@ -16,14 +16,24 @@ if (isset($_POST['add'])) {
     $membershipstart = $_POST['membership_start'];
     $membershipend = $_POST['membership_end'];
 
+    $uploadedFileName = $_FILES['member_upload']['name'];
+    $temp_name = $_FILES['member_upload']['tmp_name'];
+    $temp = explode(".", $_FILES["member_upload"]["name"]);
+    $getID = mysqli_query($conn, "SELECT id FROM member ORDER BY id DESC");
+    $idRow = mysqli_fetch_row($getID);
+    $newfilename = $idRow[0] + 1 . "_" . $firstname . "_" . $lastname . '.' . end($temp);
+    if ($uploadedFileName != '') {
+        $upload_directory = "../../repository/member_photos/";
+        move_uploaded_file($temp_name, $upload_directory . $newfilename);
+    }
 
 //    define('DIRECTORY', 'repository/member_photos');
 //
 //    $content = file_get_contents('http://anothersite/images/goods.jpg');
 //    file_put_contents(DIRECTORY . '/image.jpg', $content);
     $sql_member = "INSERT INTO member (first_name, last_name, gender, residential_address, city, telephone_no,
-        alternative_no, email, birth_date)
-    VALUES ('$firstname', '$lastname', '$gender', '$address', '$city', '$telephoneno', '$alternativeno' , '$email', '$birthdate')";
+alternative_no, email, birth_date, photo)
+VALUES ('$firstname', '$lastname', '$gender', '$address', '$city', '$telephoneno', '$alternativeno' , '$email', '$birthdate', '$newfilename')";
 
     $retval1 = mysqli_query($conn, $sql_member);
 
@@ -44,15 +54,15 @@ if (isset($_POST['add'])) {
     $memberrow = mysqli_fetch_row($memberid);
     $membershiprow = mysqli_fetch_row($membershipid);
     $sql_membershippayment = "INSERT INTO membership_payment(amount_of_payment, start_date, end_date, id_member, id_membership)
-           VALUES ('$membershipamount','$membershipstart','$membershipend', '$memberrow[0]', '$membershiprow[0]')";
+VALUES ('$membershipamount','$membershipstart','$membershipend', '$memberrow[0]', '$membershiprow[0]')";
     $retval3 = mysqli_query($conn, $sql_membershippayment);
     if (!$retval3) {
         die('Could not enter data to membership payment table' . mysqli_connect_error());
-    }else{
-        echo "<script type='text/javascript'>window.alert('Member successfully added')</script>"; 
+    } else {
+        echo "<script type='text/javascript'>window.alert('Member successfully added')</script>";
     }
-    
+
     mysqli_close($conn);
-    header("refresh: 0; url=../../members");
+    header("refresh: 0; url = ../../members");
 }
 

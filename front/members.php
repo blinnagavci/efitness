@@ -5,7 +5,7 @@ require('parts/navigation.php');
 <div class="main-right">
     <h1>Manage Member</h1>
     <div class="main-box">
-        <form enctype="multipart/form-data" action='inc/database/add_member.php' name="member-form" id="member-form" method="POST">
+        <form action='inc/database/add_member.php' name='submit' id="member-form" method="POST" enctype="multipart/form-data">
             <div class="left-form-content">
                 <label>First Name</label>
                 <input type="text" name="member_firstname" id="member_firstname" placeholder="First Name" required> 
@@ -49,9 +49,19 @@ require('parts/navigation.php');
                 <label>Membership Type</label>
                 <select name="member_subscription" required>
                     <option value="select" disabled selected>Select</option>
-                    <option value="yearly">Yearly</option>
-                    <option value="monthly">Monthly</option>
-                    <option value="weekly">Weekly</option>
+                    <?php
+                    include('inc/database/db_connect.php');
+                    $sql = 'SELECT membership_type FROM membership';
+                    $retval = mysqli_query($conn, $sql);
+                    if (!$retval) {
+                        echo ("Could not retrieve data" . mysql_error());
+                    }
+                    while ($row = $retval->fetch_assoc()) {
+                        $membership = $row['membership_type'];
+                        echo "<option value='$membership'>$membership</option>";
+                    }
+                    mysqli_close($conn);
+                    ?>
                 </select>
                 <label>Amount</label>
                 <input class="number" type='text' name='membership_amount' id='membership_amount' placeholder='Enter Payment Amount' required/>
@@ -63,7 +73,7 @@ require('parts/navigation.php');
                 <span class="date">
                     <input class="membership-date-picker readonly" type="text" name="membership_end" id="membership_end" placeholder="Enter End Date" required/>
                 </span>
-                <input type="submit" value="submit" name="add" id="member_submit"/>
+                <input type="submit" value="submit" name="submit" id="member_submit"/>
             </div>
         </form>
     </div>
