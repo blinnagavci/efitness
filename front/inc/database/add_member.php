@@ -16,16 +16,16 @@ if (isset($_POST['submit'])) {
     $membershipstart = $_POST['membership_start'];
     $membershipend = $_POST['membership_end'];
 
-    $uploadedFileName = $_FILES['member_upload']['name'];
-    $temp_name = $_FILES['member_upload']['tmp_name'];
-    $temp = explode(".", $_FILES["member_upload"]["name"]);
-    $getID = mysqli_query($conn, "SELECT id FROM member ORDER BY id DESC");
-    $idRow = mysqli_fetch_row($getID);
-    $newfilename = $idRow[0] + 1 . "_" . $firstname . "_" . $lastname . '.' . end($temp);
-    if ($uploadedFileName != '') {
-        $upload_directory = "../../repository/member_photos/";
-        move_uploaded_file($temp_name, $upload_directory . $newfilename);
-    }
+//    $uploadedFileName = $_FILES['member_upload']['name'];
+//    $temp_name = $_FILES['member_upload']['tmp_name'];
+//    $temp = explode(".", $_FILES["member_upload"]["name"]);
+//    $getID = mysqli_query($conn, "SELECT id FROM member ORDER BY id DESC");
+//    $idRow = mysqli_fetch_row($getID);
+//    $newfilename = $idRow[0] + 1 . "_" . $firstname . "_" . $lastname . '.' . end($temp);
+//    if ($uploadedFileName != '') {
+//        $upload_directory = "../../repository/member_photos/";
+//        move_uploaded_file($temp_name, $upload_directory . $newfilename);
+//    }
 
 //    define('DIRECTORY', 'repository/member_photos');
 //
@@ -42,15 +42,15 @@ VALUES ('$firstname', '$lastname', '$gender', '$address', '$city', '$telephoneno
         die('Could not enter data to member table' . mysqli_connect_error());
     }
 
-    $sql_membership = "INSERT into membership (membership_type) VALUES ('$membershiptype')";
-
-    $retval2 = mysqli_query($conn, $sql_membership);
-
-    if (!$retval2) {
-        die('Could not enter data to membership table' . mysqli_connect_error());
-    }
+//    $sql_membership = "INSERT into membership (membership_type) VALUES ('$membershiptype')";
+//
+//    $retval2 = mysqli_query($conn, $sql_membership);
+//
+//    if (!$retval2) {
+//        die('Could not enter data to membership table' . mysqli_connect_error());
+//    }
     $memberid = mysqli_query($conn, "SELECT id from member ORDER BY id DESC");
-    $membershipid = mysqli_query($conn, "SELECT id from membership ORDER BY id DESC");
+    $membershipid = mysqli_query($conn, "SELECT id from membership WHERE membership_type = '$membershiptype'");
     $memberrow = mysqli_fetch_row($memberid);
     $membershiprow = mysqli_fetch_row($membershipid);
     $sql_membershippayment = "INSERT INTO membership_payment(amount_of_payment, start_date, end_date, id_member, id_membership)
