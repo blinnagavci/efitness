@@ -8,14 +8,20 @@
             </a>
         </li>
         <li>
-            <a class="<?php active('members') || active('members_settings') ? 'active' : NULL ?>" href="members" title="Members">
+            <a class="<?php active('members') || active('search_members') || active('members_settings') ? 'active' : NULL ?>" href="members" title="Members">
                 <i class="fa members"></i>Members
             </a>
             <ul>
                 <li>
-                    <a class="<?php active('members') ? 'active' : NULL ?>" href="members" title="Manage Members">
+                    <a class="<?php active('members') ? 'active' : NULL ?>" href="members" title="Add Members">
                         <i class="fa member"></i>
-                        Manage Members
+                        Add Members
+                    </a>
+                </li>
+                <li>
+                    <a class="<?php active('search_members') ? 'active' : NULL ?>" href="search_members" title="Search Members">
+                        <i class="fa fa-search"></i>
+                        Search Members
                     </a>
                 </li>
                 <li>
