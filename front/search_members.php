@@ -35,8 +35,8 @@ require('inc/database/db_connect.php');
                         <td><?php echo $row['telephone_no'] ?></td>
                     </tr>
                 <?php } ?>
-
             </table>
+            <button class="generate-pdf">Export to PDF</button>
         </div>
         <?php
     } else {

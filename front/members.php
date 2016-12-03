@@ -19,7 +19,7 @@ require('parts/navigation.php');
                     <option value="other">Other</option>
                 </select>
                 <label>Birth Date</label>
-                <span class="birth-date">
+                <span class="date">
                     <input class="date-picker readonly" type="text" name="member_date" id="member_date" placeholder="Enter Birth Date" required/>
                 </span>
                 <label>Residential Address</label>
