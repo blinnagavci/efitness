@@ -16,16 +16,16 @@ if (isset($_POST['submit'])) {
     $membershipstart = $_POST['membership_start'];
     $membershipend = $_POST['membership_end'];
 
-//    $uploadedFileName = $_FILES['member_upload']['name'];
-//    $temp_name = $_FILES['member_upload']['tmp_name'];
-//    $temp = explode(".", $_FILES["member_upload"]["name"]);
-//    $getID = mysqli_query($conn, "SELECT id FROM member ORDER BY id DESC");
-//    $idRow = mysqli_fetch_row($getID);
-//    $newfilename = $idRow[0] + 1 . "_" . $firstname . "_" . $lastname . '.' . end($temp);
-//    if ($uploadedFileName != '') {
-//        $upload_directory = "../../repository/member_photos/";
-//        move_uploaded_file($temp_name, $upload_directory . $newfilename);
-//    }
+    $uploadedFileName = $_FILES['member_upload']['name'];
+    $temp_name = $_FILES['member_upload']['tmp_name'];
+    $temp = explode(".", $_FILES["member_upload"]["name"]);
+    $getID = mysqli_query($conn, "SELECT id FROM member ORDER BY id DESC");
+    $idRow = mysqli_fetch_row($getID);
+    $newfilename = $idRow[0] + 1 . "_" . $firstname . "_" . $lastname . '.' . end($temp);
+    if ($uploadedFileName != '') {
+        $upload_directory = "../../repository/member_photos/";
+        move_uploaded_file($temp_name, $upload_directory . $newfilename);
+    }
 
 //    define('DIRECTORY', 'repository/member_photos');
 //
