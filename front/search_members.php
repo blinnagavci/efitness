@@ -12,29 +12,32 @@ require('inc/database/db_connect.php');
     if ($result->num_rows > 0) {
         // output data of each row
         ?>
-        <table class="member_table" border="1">
-            <tr>
-                <th>ID</th>
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>Gender</th>
-                <th>Date of Birth</th>
-                <th>Phone No.</th>
-            </tr>
-            <?php
-            while ($row = $result->fetch_assoc()) {
-                ?>
+        <h1>Search Member</h1>
+        <div class="main-box">
+            <table class="member-table">
                 <tr>
-                    <td><?php echo $row["id"] ?></td>
-                    <td><?php echo $row['first_name'] ?></td>
-                    <td><?php echo $row['last_name'] ?></td>
-                    <td><?php echo $row['gender'] ?></td>
-                    <td><?php echo $row['birth_date'] ?></td>
-                    <td><?php echo $row['telephone_no'] ?></td>
+                    <th>ID</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Gender</th>
+                    <th>Date of Birth</th>
+                    <th>Phone No.</th>
                 </tr>
-            <?php } ?>
+                <?php
+                while ($row = $result->fetch_assoc()) {
+                    ?>
+                    <tr>
+                        <td><?php echo $row["id"] ?></td>
+                        <td><?php echo $row['first_name'] ?></td>
+                        <td><?php echo $row['last_name'] ?></td>
+                        <td><?php echo $row['gender'] ?></td>
+                        <td><?php echo $row['birth_date'] ?></td>
+                        <td><?php echo $row['telephone_no'] ?></td>
+                    </tr>
+                <?php } ?>
 
-        </table>
+            </table>
+        </div>
         <?php
     } else {
         echo "0 results";
