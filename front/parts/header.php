@@ -9,8 +9,10 @@
         <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i" rel="stylesheet">
         <link rel="icon" href="repository/favicon.ico">
         <script type="text/javascript" src="inc/js/vendor/jquery-3.1.0.min.js"></script>
-        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script src="inc/js/vendor/jquery-ui.js" type="text/javascript"></script>
+        <script src="inc/js/vendor/jspdf.debug.js" type="text/javascript"></script>
         <script src="inc/js/vendor/jquery.validate.min.js" type="text/javascript"></script>
+        <script type="text/javascript" src="inc/js/main.js"></script>
         <script>
             $(window).load(function () {
                 // Animate loader off screen
@@ -23,5 +25,5 @@
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
     </head>
     <body>
-        
+
         <div class="se-pre-con"></div>

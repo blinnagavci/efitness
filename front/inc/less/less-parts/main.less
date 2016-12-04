@@ -14,7 +14,6 @@
     z-index: 9999;
     background: url(../../inc/images/ring.gif) center no-repeat #ecf0f5;
 }
-
 /*.header{
     float: left;
     width: 100%;
@@ -23,7 +22,6 @@
     background-size: cover;
     height:119px;
 }*/
-
 .entire-wrapper{
     width: 100%;
 }
@@ -274,12 +272,11 @@
                 &[type="submit"]{
                     margin: 15px 0;
                     color: #fff;
-                    border-color: white;
+                    border-color: #3c8dbc;
                     background-color: #3c8dbc;
                     .transition(all 0.2s);
                     &:hover{
                         background: #fff;
-                        border-color: #3c8dbc;
                         color: #3c8dbc;
                     }
                 }
@@ -293,14 +290,43 @@
                 height: 200px;
             }
         }
-    }
-    .main-box .member-table{
-        width:inherit;
-        border: 1px solid #A9A9A9;
-        td, th{
-            padding: 7px;
+        .generate-pdf{
+            float: left;
+            margin-top: 10px;
+            border-radius: 3px;
+            padding: 10px;
+            color: #fff;
+            border: 1px solid #3c8dbc;
+            background-color: #3c8dbc;
+            .transition(all 0.2s);
+            &:hover{
+                background: #fff;
+                color: #3c8dbc;
+            }
+        }
+        .member-table{
             border: 1px solid #A9A9A9;
-        }        
+            float: left;
+            width: 100%;
+            td, th{
+                padding: 7px;
+                border: 1px solid #A9A9A9;
+                text-align: center;
+                color: #333333;
+            }
+            th{
+                font-weight: 600;
+                background-color: #ecf0f5;
+            }
+            /*        tr:last-child{
+                        td:first-child{
+                            border-bottom-left-radius: 3px;
+                        }
+                        td:last-child{
+                            border-bottom-right-radius: 3px;
+                        }
+                    }*/
+        }
     }
 }
 .ui-datepicker select.ui-datepicker-month, .ui-datepicker select.ui-datepicker-year{
