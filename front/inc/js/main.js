@@ -60,7 +60,9 @@ $(document).ready(function () {
     $(document).on("focusin", ".readonly", function () {
         $(this).prop('readonly', true);
     });
-
+    $("input.readonly").change(function(){
+        $(this).removeClass("error");
+    });
     $(document).on("focusout", ".readonly", function () {
         $(this).prop('readonly', false);
     });
