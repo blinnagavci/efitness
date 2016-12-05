@@ -1,6 +1,7 @@
 <?php
 require('parts/header.php');
 require('parts/navigation.php');
+require('inc/database/db_connect.php');
 ?>
 <div class="main-right">
     <h1>Settings</h1>
@@ -26,12 +27,11 @@ require('parts/navigation.php');
                     ?>
                 </div>
             </form>
-            <form id='remove-membership-form' method='POST'>
+            <form id='remove-membership-form' name='remove-membership-form' method='POST'>
                 <div class="remove-membership">
                     <select name="settings-membership-select" class="settings-membership-select" required>
                         <option value="select" disabled selected>Select</option>
                         <?php
-                        include('inc/database/db_connect.php');
                         $sql = 'SELECT membership_type FROM membership WHERE status= "0"';
                         $retval = mysqli_query($conn, $sql);
                         if (!$retval) {
@@ -48,16 +48,16 @@ require('parts/navigation.php');
                 </div>
             </form>
             <?php
-            if (isset($_post['remove_membership'])) {
+            if (isset($_POST['remove_membership'])) {
                 $removemembership = $_POST['settings-membership-select'];
-
-                echo $removemembership;
-
+                $removemembershipsql = "UPDATE membership SET status='1' WHERE membership_type = '$removemembership'";
+                require ('inc/database/db_connect.php');
                 if (mysqli_query($conn, $removemembershipsql)) {
                     echo "<script type=text/javascript>window.alert('Membership successfully removed');</script>";
                 } else {
-                    echo "Membership could not be added" . mysqli_error();
+                    echo "Membership could not be added: " . mysqli_error($conn);
                 }
+                mysqli_close($conn);
             }
             ?>
 

@@ -679,7 +679,7 @@ h6 {
   background-color: #fff;
   padding: 10px 5px;
   border-radius: 3px;
-  box-shadow: 0 0 4px grey;
+  box-shadow: 0 0 8px 1px grey;
 }
 .main-right .main-box .left-form-content,
 .main-right .main-box .right-form-content {
