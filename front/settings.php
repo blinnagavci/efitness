@@ -9,7 +9,7 @@ require('parts/navigation.php');
             <div class="add-membership">  
                 <form class="add-membership-form" method="POST" action="inc/database/add_membership.php">
                     <label class="settings-label">Membership Type</label>
-                    <input type="text" class="settings-input" name="membershiptype_settings" id="membershiptype_settings" placeholder="Enter Membership Type" />
+                    <input type="text" class="settings-input" name="membershiptype_settings" id="membershiptype_settings" placeholder="Enter Membership Type" required/>
                     <input type="submit" class="settings-add-ms" value="Add" name="add_membership_submit" id="add_membership_submit"/>
                 </form>
             </div>
