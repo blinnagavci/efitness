@@ -87,6 +87,16 @@ function validateMemberForm() {
     $("input[class='number']").on('keydown paste', function (e) {
         -1 !== $.inArray(e.keyCode, [46, 8, 9, 27, 13, 110, 190]) || /65|67|86|88/.test(e.keyCode) && (!0 === e.ctrlKey || !0 === e.metaKey) || 35 <= e.keyCode && 40 >= e.keyCode || (e.shiftKey || 48 > e.keyCode || 57 < e.keyCode) && (96 > e.keyCode || 105 < e.keyCode) && e.preventDefault();
     });
+    $("#remove-membership-form").validate({
+        errorPlacement: function () {
+            return false;
+        }
+    });
+    $("#new-membership").validate({
+        errorPlacement: function () {
+            return false;
+        }
+    });
 }
 
 function controlImg() {
@@ -142,20 +152,19 @@ function generatePDF() {
     var pdf = new jsPDF('p', 'pt', 'letter');
     // source can be HTML-formatted string, or a reference
     // to an actual DOM element from which the text will be scraped.
-    
-    source = $('.main-box')[0],
 
-    // we support special element handlers. Register them with jQuery-style 
-    // ID selector for either ID or node name. ("#iAmID", "div", "span" etc.)
-    // There is no support for any other type of selectors 
-    // (class, of compound) at this time.
-    specialElementHandlers = {
-        // element with id of "bypass" - jQuery style selector
-        '#bypassme': function (element, renderer) {
-            // true = "handled elsewhere, bypass text extraction"
-            return true;
-        }
-    };
+    source = $('.main-box')[0],
+            // we support special element handlers. Register them with jQuery-style 
+            // ID selector for either ID or node name. ("#iAmID", "div", "span" etc.)
+            // There is no support for any other type of selectors 
+            // (class, of compound) at this time.
+            specialElementHandlers = {
+                // element with id of "bypass" - jQuery style selector
+                '#bypassme': function (element, renderer) {
+                    // true = "handled elsewhere, bypass text extraction"
+                    return true;
+                }
+            };
     margins = {
         top: 80,
         bottom: 60,
@@ -170,9 +179,8 @@ function generatePDF() {
             margins.top, {// y coord
                 'width': margins.width, // max width of content on PDF
                 'elementHandlers': specialElementHandlers
-                
+
             },
-            
             function (dispose) {
                 // dispose: object with X, Y of the last line add to the PDF 
                 //          this allow the insertion of new lines after html

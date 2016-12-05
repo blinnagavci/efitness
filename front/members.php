@@ -74,7 +74,7 @@ require('parts/navigation.php');
                 <span class="date">
                     <input class="membership-date-picker readonly" type="text" name="membership_end" id="membership_end" placeholder="Enter End Date" required/>
                 </span>
-                <input type="submit" value="submit" name="submit" id="member_submit"/>
+                <input type="submit" value="Submit" name="submit" id="member_submit"/>
             </div>
         </form>
     </div>
