@@ -12,6 +12,7 @@
         <script src="inc/js/vendor/jquery-ui.js" type="text/javascript"></script>
         <script src="inc/js/vendor/jspdf.debug.js" type="text/javascript"></script>
         <script src="inc/js/vendor/jquery.validate.min.js" type="text/javascript"></script>
+        <script src="inc/js/vendor/jspdf.min.js" type="text/javascript"></script>
         <script type="text/javascript" src="inc/js/main.js"></script>
         <script>
             $(window).load(function () {
