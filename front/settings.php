@@ -16,7 +16,7 @@ require('parts/navigation.php');
             <div class="remove-membership">
                 <form class="remove-membership-form" action="inc/database/remove_membership.php" method="POST">
                     <select name="remove_membership_select" class="settings-membership-select" required>
-                        <option value="select" disabled selected>Select</option>
+                        <option value="select" disabled selected>Select</option> 
                         <?php
                         include('inc/database/db_connect.php');
                         $sql = 'SELECT membership_type FROM membership WHERE status= "0"';
