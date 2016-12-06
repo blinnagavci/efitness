@@ -118,10 +118,6 @@ function controlImg() {
                 $('#member-photo').attr('src', 'repository/no_image.png');
                 $("#member-upload").val('');
         }
-        if ($('#member-upload').val() == "") {
-            console.log("asd");
-            $("#member-photo").attr('src', 'repository/no_image.png');
-        }
     });
     $('#remove').hide();
     function readURL(input) {
