@@ -794,10 +794,7 @@ h6 {
   border: none;
   padding-left: 0;
   padding-bottom: 0;
-}
-.main-right .main-box .left-form-content input[type="file"].valid,
-.main-right .main-box .right-form-content input[type="file"].valid {
-  color: black;
+  padding-top: 0;
 }
 .main-right .main-box .left-form-content input[type="file"].error,
 .main-right .main-box .right-form-content input[type="file"].error {
@@ -842,6 +839,7 @@ h6 {
   float: left;
   width: 200px;
   height: 200px;
+  margin-top: 5px;
 }
 .main-right .main-box .generate-pdf {
   float: left;

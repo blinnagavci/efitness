@@ -60,7 +60,7 @@ $(document).ready(function () {
     $(document).on("focusin", ".readonly", function () {
         $(this).prop('readonly', true);
     });
-    $("input.readonly").change(function(){
+    $("input.readonly").change(function () {
         $(this).removeClass("error");
     });
     $(document).on("focusout", ".readonly", function () {
@@ -86,7 +86,7 @@ function validateForms() {
             }
         }
     });
-    $("input[class='number']").on('keydown paste', function (e) {
+    $("input.number").on('keydown paste', function (e) {
         -1 !== $.inArray(e.keyCode, [46, 8, 9, 27, 13, 110, 190]) || /65|67|86|88/.test(e.keyCode) && (!0 === e.ctrlKey || !0 === e.metaKey) || 35 <= e.keyCode && 40 >= e.keyCode || (e.shiftKey || 48 > e.keyCode || 57 < e.keyCode) && (96 > e.keyCode || 105 < e.keyCode) && e.preventDefault();
     });
     $(".add-membership-form").validate({
@@ -117,6 +117,10 @@ function controlImg() {
                 }
                 $('#member-photo').attr('src', 'repository/no_image.png');
                 $("#member-upload").val('');
+        }
+        if ($('#member-upload').val() == "") {
+            console.log("asd");
+            $("#member-photo").attr('src', 'repository/no_image.png');
         }
     });
     $('#remove').hide();
