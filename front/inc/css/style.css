@@ -797,6 +797,10 @@ h6 {
 .main-right .main-box .right-form-content input[type="file"].error {
   color: red;
 }
+.main-right .main-box .left-form-content input[type="file"].valid,
+.main-right .main-box .right-form-content input[type="file"].valid {
+  color: black;
+}
 .main-right .main-box .left-form-content input.error,
 .main-right .main-box .right-form-content input.error {
   border-color: red;
