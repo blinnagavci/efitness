@@ -670,6 +670,12 @@ h6 {
   font-weight: 300;
   margin-top: 0;
 }
+.main-right h2 {
+  color: #333333;
+  font-weight: 300;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
 .main-right .main-box {
   float: left;
   width: 100%;
@@ -901,13 +907,44 @@ h6 {
   text-align: center;
   color: #333333;
 }
+.main-right .main-box .member-table td.buttons {
+  text-align: left;
+  padding: 4px;
+  width: 50px;
+}
 .main-right .main-box .member-table th {
   font-weight: 600;
   background-color: #ecf0f5;
 }
+.main-right .main-box button.remove-member,
+.main-right .main-box button.edit-member {
+  border-radius: 3px;
+  padding: 6px 12px;
+  color: #fff;
+  border: 1px solid #3c8dbc;
+  background-color: #3c8dbc;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+}
+.main-right .main-box button.remove-member:hover,
+.main-right .main-box button.edit-member:hover {
+  background: #fff;
+  color: #3c8dbc;
+}
+.main-right .main-box button.remove-member {
+  border-color: #FF0000;
+  background-color: #FF0000;
+}
+.main-right .main-box button.remove-member:hover {
+  background: #fff;
+  color: #FF0000;
+}
 .main-right .left-membership {
   float: left;
   width: 33%;
+  padding-left: 10px;
 }
 .main-right .left-membership input[type='submit'] {
   height: 36px;

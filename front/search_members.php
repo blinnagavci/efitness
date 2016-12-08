@@ -33,7 +33,10 @@ require('inc/database/db_connect.php');
                             <td><?php echo $row['gender'] ?></td>
                             <td><?php echo $row['birth_date'] ?></td>
                             <td><?php echo $row['telephone_no'] ?></td>
+                            <td class="buttons"><button onclick="//document.write('<?php //call a PHP function here ?>');" class="edit-member">Edit</button></td>
+                            <td class="buttons"><button onclick="//document.write('<?php //call a PHP function here ?>');" class="remove-member" >Remove</button></td>
                         </tr>
+                        
                     <?php } ?>
                 </table>
                 <button class="generate-pdf">Export to PDF</button>

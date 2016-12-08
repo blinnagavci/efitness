@@ -6,6 +6,7 @@ require('parts/navigation.php');
     <h1>Settings</h1>
     <div class="main-box">
         <div class="left-membership">
+            <h2>Membership Settings</h2>
             <div class="add-membership">  
                 <form class="add-membership-form" method="POST" action="inc/database/add_membership.php">
                     <label class="settings-label">Membership Type</label>

@@ -153,6 +153,12 @@
         font-weight: 300;
         margin-top: 0;
     }
+    h2{
+        color: #333333;
+        font-weight: 300;
+        margin-top: 10px; 
+        margin-bottom: 10px; 
+    }
     .main-box{
         float: left;
         width: 100%;
@@ -333,6 +339,12 @@
                 text-align: center;
                 color: #333333;
             }
+            td.buttons{
+                text-align: left;
+                padding: 4px;
+                width: 50px;
+
+            }
             th{
                 font-weight: 600;
                 background-color: #ecf0f5;
@@ -346,11 +358,34 @@
                         }
                     }*/
         }
+        button.remove-member, button.edit-member{
+            border-radius: 3px;
+            padding: 6px 12px;
+            color: #fff;
+            border: 1px solid #3c8dbc;
+            background-color: #3c8dbc;
+            .transition(all 0.2s);
+            &:hover{
+                background: #fff;
+                color: #3c8dbc;
+            }
+        }
+        button.remove-member{
+            border-color: #FF0000;
+            background-color: #FF0000;
+            &:hover{
+                background: #fff;
+                color: #FF0000;
+            }
+        }
+
+
     }
 
     .left-membership{
         float:left;
         width:33%;
+        padding-left: 10px;
         input[type='submit']{
             height: 36px;
             width: 28%;
