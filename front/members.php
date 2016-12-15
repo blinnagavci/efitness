@@ -51,7 +51,7 @@ require('parts/navigation.php');
                     <option value="select" disabled selected>Select</option>
                     <?php
                     include('inc/database/db_connect.php');
-                    
+
                     $sql = 'SELECT membership_type FROM membership WHERE status= "0"';
                     $retval = mysqli_query($conn, $sql);
                     if (!$retval) {

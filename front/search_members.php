@@ -14,33 +14,33 @@ require('inc/database/db_connect.php');
         ?>
         <h1>Search Member</h1>
         <div class="main-box">
-                <table class="member-table">
+            <table class="member-table">
+                <tr>
+                    <th>ID</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Gender</th>
+                    <th>Date of Birth</th>
+                    <th>Phone No.</th>
+                </tr>
+                <?php
+                while ($row = $result->fetch_assoc()) {
+                    ?>
                     <tr>
-                        <th>ID</th>
-                        <th>First Name</th>
-                        <th>Last Name</th>
-                        <th>Gender</th>
-                        <th>Date of Birth</th>
-                        <th>Phone No.</th>
+                        <td><?php echo $row["id"] ?></td>
+                        <td><?php echo $row['first_name'] ?></td>
+                        <td><?php echo $row['last_name'] ?></td>
+                        <td><?php echo $row['gender'] ?></td>
+                        <td><?php echo $row['birth_date'] ?></td>
+                        <td><?php echo $row['telephone_no'] ?></td>
+                        <td class="buttons"><button onclick="//document.write('<?php //call a PHP function here    ?>');" class="edit-member">Edit</button></td>
+                        <td class="buttons"><button onclick="//document.write('<?php //call a PHP function here    ?>');" class="remove-member" >Remove</button></td>
                     </tr>
-                    <?php
-                    while ($row = $result->fetch_assoc()) {
-                        ?>
-                        <tr>
-                            <td><?php echo $row["id"] ?></td>
-                            <td><?php echo $row['first_name'] ?></td>
-                            <td><?php echo $row['last_name'] ?></td>
-                            <td><?php echo $row['gender'] ?></td>
-                            <td><?php echo $row['birth_date'] ?></td>
-                            <td><?php echo $row['telephone_no'] ?></td>
-                            <td class="buttons"><button onclick="//document.write('<?php //call a PHP function here ?>');" class="edit-member">Edit</button></td>
-                            <td class="buttons"><button onclick="//document.write('<?php //call a PHP function here ?>');" class="remove-member" >Remove</button></td>
-                        </tr>
-                        
-                    <?php } ?>
-                </table>
-                <button class="generate-pdf">Export to PDF</button>
-            </div>
+
+                <?php } ?>
+            </table>
+            <button class="generate-pdf">Export to PDF</button>
+        </div>
         <?php
     } else {
         echo "0 results";

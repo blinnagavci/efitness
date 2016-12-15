@@ -24,12 +24,12 @@
                         Search Members
                     </a>
                 </li>
-<!--                <li>
-                    <a class="<?php active('members_settings') ? 'active' : NULL ?>" href="members_settings" title="Member Settings">
-                        <i class="fa settings"></i>
-                        Settings
-                    </a>
-                </li>-->
+                <!--                <li>
+                                    <a class="<?php active('members_settings') ? 'active' : NULL ?>" href="members_settings" title="Member Settings">
+                                        <i class="fa settings"></i>
+                                        Settings
+                                    </a>
+                                </li>-->
             </ul>
         </li>
         <li>

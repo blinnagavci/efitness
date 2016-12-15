@@ -7,5 +7,3 @@ function active($currect_page) {
         echo 'active'; //class name in css 
     }
 }
-
-

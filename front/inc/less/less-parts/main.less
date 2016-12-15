@@ -18,7 +18,7 @@
     float: left;
     width: 100%;
     background-image: url('../../repository/cropped-img.jpg');
-    background-repeat: no-repeat;
+    background-repeat: no-repefat;
     background-size: cover;
     height:119px;
 }
@@ -236,6 +236,7 @@
                 .transition(all 0.35s);
                 &.error{
                     border-color: red;
+
                 }
             }
             input{
@@ -244,9 +245,10 @@
                 border-radius: 3px;
                 padding: 7px;
                 position: relative;
-                .transition(all 0.35s);
+                .transition(all 0.3s);
                 &:focus{
-                    box-shadow: 0 0 5px #719ECE;
+                    border-color: #719ece;
+                    box-shadow: 0 0 5px #719ece;
                 }
                 &[type="file"]{
                     border: none;

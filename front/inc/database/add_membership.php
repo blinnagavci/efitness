@@ -1,4 +1,5 @@
 <?php
+
 require('db_connect.php');
 
 if (isset($_POST['add_membership_submit'])) {
@@ -12,8 +13,7 @@ if (isset($_POST['add_membership_submit'])) {
 
     if (!$retval1) {
         die('Could not enter data to membership table' . mysqli_connect_error());
-    }
-    else {
+    } else {
         echo "<script type='text/javascript'>window.alert('Membership successfully added')</script>";
     }
 
