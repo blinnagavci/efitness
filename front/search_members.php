@@ -22,6 +22,7 @@ require('inc/database/db_connect.php');
                     <th>Gender</th>
                     <th>Date of Birth</th>
                     <th>Phone No.</th>
+                    <th colspan="2">Options</th>
                 </tr>
                 <?php
                 while ($row = $result->fetch_assoc()) {
@@ -33,8 +34,8 @@ require('inc/database/db_connect.php');
                         <td><?php echo $row['gender'] ?></td>
                         <td><?php echo $row['birth_date'] ?></td>
                         <td><?php echo $row['telephone_no'] ?></td>
-                        <td class="buttons"><button onclick="//document.write('<?php //call a PHP function here    ?>');" class="edit-member">Edit</button></td>
-                        <td class="buttons"><button onclick="//document.write('<?php //call a PHP function here    ?>');" class="remove-member" >Remove</button></td>
+                        <td class="buttons"><button onclick="//document.write('<?php //call a PHP function here     ?>');" class="edit-member">Edit</button></td>
+                        <td class="buttons"><button onclick="//document.write('<?php //call a PHP function here     ?>');" class="remove-member" >Remove</button></td>
                     </tr>
 
                 <?php } ?>
