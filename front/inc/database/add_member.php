@@ -28,10 +28,6 @@ if (isset($_POST['submit'])) {
         move_uploaded_file($temp_name, $upload_directory . $newfilename);
     }
 
-//    define('DIRECTORY', 'repository/member_photos');
-//
-//    $content = file_get_contents('http://anothersite/images/goods.jpg');
-//    file_put_contents(DIRECTORY . '/image.jpg', $content);
     $sql_member = "INSERT INTO member (first_name, last_name, gender, residential_address, city, telephone_no,
 alternative_no, email, birth_date, photo)
 VALUES ('$firstname', '$lastname', '$gender', '$address', '$city', '$telephoneno', '$alternativeno' , '$email', '$birthdate', '$newfilename')";
@@ -43,13 +39,6 @@ VALUES ('$firstname', '$lastname', '$gender', '$address', '$city', '$telephoneno
         die('Could not enter data to member table' . mysqli_connect_error());
     }
 
-//    $sql_membership = "INSERT into membership (membership_type) VALUES ('$membershiptype')";
-//
-//    $retval2 = mysqli_query($conn, $sql_membership);
-//
-//    if (!$retval2) {
-//        die('Could not enter data to membership table' . mysqli_connect_error());
-//    }
     $memberid = mysqli_query($conn, "SELECT id from member ORDER BY id DESC");
     $membershipid = mysqli_query($conn, "SELECT id from membership WHERE membership_type = '$membershiptype'");
     $memberrow = mysqli_fetch_row($memberid);

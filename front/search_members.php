@@ -4,7 +4,6 @@ require('parts/navigation.php');
 require('inc/database/db_connect.php');
 ?>
 <div class="main-right">
-
     <?php
     $sql = "SELECT id, first_name, last_name, gender, birth_date, telephone_no FROM member";
     $result = $conn->query($sql);
@@ -34,8 +33,10 @@ require('inc/database/db_connect.php');
                         <td><?php echo $row['gender'] ?></td>
                         <td><?php echo $row['birth_date'] ?></td>
                         <td><?php echo $row['telephone_no'] ?></td>
-                        <td class="buttons"><button onclick="//document.write('<?php //call a PHP function here     ?>');" class="edit-member">Edit</button></td>
-                        <td class="buttons"><button onclick="//document.write('<?php //call a PHP function here     ?>');" class="remove-member" >Remove</button></td>
+                        <td class="buttons"><a class="edit-member" href="#">Edit</a></td>
+                        <td class="buttons">
+                            <a class="remove-member" href='inc/database/remove_member.php?id=<?php echo $row['id'] ?> ' name="remove-member"/>Delete</a>
+                        </td>    
                     </tr>
 
                 <?php } ?>
@@ -44,7 +45,7 @@ require('inc/database/db_connect.php');
         </div>
         <?php
     } else {
-        echo "0 results";
+        echo "No results";
     }
     $conn->close();
     ?>

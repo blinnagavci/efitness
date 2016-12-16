@@ -6,31 +6,6 @@ $(document).ready(function () {
     });
     $(".main-left-after").width($('.main-left').width());
     $(".main-right").css("margin-left", $(".main-left").width());
-//    $('.main-left>ul>li a').click(function () {
-//        var innerList = $(this).parent().find("ul");
-//        var innerList2 = $(this).parent();
-//        $(this).parent().siblings().children().removeClass("active");
-//        innerList.slideToggle();
-//        if (innerList.length > 0) {
-////            if (innerList2.hasClass("down-arrow")) {
-////                innerList2.removeClass("down-arrow").addClass("right-arrow");
-////            } else {
-////                innerList2.removeClass("right-arrow").addClass("down-arrow");
-////            }
-//            innerList.find("a").removeClass("active");
-//            innerList.find("a").first().addClass("active");
-//        }
-////        if (innerList.length === 0) {
-////            $(".main-left>ul>li").each(function () {
-////                if ($(this).hasClass("down-arrow")) {
-////                    $(this).removeClass("down-arrow").addClass("right-arrow");
-////                }
-////            });
-////        }
-//
-//        $(this).parent().siblings().find("ul").slideUp();
-//        $(this).addClass("active");
-//    });
 
     $(".date-picker").datepicker({
         maxDate: new Date(),
@@ -66,6 +41,7 @@ $(document).ready(function () {
     $(document).on("focusout", ".readonly", function () {
         $(this).prop('readonly', false);
     });
+
 });
 $(window).resize(function () {
     $(".main-right").css("margin-left", $(".main-left").width());
@@ -154,19 +130,19 @@ function generatePDF() {
     var pdf = new jsPDF('p', 'pt', 'letter');
     // source can be HTML-formatted string, or a reference
     // to an actual DOM element from which the text will be scraped.
+    source = $('.main-box')[0];
 
-    source = $('.main-box')[0],
-            // we support special element handlers. Register them with jQuery-style 
-            // ID selector for either ID or node name. ("#iAmID", "div", "span" etc.)
-            // There is no support for any other type of selectors 
-            // (class, of compound) at this time.
-            specialElementHandlers = {
-                // element with id of "bypass" - jQuery style selector
-                '#bypassme': function (element, renderer) {
-                    // true = "handled elsewhere, bypass text extraction"
-                    return true;
-                }
-            };
+    // we support special element handlers. Register them with jQuery-style 
+    // ID selector for either ID or node name. ("#iAmID", "div", "span" etc.)
+    // There is no support for any other type of selectors 
+    // (class, of compound) at this time.
+    specialElementHandlers = {
+        // element with id of "bypass" - jQuery style selector
+        '#bypassme': function (element, renderer) {
+            // true = "handled elsewhere, bypass text extraction"
+            return true;
+        }
+    };
     margins = {
         top: 80,
         bottom: 60,
@@ -181,12 +157,11 @@ function generatePDF() {
             margins.top, {// y coord
                 'width': margins.width, // max width of content on PDF
                 'elementHandlers': specialElementHandlers
-
             },
             function (dispose) {
                 // dispose: object with X, Y of the last line add to the PDF 
                 //          this allow the insertion of new lines after html
-                pdf.save('MembersList.pdf');
+                pdf.save('MemberList.pdf');
             }, margins
             );
 }

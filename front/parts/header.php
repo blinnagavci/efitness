@@ -16,7 +16,6 @@
         <script type="text/javascript" src="inc/js/main.js"></script>
         <script>
             $(window).load(function () {
-                // Animate loader off screen
                 $(".se-pre-con").fadeOut("slow");
                 ;
             });

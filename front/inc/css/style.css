@@ -890,8 +890,8 @@ h6 {
 }
 .main-right .main-box .member-table {
   border: 1px solid #A9A9A9;
-  float: left;
   width: 100%;
+  display: table;
   /*        tr:last-child{
                         td:first-child{
                             border-bottom-left-radius: 3px;
@@ -907,18 +907,21 @@ h6 {
   border: 1px solid #A9A9A9;
   text-align: center;
   color: #333333;
+  display: table-cell;
+  vertical-align: middle;
 }
 .main-right .main-box .member-table td.buttons {
-  text-align: left;
-  padding: 4px;
   width: 50px;
+}
+.main-right .main-box .member-table td.buttons a {
+  float: left;
 }
 .main-right .main-box .member-table th {
   font-weight: 600;
   background-color: #ecf0f5;
 }
-.main-right .main-box button.remove-member,
-.main-right .main-box button.edit-member {
+.main-right .main-box .remove-member,
+.main-right .main-box .edit-member {
   border-radius: 3px;
   padding: 6px 12px;
   color: #fff;
@@ -929,16 +932,16 @@ h6 {
   -ms-transition: all 0.2s;
   -o-transition: all 0.2s;
 }
-.main-right .main-box button.remove-member:hover,
-.main-right .main-box button.edit-member:hover {
+.main-right .main-box .remove-member:hover,
+.main-right .main-box .edit-member:hover {
   background: #fff;
   color: #3c8dbc;
 }
-.main-right .main-box button.remove-member {
+.main-right .main-box .remove-member {
   border-color: #FF0000;
   background-color: #FF0000;
 }
-.main-right .main-box button.remove-member:hover {
+.main-right .main-box .remove-member:hover {
   background: #fff;
   color: #FF0000;
 }
