@@ -8,7 +8,7 @@
             </a>
         </li>
         <li>
-            <a class="<?php active('members') || active('search_members') || active('members_settings') ? 'active' : NULL ?>" href="members" title="Members">
+            <a class="<?php active('members') || active('search_members') || active('search_members_field.php?go') || active('members_settings') ? 'active' : NULL ?>" href="members" title="Members">
                 <i class="fa members"></i>Members
             </a>
             <ul>
@@ -19,7 +19,7 @@
                     </a>
                 </li>
                 <li>
-                    <a class="<?php active('search_members') ? 'active' : NULL ?>" href="search_members" title="Search Members">
+                    <a class="<?php (active('search_members') || active('search_members_field.php?go')) ? 'active' : NULL ?>" href="search_members" title="Search Members">
                         <i class="fa fa-search"></i>
                         Search Members
                     </a>

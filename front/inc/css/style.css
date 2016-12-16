@@ -892,6 +892,8 @@ h6 {
   border: 1px solid #A9A9A9;
   width: 100%;
   display: table;
+  margin: 20px 0px 10px 0px;
+  float: left;
   /*        tr:last-child{
                         td:first-child{
                             border-bottom-left-radius: 3px;
@@ -991,7 +993,8 @@ h6 {
 .main-right label.settings-label:first-child {
   padding-top: 0;
 }
-.main-right input.settings-input {
+.main-right input.settings-input,
+.main-right input.search-box {
   width: 70%;
   float: left;
   border-radius: 3px;
@@ -1002,32 +1005,40 @@ h6 {
   -ms-transition: all 0.35s;
   -o-transition: all 0.35s;
 }
-.main-right input.settings-input:focus {
+.main-right input.settings-input:focus,
+.main-right input.search-box:focus {
   box-shadow: 0 0 5px #719ECE;
 }
-.main-right input.settings-input[type="file"] {
+.main-right input.settings-input[type="file"],
+.main-right input.search-box[type="file"] {
   border: none;
   padding-left: 0;
   padding-bottom: 0;
 }
-.main-right input.settings-input[type="file"].valid {
+.main-right input.settings-input[type="file"].valid,
+.main-right input.search-box[type="file"].valid {
   color: black;
 }
-.main-right input.settings-input[type="file"].error {
+.main-right input.settings-input[type="file"].error,
+.main-right input.search-box[type="file"].error {
   color: red;
 }
-.main-right input.settings-input.error {
+.main-right input.settings-input.error,
+.main-right input.search-box.error {
   border-color: red;
 }
-.main-right input.settings-input#remove {
+.main-right input.settings-input#remove,
+.main-right input.search-box#remove {
   width: 20%;
   padding: 5px;
   margin-top: 10px;
 }
-.main-right input.settings-input.number::after {
+.main-right input.settings-input.number::after,
+.main-right input.search-box.number::after {
   content: "€";
 }
-.main-right input.settings-input[type="submit"] {
+.main-right input.settings-input[type="submit"],
+.main-right input.search-box[type="submit"] {
   margin: 15px 0;
   color: #fff;
   border-color: #3c8dbc;
@@ -1037,11 +1048,13 @@ h6 {
   -ms-transition: all 0.2s;
   -o-transition: all 0.2s;
 }
-.main-right input.settings-input[type="submit"]:hover {
+.main-right input.settings-input[type="submit"]:hover,
+.main-right input.search-box[type="submit"]:hover {
   background: #fff;
   color: #3c8dbc;
 }
-.main-right input.settings-input.hide {
+.main-right input.settings-input.hide,
+.main-right input.search-box.hide {
   display: none;
 }
 .main-right .generate-pdf {
@@ -1058,6 +1071,29 @@ h6 {
   -o-transition: all 0.2s;
 }
 .main-right .generate-pdf:hover {
+  background: #fff;
+  color: #3c8dbc;
+}
+.main-right #searchform input.search-box {
+  width: 200px;
+  float: left;
+  border-radius: 3px;
+  padding: 7px;
+}
+.main-right #searchform input.search-button {
+  float: left;
+  border-radius: 3px;
+  padding: 7px 10px;
+  color: #fff;
+  border: 1px solid #3c8dbc;
+  background-color: #3c8dbc;
+  margin-left: 5px;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+}
+.main-right #searchform input.search-button:hover {
   background: #fff;
   color: #3c8dbc;
 }

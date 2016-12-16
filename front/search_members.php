@@ -3,6 +3,7 @@ require('parts/header.php');
 require('parts/navigation.php');
 require('inc/database/db_connect.php');
 ?>
+
 <div class="main-right">
     <?php
     $sql = "SELECT id, first_name, last_name, gender, birth_date, telephone_no FROM member";
@@ -13,6 +14,11 @@ require('inc/database/db_connect.php');
         ?>
         <h1>Search Member</h1>
         <div class="main-box">
+            <form  method="post" action="search_members_field.php?go"  id="searchform"> 
+                <input type="text" name="name" class="search-box" placeholder="Search Member..."> 
+                <input type="submit" name="submit" value="Search" class="search-button"> 
+            </form>
+            
             <table class="member-table">
                 <tr>
                     <th>ID</th>
@@ -33,7 +39,9 @@ require('inc/database/db_connect.php');
                         <td><?php echo $row['gender'] ?></td>
                         <td><?php echo $row['birth_date'] ?></td>
                         <td><?php echo $row['telephone_no'] ?></td>
-                        <td class="buttons"><a class="edit-member" href="#">Edit</a></td>
+                        <td class="buttons">
+                            <a class="edit-member" href="">Edit</a>
+                        </td>
                         <td class="buttons">
                             <a class="remove-member" href='inc/database/remove_member.php?id=<?php echo $row['id'] ?> ' name="remove-member"/>Delete</a>
                         </td>    
