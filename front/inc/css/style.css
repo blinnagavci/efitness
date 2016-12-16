@@ -680,7 +680,7 @@ h6 {
   float: left;
   width: 100%;
   background-color: #fff;
-  padding: 10px 5px;
+  padding: 10px;
   border-radius: 3px;
   box-shadow: 0 0 8px 1px grey;
 }
@@ -892,7 +892,7 @@ h6 {
   border: 1px solid #A9A9A9;
   width: 100%;
   display: table;
-  margin: 20px 0px 10px 0px;
+  margin: 10px 0;
   float: left;
   /*        tr:last-child{
                         td:first-child{
@@ -922,8 +922,13 @@ h6 {
   font-weight: 600;
   background-color: #ecf0f5;
 }
+.main-right .main-box #searchform {
+  float: left;
+  margin: 10px 0;
+}
+.main-right .main-box .edit-member,
 .main-right .main-box .remove-member,
-.main-right .main-box .edit-member {
+.main-right .main-box .search-button {
   border-radius: 3px;
   padding: 6px 12px;
   color: #fff;
@@ -934,8 +939,9 @@ h6 {
   -ms-transition: all 0.2s;
   -o-transition: all 0.2s;
 }
+.main-right .main-box .edit-member:hover,
 .main-right .main-box .remove-member:hover,
-.main-right .main-box .edit-member:hover {
+.main-right .main-box .search-button:hover {
   background: #fff;
   color: #3c8dbc;
 }
