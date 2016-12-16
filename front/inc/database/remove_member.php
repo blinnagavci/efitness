@@ -10,7 +10,7 @@ if (isset($_GET['id'])) {
     $row = mysqli_fetch_assoc($photo);
     $photopath = $row['photo'];
     if (!(unlink("../../repository/member_photos/" . $photopath))) {
-        die("<script type=text/javascript>window.alert('Photo removed successfully.')</script>");
+        die("<script type=text/javascript>window.alert('Photo could not be removed. Please check the member photos directory.')</script>");
     }
     if (!(mysqli_query($conn, $removesql))) {
         die("Could not remove member: " . mysqli_error($conn));

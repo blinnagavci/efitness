@@ -27,14 +27,14 @@ if (isset($_POST['submit'])) {
         $upload_directory = "../../repository/member_photos/";
         move_uploaded_file($temp_name, $upload_directory . $newfilename);
     }
-
     $sql_member = "INSERT INTO member (first_name, last_name, gender, residential_address, city, telephone_no,
 alternative_no, email, birth_date, photo)
 VALUES ('$firstname', '$lastname', '$gender', '$address', '$city', '$telephoneno', '$alternativeno' , '$email', '$birthdate', '$newfilename')";
-
     $retval1 = mysqli_query($conn, $sql_member);
-
-
+//    $imageId = strstr($newfilename, '_', true);
+//    if ($imageId) {
+//        var_dump($imageId);
+//    }
     if (!$retval1) {
         die('Could not enter data to member table' . mysqli_connect_error());
     }
