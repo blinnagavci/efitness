@@ -46,7 +46,14 @@ require('inc/database/db_connect.php');
                             <a class="remove-member" href='inc/database/remove_member.php?id=<?php echo $row['id'] ?> ' name="remove-member"/>Delete</a>
                         </td>  
                         <td class="buttons">
-                            <a class="details-member" href="" name="details-member"/>Details</a>
+                            <script type="text/javascript">
+                                function popupwindow(url, title, win, w, h) {
+                                    var y = window.top.outerHeight / 2 + window.top.screenY - (h / 2);
+                                    var x = window.top.outerWidth / 2 + window.top.screenX - (w / 2);
+                                    return window.open('member_details.php', 'Member Details', 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=yes, resizable=yes, copyhistory=no, width=' + w + ', height=' + h + ', top=' + y + ', left=' + x);
+                                }
+                            </script>
+                            <a class="details-member" href='member_details.php?id=<?php echo $row["id"] ?>' name="details-member"/>Details</a>
                         </td>
                     </tr>
 

@@ -6,7 +6,7 @@ $(document).ready(function () {
     });
     $(".main-left-after").width($('.main-left').width());
     $(".main-right").css("margin-left", $(".main-left").width());
-
+    $(".main-right-full input, .main-right-full select").prop("disabled", true);
     $(".date-picker").datepicker({
         maxDate: new Date(),
         changeYear: true,
@@ -76,6 +76,11 @@ function validateForms() {
     });
 
     $("#searchform").validate({
+        errorPlacement: function () {
+            return false;
+        }
+    });
+    $("#add-membership").validate({
         errorPlacement: function () {
             return false;
         }

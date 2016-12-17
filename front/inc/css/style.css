@@ -656,7 +656,11 @@ h6 {
 .main-left ul li ul li a i.member.member:before {
   content: '\f007';
 }
-.main-right {
+body .main-right-full {
+  width: 100%;
+}
+.main-right,
+.main-right-full {
   width: 85%;
   float: left;
   height: 100%;
@@ -664,19 +668,22 @@ h6 {
   background-color: #ecf0f5;
   padding: 25px;
 }
-.main-right h1 {
+.main-right h1,
+.main-right-full h1 {
   color: #333333;
   font-size: 28px;
   font-weight: 300;
   margin-top: 0;
 }
-.main-right h2 {
+.main-right h2,
+.main-right-full h2 {
   color: #333333;
   font-weight: 300;
   margin-top: 10px;
   margin-bottom: 10px;
 }
-.main-right .main-box {
+.main-right .main-box,
+.main-right-full .main-box {
   float: left;
   width: 100%;
   background-color: #fff;
@@ -685,13 +692,17 @@ h6 {
   box-shadow: 0 0 8px 1px grey;
 }
 .main-right .main-box .left-form-content,
-.main-right .main-box .right-form-content {
+.main-right-full .main-box .left-form-content,
+.main-right .main-box .right-form-content,
+.main-right-full .main-box .right-form-content {
   width: 50%;
   float: left;
   padding: 0 10px;
 }
 .main-right .main-box .left-form-content label,
-.main-right .main-box .right-form-content label {
+.main-right-full .main-box .left-form-content label,
+.main-right .main-box .right-form-content label,
+.main-right-full .main-box .right-form-content label {
   float: left;
   width: 100%;
   padding: 20px 0 5px 0;
@@ -700,21 +711,31 @@ h6 {
   font-size: 14px;
 }
 .main-right .main-box .left-form-content label:first-child,
-.main-right .main-box .right-form-content label:first-child {
+.main-right-full .main-box .left-form-content label:first-child,
+.main-right .main-box .right-form-content label:first-child,
+.main-right-full .main-box .right-form-content label:first-child {
   padding-top: 0;
 }
 .main-right .main-box .left-form-content span.telephone,
+.main-right-full .main-box .left-form-content span.telephone,
 .main-right .main-box .right-form-content span.telephone,
+.main-right-full .main-box .right-form-content span.telephone,
 .main-right .main-box .left-form-content span.mobile,
-.main-right .main-box .right-form-content span.mobile {
+.main-right-full .main-box .left-form-content span.mobile,
+.main-right .main-box .right-form-content span.mobile,
+.main-right-full .main-box .right-form-content span.mobile {
   width: 100%;
   float: left;
   position: relative;
 }
 .main-right .main-box .left-form-content span.telephone::after,
+.main-right-full .main-box .left-form-content span.telephone::after,
 .main-right .main-box .right-form-content span.telephone::after,
+.main-right-full .main-box .right-form-content span.telephone::after,
 .main-right .main-box .left-form-content span.mobile::after,
-.main-right .main-box .right-form-content span.mobile::after {
+.main-right-full .main-box .left-form-content span.mobile::after,
+.main-right .main-box .right-form-content span.mobile::after,
+.main-right-full .main-box .right-form-content span.mobile::after {
   content: "\f095";
   position: absolute;
   font-family: 'FontAwesome';
@@ -723,19 +744,25 @@ h6 {
   color: #555555;
 }
 .main-right .main-box .left-form-content span.error,
-.main-right .main-box .right-form-content span.error {
+.main-right-full .main-box .left-form-content span.error,
+.main-right .main-box .right-form-content span.error,
+.main-right-full .main-box .right-form-content span.error {
   float: left;
   padding-top: 5px;
   color: red;
 }
 .main-right .main-box .left-form-content span.email,
-.main-right .main-box .right-form-content span.email {
+.main-right-full .main-box .left-form-content span.email,
+.main-right .main-box .right-form-content span.email,
+.main-right-full .main-box .right-form-content span.email {
   width: 100%;
   float: left;
   position: relative;
 }
 .main-right .main-box .left-form-content span.email::after,
-.main-right .main-box .right-form-content span.email::after {
+.main-right-full .main-box .left-form-content span.email::after,
+.main-right .main-box .right-form-content span.email::after,
+.main-right-full .main-box .right-form-content span.email::after {
   content: "\f0e0";
   position: absolute;
   font-family: 'FontAwesome';
@@ -744,13 +771,17 @@ h6 {
   color: #555555;
 }
 .main-right .main-box .left-form-content span.date,
-.main-right .main-box .right-form-content span.date {
+.main-right-full .main-box .left-form-content span.date,
+.main-right .main-box .right-form-content span.date,
+.main-right-full .main-box .right-form-content span.date {
   width: 100%;
   float: left;
   position: relative;
 }
 .main-right .main-box .left-form-content span.date::after,
-.main-right .main-box .right-form-content span.date::after {
+.main-right-full .main-box .left-form-content span.date::after,
+.main-right .main-box .right-form-content span.date::after,
+.main-right-full .main-box .right-form-content span.date::after {
   content: "\f073";
   position: absolute;
   font-family: 'FontAwesome';
@@ -760,7 +791,9 @@ h6 {
   pointer-events: none;
 }
 .main-right .main-box .left-form-content select,
-.main-right .main-box .right-form-content select {
+.main-right-full .main-box .left-form-content select,
+.main-right .main-box .right-form-content select,
+.main-right-full .main-box .right-form-content select {
   float: left;
   width: 100%;
   border-radius: 3px;
@@ -773,11 +806,15 @@ h6 {
   -o-transition: all 0.3s;
 }
 .main-right .main-box .left-form-content select.error,
-.main-right .main-box .right-form-content select.error {
+.main-right-full .main-box .left-form-content select.error,
+.main-right .main-box .right-form-content select.error,
+.main-right-full .main-box .right-form-content select.error {
   border-color: red;
 }
 .main-right .main-box .left-form-content input,
-.main-right .main-box .right-form-content input {
+.main-right-full .main-box .left-form-content input,
+.main-right .main-box .right-form-content input,
+.main-right-full .main-box .right-form-content input {
   width: 100%;
   float: left;
   border-radius: 3px;
@@ -789,41 +826,57 @@ h6 {
   -o-transition: all 0.3s;
 }
 .main-right .main-box .left-form-content input:focus,
-.main-right .main-box .right-form-content input:focus {
+.main-right-full .main-box .left-form-content input:focus,
+.main-right .main-box .right-form-content input:focus,
+.main-right-full .main-box .right-form-content input:focus {
   border-color: #719ece;
   box-shadow: 0 0 5px #719ece;
 }
 .main-right .main-box .left-form-content input[type="file"],
-.main-right .main-box .right-form-content input[type="file"] {
+.main-right-full .main-box .left-form-content input[type="file"],
+.main-right .main-box .right-form-content input[type="file"],
+.main-right-full .main-box .right-form-content input[type="file"] {
   border: none;
   padding-left: 0;
   padding-bottom: 0;
   padding-top: 0;
 }
 .main-right .main-box .left-form-content input[type="file"].error,
-.main-right .main-box .right-form-content input[type="file"].error {
+.main-right-full .main-box .left-form-content input[type="file"].error,
+.main-right .main-box .right-form-content input[type="file"].error,
+.main-right-full .main-box .right-form-content input[type="file"].error {
   color: red;
 }
 .main-right .main-box .left-form-content input[type="file"].valid,
-.main-right .main-box .right-form-content input[type="file"].valid {
+.main-right-full .main-box .left-form-content input[type="file"].valid,
+.main-right .main-box .right-form-content input[type="file"].valid,
+.main-right-full .main-box .right-form-content input[type="file"].valid {
   color: black;
 }
 .main-right .main-box .left-form-content input.error,
-.main-right .main-box .right-form-content input.error {
+.main-right-full .main-box .left-form-content input.error,
+.main-right .main-box .right-form-content input.error,
+.main-right-full .main-box .right-form-content input.error {
   border-color: red;
 }
 .main-right .main-box .left-form-content input#remove,
-.main-right .main-box .right-form-content input#remove {
+.main-right-full .main-box .left-form-content input#remove,
+.main-right .main-box .right-form-content input#remove,
+.main-right-full .main-box .right-form-content input#remove {
   width: 20%;
   padding: 5px;
   margin-top: 10px;
 }
 .main-right .main-box .left-form-content input.number::after,
-.main-right .main-box .right-form-content input.number::after {
+.main-right-full .main-box .left-form-content input.number::after,
+.main-right .main-box .right-form-content input.number::after,
+.main-right-full .main-box .right-form-content input.number::after {
   content: "€";
 }
 .main-right .main-box .left-form-content input[type="submit"],
-.main-right .main-box .right-form-content input[type="submit"] {
+.main-right-full .main-box .left-form-content input[type="submit"],
+.main-right .main-box .right-form-content input[type="submit"],
+.main-right-full .main-box .right-form-content input[type="submit"] {
   margin: 15px 0;
   color: #fff;
   border-color: #3c8dbc;
@@ -834,22 +887,33 @@ h6 {
   -o-transition: all 0.2s;
 }
 .main-right .main-box .left-form-content input[type="submit"]:hover,
-.main-right .main-box .right-form-content input[type="submit"]:hover {
+.main-right-full .main-box .left-form-content input[type="submit"]:hover,
+.main-right .main-box .right-form-content input[type="submit"]:hover,
+.main-right-full .main-box .right-form-content input[type="submit"]:hover {
   background: #fff;
   color: #3c8dbc;
 }
 .main-right .main-box .left-form-content input.hide,
-.main-right .main-box .right-form-content input.hide {
+.main-right-full .main-box .left-form-content input.hide,
+.main-right .main-box .right-form-content input.hide,
+.main-right-full .main-box .right-form-content input.hide {
   display: none;
 }
 .main-right .main-box .left-form-content img,
-.main-right .main-box .right-form-content img {
+.main-right-full .main-box .left-form-content img,
+.main-right .main-box .right-form-content img,
+.main-right-full .main-box .right-form-content img {
   float: left;
   width: 200px;
   height: 200px;
   margin-top: 5px;
 }
-.main-right .main-box .generate-pdf {
+.main-right .main-box #details,
+.main-right-full .main-box #details {
+  float: right;
+}
+.main-right .main-box .generate-pdf,
+.main-right-full .main-box .generate-pdf {
   float: left;
   margin-top: 10px;
   border-radius: 3px;
@@ -862,12 +926,15 @@ h6 {
   -ms-transition: all 0.2s;
   -o-transition: all 0.2s;
 }
-.main-right .main-box .generate-pdf:hover {
+.main-right .main-box .generate-pdf:hover,
+.main-right-full .main-box .generate-pdf:hover {
   background: #fff;
   color: #3c8dbc;
 }
 .main-right .main-box .settings-remove-ms,
-.main-right .main-box .settings-add-ms {
+.main-right-full .main-box .settings-remove-ms,
+.main-right .main-box .settings-add-ms,
+.main-right-full .main-box .settings-add-ms {
   border-radius: 3px;
   padding: 8px;
   float: left;
@@ -881,14 +948,20 @@ h6 {
   -o-transition: all 0.2s;
 }
 .main-right .main-box .settings-remove-ms:hover,
-.main-right .main-box .settings-add-ms:hover {
+.main-right-full .main-box .settings-remove-ms:hover,
+.main-right .main-box .settings-add-ms:hover,
+.main-right-full .main-box .settings-add-ms:hover {
   background: #fff;
   color: #3c8dbc;
 }
-.main-right .main-box .settings-add-ms {
+.main-right .main-box .settings-add-ms,
+.main-right-full .main-box .settings-add-ms {
   padding: 8px 23px;
 }
-.main-right .main-box .member-table {
+.main-right .main-box .member-table,
+.main-right-full .main-box .member-table,
+.main-right .main-box .membership-table,
+.main-right-full .main-box .membership-table {
   border: 1px solid #A9A9A9;
   width: 100%;
   display: table;
@@ -904,7 +977,13 @@ h6 {
                     }*/
 }
 .main-right .main-box .member-table td,
-.main-right .main-box .member-table th {
+.main-right-full .main-box .member-table td,
+.main-right .main-box .membership-table td,
+.main-right-full .main-box .membership-table td,
+.main-right .main-box .member-table th,
+.main-right-full .main-box .member-table th,
+.main-right .main-box .membership-table th,
+.main-right-full .main-box .membership-table th {
   padding: 7px;
   border: 1px solid #A9A9A9;
   text-align: center;
@@ -912,24 +991,38 @@ h6 {
   display: table-cell;
   vertical-align: middle;
 }
-.main-right .main-box .member-table td.buttons {
+.main-right .main-box .member-table td.buttons,
+.main-right-full .main-box .member-table td.buttons,
+.main-right .main-box .membership-table td.buttons,
+.main-right-full .main-box .membership-table td.buttons {
   width: 50px;
 }
-.main-right .main-box .member-table td.buttons a {
+.main-right .main-box .member-table td.buttons a,
+.main-right-full .main-box .member-table td.buttons a,
+.main-right .main-box .membership-table td.buttons a,
+.main-right-full .main-box .membership-table td.buttons a {
   float: left;
 }
-.main-right .main-box .member-table th {
+.main-right .main-box .member-table th,
+.main-right-full .main-box .member-table th,
+.main-right .main-box .membership-table th,
+.main-right-full .main-box .membership-table th {
   font-weight: 600;
   background-color: #ecf0f5;
 }
-.main-right .main-box #searchform {
+.main-right .main-box #searchform,
+.main-right-full .main-box #searchform {
   float: left;
   margin: 10px 0;
 }
 .main-right .main-box .edit-member,
+.main-right-full .main-box .edit-member,
 .main-right .main-box .remove-member,
+.main-right-full .main-box .remove-member,
 .main-right .main-box .search-button,
-.main-right .main-box .details-member {
+.main-right-full .main-box .search-button,
+.main-right .main-box .details-member,
+.main-right-full .main-box .details-member {
   border-radius: 3px;
   padding: 6px 12px;
   color: #fff;
@@ -941,48 +1034,61 @@ h6 {
   -o-transition: all 0.2s;
 }
 .main-right .main-box .edit-member:hover,
+.main-right-full .main-box .edit-member:hover,
 .main-right .main-box .remove-member:hover,
+.main-right-full .main-box .remove-member:hover,
 .main-right .main-box .search-button:hover,
-.main-right .main-box .details-member:hover {
+.main-right-full .main-box .search-button:hover,
+.main-right .main-box .details-member:hover,
+.main-right-full .main-box .details-member:hover {
   background: #fff;
   color: #3c8dbc;
 }
-.main-right .main-box .remove-member {
+.main-right .main-box .remove-member,
+.main-right-full .main-box .remove-member {
   border-color: #FF0000;
   background-color: #FF0000;
 }
-.main-right .main-box .remove-member:hover {
+.main-right .main-box .remove-member:hover,
+.main-right-full .main-box .remove-member:hover {
   background: #fff;
   color: #FF0000;
 }
-.main-right .main-box .details-member {
+.main-right .main-box .details-member,
+.main-right-full .main-box .details-member {
   border-color: #ffb701;
   background-color: #ffb701;
 }
-.main-right .main-box .details-member:hover {
+.main-right .main-box .details-member:hover,
+.main-right-full .main-box .details-member:hover {
   background: #fff;
   color: #ffb701;
 }
-.main-right .left-membership {
+.main-right .left-membership,
+.main-right-full .left-membership {
   float: left;
   width: 33%;
   padding-left: 10px;
 }
-.main-right .left-membership input[type='submit'] {
+.main-right .left-membership input[type='submit'],
+.main-right-full .left-membership input[type='submit'] {
   height: 36px;
   width: 28%;
 }
-.main-right .left-membership .add-membership {
+.main-right .left-membership .add-membership,
+.main-right-full .left-membership .add-membership {
   float: left;
   width: 100%;
   margin: 5px;
 }
-.main-right .left-membership .remove-membership {
+.main-right .left-membership .remove-membership,
+.main-right-full .left-membership .remove-membership {
   float: left;
   width: 100%;
   margin: 5px;
 }
-.main-right .settings-membership-select {
+.main-right .settings-membership-select,
+.main-right-full .settings-membership-select {
   float: left;
   width: 70%;
   border-radius: 3px;
@@ -995,10 +1101,12 @@ h6 {
   -ms-transition: all 0.35s;
   -o-transition: all 0.35s;
 }
-.main-right .settings-membership-select.error {
+.main-right .settings-membership-select.error,
+.main-right-full .settings-membership-select.error {
   border-color: red;
 }
-.main-right label.settings-label {
+.main-right label.settings-label,
+.main-right-full label.settings-label {
   float: left;
   width: 100%;
   padding: 20px 0 10px 0;
@@ -1006,11 +1114,14 @@ h6 {
   color: #333333;
   font-size: 14px;
 }
-.main-right label.settings-label:first-child {
+.main-right label.settings-label:first-child,
+.main-right-full label.settings-label:first-child {
   padding-top: 0;
 }
 .main-right input.settings-input,
-.main-right input.search-box {
+.main-right-full input.settings-input,
+.main-right input.search-box,
+.main-right-full input.search-box {
   width: 70%;
   float: left;
   border-radius: 3px;
@@ -1022,39 +1133,55 @@ h6 {
   -o-transition: all 0.35s;
 }
 .main-right input.settings-input:focus,
-.main-right input.search-box:focus {
+.main-right-full input.settings-input:focus,
+.main-right input.search-box:focus,
+.main-right-full input.search-box:focus {
   box-shadow: 0 0 5px #719ECE;
 }
 .main-right input.settings-input[type="file"],
-.main-right input.search-box[type="file"] {
+.main-right-full input.settings-input[type="file"],
+.main-right input.search-box[type="file"],
+.main-right-full input.search-box[type="file"] {
   border: none;
   padding-left: 0;
   padding-bottom: 0;
 }
 .main-right input.settings-input[type="file"].valid,
-.main-right input.search-box[type="file"].valid {
+.main-right-full input.settings-input[type="file"].valid,
+.main-right input.search-box[type="file"].valid,
+.main-right-full input.search-box[type="file"].valid {
   color: black;
 }
 .main-right input.settings-input[type="file"].error,
-.main-right input.search-box[type="file"].error {
+.main-right-full input.settings-input[type="file"].error,
+.main-right input.search-box[type="file"].error,
+.main-right-full input.search-box[type="file"].error {
   color: red;
 }
 .main-right input.settings-input.error,
-.main-right input.search-box.error {
+.main-right-full input.settings-input.error,
+.main-right input.search-box.error,
+.main-right-full input.search-box.error {
   border-color: red;
 }
 .main-right input.settings-input#remove,
-.main-right input.search-box#remove {
+.main-right-full input.settings-input#remove,
+.main-right input.search-box#remove,
+.main-right-full input.search-box#remove {
   width: 20%;
   padding: 5px;
   margin-top: 10px;
 }
 .main-right input.settings-input.number::after,
-.main-right input.search-box.number::after {
+.main-right-full input.settings-input.number::after,
+.main-right input.search-box.number::after,
+.main-right-full input.search-box.number::after {
   content: "€";
 }
 .main-right input.settings-input[type="submit"],
-.main-right input.search-box[type="submit"] {
+.main-right-full input.settings-input[type="submit"],
+.main-right input.search-box[type="submit"],
+.main-right-full input.search-box[type="submit"] {
   margin: 15px 0;
   color: #fff;
   border-color: #3c8dbc;
@@ -1065,15 +1192,20 @@ h6 {
   -o-transition: all 0.2s;
 }
 .main-right input.settings-input[type="submit"]:hover,
-.main-right input.search-box[type="submit"]:hover {
+.main-right-full input.settings-input[type="submit"]:hover,
+.main-right input.search-box[type="submit"]:hover,
+.main-right-full input.search-box[type="submit"]:hover {
   background: #fff;
   color: #3c8dbc;
 }
 .main-right input.settings-input.hide,
-.main-right input.search-box.hide {
+.main-right-full input.settings-input.hide,
+.main-right input.search-box.hide,
+.main-right-full input.search-box.hide {
   display: none;
 }
-.main-right .generate-pdf {
+.main-right .generate-pdf,
+.main-right-full .generate-pdf {
   float: left;
   margin-top: 10px;
   border-radius: 3px;
@@ -1086,17 +1218,20 @@ h6 {
   -ms-transition: all 0.2s;
   -o-transition: all 0.2s;
 }
-.main-right .generate-pdf:hover {
+.main-right .generate-pdf:hover,
+.main-right-full .generate-pdf:hover {
   background: #fff;
   color: #3c8dbc;
 }
-.main-right #searchform input.search-box {
+.main-right #searchform input.search-box,
+.main-right-full #searchform input.search-box {
   width: 200px;
   float: left;
   border-radius: 3px;
   padding: 7px;
 }
-.main-right #searchform input.search-button {
+.main-right #searchform input.search-button,
+.main-right-full #searchform input.search-button {
   float: left;
   border-radius: 3px;
   padding: 7px 10px;
@@ -1109,7 +1244,8 @@ h6 {
   -ms-transition: all 0.2s;
   -o-transition: all 0.2s;
 }
-.main-right #searchform input.search-button:hover {
+.main-right #searchform input.search-button:hover,
+.main-right-full #searchform input.search-button:hover {
   background: #fff;
   color: #3c8dbc;
 }
