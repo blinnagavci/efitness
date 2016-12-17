@@ -55,20 +55,21 @@ require('inc/database/db_connect.php');
     VALUES ('$membershipamount', '$membershipstart', '$membershipend', '$id', '$membershiprow[0]')";
 
                     $retval1 = mysqli_query($conn, $sql);
-
+                    header("refresh: 0;");
                     if (!$retval1) {
                         die('Could not enter data to membership payment table' . mysqli_connect_error());
                     } else {
                         echo "<script type='text/javascript'>window.alert('Membership payment successfully added')</script>";
                     }
+
                     mysqli_close($conn);
-                    header("refresh: 0;");
                 }
                 ?>
             </form>
         </div>
         <div class="left-form-content">
             <?php
+            require('inc/database/db_connect.php');
             if (isset($_GET['id'])) {
                 $id = $_GET['id'];
                 $sql = "SELECT id, start_date, end_date, amount_of_payment FROM membership_payment WHERE id_member = '$id' ORDER BY id DESC";
