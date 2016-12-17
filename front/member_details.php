@@ -1,5 +1,6 @@
 <?php
 require('parts/header.php');
+require('parts/navigation.php');
 require('inc/database/db_connect.php');
 ?>
 <div class="main-right">

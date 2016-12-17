@@ -85,6 +85,11 @@ function validateForms() {
             return false;
         }
     });
+    $("#member-edit-form").validate({
+        errorPlacement: function () {
+            return false;
+        }
+    });
 }
 
 function controlImg() {
