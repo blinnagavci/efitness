@@ -5,7 +5,7 @@ if (isset($_POST['edit_member_submit'])) {
     if (isset($_GET['id'])) {
         $id = $_GET['id'];
     }
-    
+
     $firstname = $_POST['member_firstname'];
     $lastname = ($_POST['member_surname']);
     $address = ($_POST['member_address']);
@@ -15,10 +15,24 @@ if (isset($_POST['edit_member_submit'])) {
     $telephoneno = ($_POST['member_telephone']);
     $alternativeno = ($_POST['member_alternative']);
     $birthdate = ($_POST['member_date']);
-    
-    $sql = "UPDATE member SET first_name='$firstname', last_name='$lastname', gender='$gender', residential_address='$address', "
-            . "city='$city', telephone_no='$telephoneno', alternative_no='$alternativeno', email='$email', birth_date='$birthdate' WHERE id = $id";
 
+    if ($_FILES['member_upload']['name'] != '') {
+        $uploadedFileName = $_FILES['member_upload']['name'];
+        $temp_name = $_FILES['member_upload']['tmp_name'];
+        $temp = explode(".", $_FILES["member_upload"]["name"]);
+        $getID = mysqli_query($conn, "SELECT id FROM member ORDER BY id DESC");
+        $idRow = mysqli_fetch_row($getID);
+        $newfilename = $idRow[0] . "_" . $firstname . "_" . $lastname . '.' . end($temp);
+        if ($uploadedFileName != '') {
+            $upload_directory = "repository/member_photos/";
+            move_uploaded_file($temp_name, $upload_directory . $newfilename);
+        }
+        $sql = "UPDATE member SET first_name='$firstname', last_name='$lastname', gender='$gender', residential_address='$address', "
+                . "city='$city', telephone_no='$telephoneno', alternative_no='$alternativeno', email='$email', birth_date='$birthdate', photo='$newfilename' WHERE id = $id";
+    } else {
+        $sql = "UPDATE member SET first_name='$firstname', last_name='$lastname', gender='$gender', residential_address='$address', "
+                . "city='$city', telephone_no='$telephoneno', alternative_no='$alternativeno', email='$email', birth_date='$birthdate' WHERE id = $id";
+    }
     $retval1 = mysqli_query($conn, $sql);
     if (!$retval1) {
         die('Could not edit data.' . mysqli_connect_error());
@@ -27,7 +41,6 @@ if (isset($_POST['edit_member_submit'])) {
     }
 
     mysqli_close($conn);
-    header("refresh: 0; url= search_members.php");
 }
 require('parts/navigation.php');
 ?>
@@ -41,7 +54,7 @@ require('parts/navigation.php');
                 if (isset($_GET['id'])) {
                     $id = $_GET['id'];
                 }
-                $sql = "SELECT first_name, last_name, gender, residential_address, city, birth_date, alternative_no, telephone_no, email FROM member WHERE id = '$id'";
+                $sql = "SELECT first_name, last_name, gender, residential_address, city, birth_date, alternative_no, telephone_no, email, photo FROM member WHERE id = '$id'";
                 $result = $conn->query($sql);
                 $row = $result->fetch_assoc();
                 ?>
@@ -52,9 +65,24 @@ require('parts/navigation.php');
                 <label>Gender</label>
                 <select name="member_gender" required>
                     <option value="<?php echo $row['gender']; ?>" selected><?php echo $row['gender']; ?></option>
-                    <option value="Male">Male</option>
-                    <option value="Female">Female</option>
-                    <option value="Other">Other</option>
+                    <?php
+                    switch ($row['gender']) {
+                        case "Male":
+                            echo '<option value="Female">Female</option>';
+                            echo '<option value="Other">Other</option>';
+                            break;
+                        case "Female":
+                            echo '<option value="Male">Male</option>';
+                            echo '<option value="Other">Other</option>';
+                            break;
+                        case "Other":
+                            echo '<option value="Female">Male</option>';
+                            echo '<option value="Other">Female</option>';
+                            break;
+                        default:
+                            echo 'Something went wrong';
+                    }
+                    ?>
                 </select>
                 <label>Birth Date</label>
                 <span class="date">
@@ -80,9 +108,9 @@ require('parts/navigation.php');
             </div>
             <div class="right-form-content">
                 <label>Member Photo</label>
-                <img id="member-photo" src="repository/no_image.png" alt="Photo"/>
+                <img id="member-photo" src="repository/member_photos/<?php echo $row['photo']; ?>" alt="Photo"/>
                 <label>Upload from Computer</label>
-                <input type="file" name="member_upload" id="member-upload" required/>
+                <input type="file" name="member_upload" id="member-upload"/>
                 <input type="button" name="hide_button" id="remove" value="remove" class="hide"/>
                 <input type="submit" value="Submit" name="edit_member_submit" id="member_submit"/>
             </div>

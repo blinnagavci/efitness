@@ -13,10 +13,10 @@ require('parts/navigation.php');
                 <input type="text" name="member_surname" id="member_surname" placeholder="Last Name" required> 
                 <label>Gender</label>
                 <select name="member_gender" required>
-                    <option value="male" disabled selected>Select</option>
-                    <option value="male">Male</option>
-                    <option value="female">Female</option>
-                    <option value="other">Other</option>
+                    <option value="disabled" disabled selected>Select</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
                 </select>
                 <label>Birth Date</label>
                 <span class="date">
