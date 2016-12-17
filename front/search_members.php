@@ -14,8 +14,8 @@ require('inc/database/db_connect.php');
         ?>
         <h1>Search Member</h1>
         <div class="main-box">
-            <form  method="post" action="search_members_field.php?go"  id="searchform"> 
-                <input type="text" name="name" class="search-box" placeholder="Search Member..."> 
+            <form id="searchform" method="post" action="search_members_field.php?go"> 
+                <input type="text" name="name" class="search-box" placeholder="Search Member..." required> 
                 <input type="submit" name="submit" value="Search" class="search-button"> 
             </form>
 
