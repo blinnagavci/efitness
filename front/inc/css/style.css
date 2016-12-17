@@ -928,7 +928,8 @@ h6 {
 }
 .main-right .main-box .edit-member,
 .main-right .main-box .remove-member,
-.main-right .main-box .search-button {
+.main-right .main-box .search-button,
+.main-right .main-box .details-member {
   border-radius: 3px;
   padding: 6px 12px;
   color: #fff;
@@ -941,7 +942,8 @@ h6 {
 }
 .main-right .main-box .edit-member:hover,
 .main-right .main-box .remove-member:hover,
-.main-right .main-box .search-button:hover {
+.main-right .main-box .search-button:hover,
+.main-right .main-box .details-member:hover {
   background: #fff;
   color: #3c8dbc;
 }
@@ -952,6 +954,14 @@ h6 {
 .main-right .main-box .remove-member:hover {
   background: #fff;
   color: #FF0000;
+}
+.main-right .main-box .details-member {
+  border-color: #ffb701;
+  background-color: #ffb701;
+}
+.main-right .main-box .details-member:hover {
+  background: #fff;
+  color: #ffb701;
 }
 .main-right .left-membership {
   float: left;

@@ -18,7 +18,7 @@ require('inc/database/db_connect.php');
                 <input type="text" name="name" class="search-box" placeholder="Search Member..."> 
                 <input type="submit" name="submit" value="Search" class="search-button"> 
             </form>
-            
+
             <table class="member-table">
                 <tr>
                     <th>ID</th>
@@ -27,7 +27,7 @@ require('inc/database/db_connect.php');
                     <th>Gender</th>
                     <th>Date of Birth</th>
                     <th>Phone No.</th>
-                    <th colspan="2">Options</th>
+                    <th colspan="3">Options</th>
                 </tr>
                 <?php
                 while ($row = $result->fetch_assoc()) {
@@ -44,7 +44,10 @@ require('inc/database/db_connect.php');
                         </td>
                         <td class="buttons">
                             <a class="remove-member" href='inc/database/remove_member.php?id=<?php echo $row['id'] ?> ' name="remove-member"/>Delete</a>
-                        </td>    
+                        </td>  
+                        <td class="buttons">
+                            <a class="details-member" href="" name="details-member"/>Details</a>
+                        </td>
                     </tr>
 
                 <?php } ?>
