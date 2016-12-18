@@ -41,6 +41,7 @@ if (isset($_POST['edit_member_submit'])) {
     }
 
     mysqli_close($conn);
+    header("refresh: 0; url=search_members.php" );
 }
 require('parts/navigation.php');
 ?>
@@ -76,8 +77,8 @@ require('parts/navigation.php');
                             echo '<option value="Other">Other</option>';
                             break;
                         case "Other":
-                            echo '<option value="Female">Male</option>';
-                            echo '<option value="Other">Female</option>';
+                            echo '<option value="Male">Male</option>';
+                            echo '<option value="Female">Female</option>';
                             break;
                         default:
                             echo 'Something went wrong';
