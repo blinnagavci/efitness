@@ -1,6 +1,5 @@
 <?php
 require('parts/header.php');
-require('parts/navigation.php');
 require('inc/database/db_connect.php');
 //require('inc/database/db_connect.php');
 if (isset($_POST['add-membership-payment'])) {
@@ -27,6 +26,9 @@ if (isset($_POST['add-membership-payment'])) {
 
     mysqli_close($conn);
 }
+
+
+require('parts/navigation.php');
 ?>
 <div class="main-right">
     <h1>Add Membership</h1>
