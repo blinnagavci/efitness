@@ -11,7 +11,11 @@
             <?php
             $url = startsWith(getLastURLPart(), 'member');
             ?>
-            <a class="<?php active($url) || active('search_members') || active('search_members_field.php?go') || active('members_settings') ? 'active' : NULL ?>" href="members" title="Members">
+            <a class="<?php
+            if ($url == true) {
+                active($url);
+            } active('search_members') || active('search_members_field.php?go') || active('members_settings') ? 'active' : NULL
+            ?>" href="members" title="Members">
                 <i class="fa members"></i>Members
             </a>
             <ul>
