@@ -1,9 +1,16 @@
-<?php include ('functions.php'); ?>
+<?php
+require('inc/database/db_connect.php');
+require('inc/database/login.php');
+include ('functions.php');
+if (!isset($_SESSION['logged_in'])) {
+    header('refresh: 0; url=./');
+}
+?>
 <div class="main-left">
     <h2>E-Fitness</h2>
     <ul>
         <li>
-            <a class="<?php active('') ? 'active' : NULL ?>" href="./" title="Dashboard">
+            <a class="<?php active('dashboard') ? 'active' : NULL ?>" href="./" title="Dashboard">
                 <i class="fa dashboard"></i>Dashboard
             </a>
         </li>
@@ -39,4 +46,9 @@
             </a>
         </li>
     </ul>
+    <div class="log-out">
+        <a href="inc/database/logout.php" title="Log Out"><i class="fa log-out-icon"></i>Log Out
+        </a>
+    </div>
 </div>
+

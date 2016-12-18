@@ -90,6 +90,11 @@ function validateForms() {
             return false;
         }
     });
+    $("#login-form").validate({
+        errorPlacement: function () {
+            return false;
+        }
+    });
 }
 
 function controlImg() {

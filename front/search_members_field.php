@@ -43,10 +43,10 @@ require('inc/database/db_connect.php');
                                     <td><?php echo $row['birth_date'] ?></td>
                                     <td><?php echo $row['telephone_no'] ?></td>
                                     <td class="buttons">
-                                        <a class="edit-member" href="">Edit</a>
+                                        <a class="edit-member" href="member_edit.php?id=<?php echo $row["id"] ?>" name="edit-member">Edit</a>
                                     </td>
                                     <td class="buttons">
-                                        <a class="remove-member" href='inc/database/remove_member.php?id=<?php echo $row['id'] ?> ' name="remove-member"/>Delete</a>
+                                        <a class="remove-member" href='inc/database/remove_member.php?id=<?php echo $row['id'] ?>' name="remove-member"/>Delete</a>
                                     </td>  
                                     <td class="buttons">
                                         <script type="text/javascript">
