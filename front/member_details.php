@@ -31,7 +31,7 @@ if (isset($_POST['add-membership-payment'])) {
 require('parts/navigation.php');
 ?>
 <div class="main-right">
-    <h1>Add Membership</h1>
+    <h1>Add Membership Payment</h1>
     <div class="main-box">
         <div class = "right-form-content">
             <label>Membership Type</label>
