@@ -2,6 +2,31 @@
 require('parts/header.php');
 require('parts/navigation.php');
 require('inc/database/db_connect.php');
+//require('inc/database/db_connect.php');
+if (isset($_POST['add-membership-payment'])) {
+    if (isset($_GET['id'])) {
+        $id = $_GET['id'];
+    }
+    $membershiptype = $_POST['member_subscription'];
+    $membershipamount = $_POST['membership_amount'];
+    $membershipstart = $_POST['membership_start'];
+    $membershipend = $_POST['membership_end'];
+    $membershipid = mysqli_query($conn, "SELECT id from membership WHERE membership_type = '$membershiptype'");
+    $membershiprow = mysqli_fetch_row($membershipid);
+
+    $sql = "INSERT INTO membership_payment (amount_of_payment, start_date, end_date, id_member, id_membership)
+    VALUES ('$membershipamount', '$membershipstart', '$membershipend', '$id', '$membershiprow[0]')";
+
+    $retval1 = mysqli_query($conn, $sql);
+    header("refresh: 0;");
+    if (!$retval1) {
+        die('Could not enter data to membership payment table' . mysqli_connect_error());
+    } else {
+        echo "<script type='text/javascript'>window.alert('Membership payment successfully added')</script>";
+    }
+
+    mysqli_close($conn);
+}
 ?>
 <div class="main-right">
     <h1>Add Membership</h1>
@@ -38,33 +63,7 @@ require('inc/database/db_connect.php');
                 </span>
                 <input type="submit" value="Add Membership" name="add-membership-payment" id="add-membership-submit"/>
 
-                <?php
-                //require('inc/database/db_connect.php');
-                if (isset($_POST['add-membership-payment'])) {
-                    if (isset($_GET['id'])) {
-                        $id = $_GET['id'];
-                    }
-                    $membershiptype = $_POST['member_subscription'];
-                    $membershipamount = $_POST['membership_amount'];
-                    $membershipstart = $_POST['membership_start'];
-                    $membershipend = $_POST['membership_end'];
-                    $membershipid = mysqli_query($conn, "SELECT id from membership WHERE membership_type = '$membershiptype'");
-                    $membershiprow = mysqli_fetch_row($membershipid);
 
-                    $sql = "INSERT INTO membership_payment (amount_of_payment, start_date, end_date, id_member, id_membership)
-    VALUES ('$membershipamount', '$membershipstart', '$membershipend', '$id', '$membershiprow[0]')";
-
-                    $retval1 = mysqli_query($conn, $sql);
-                    header("refresh: 0;");
-                    if (!$retval1) {
-                        die('Could not enter data to membership payment table' . mysqli_connect_error());
-                    } else {
-                        echo "<script type='text/javascript'>window.alert('Membership payment successfully added')</script>";
-                    }
-
-                    mysqli_close($conn);
-                }
-                ?>
             </form>
         </div>
         <div class="left-form-content">

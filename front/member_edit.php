@@ -41,7 +41,7 @@ if (isset($_POST['edit_member_submit'])) {
     }
 
     mysqli_close($conn);
-    header("refresh: 0; url=search_members" );
+    header("refresh: 0; url=search_members");
 }
 require('parts/navigation.php');
 ?>
