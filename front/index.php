@@ -20,6 +20,7 @@ if (isset($_REQUEST['submit_login'])) {
     <div class="login-container">
         <div class="center-login">
             <div class="form-container">
+                <h1>E-FITNESS</h1>
                 <form id="login-form" action="" method="POST">
                     <span class="login-username">
                         <input type="text" name="username" placeholder="Username" required> 
