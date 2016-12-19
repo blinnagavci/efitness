@@ -49,14 +49,9 @@
     display: table;
     width: 100%;
     height: 100vh;
-    background: -moz-radial-gradient(center, ellipse cover, rgba(79,182,255,1) 0%, rgba(0,128,128,1) 100%); /* ff3.6+ */
-    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(79,182,255,1)), color-stop(100%, rgba(0,128,128,1))); /* safari4+,chrome */
-    background:-webkit-radial-gradient(center, ellipse cover, rgba(79,182,255,1) 0%, rgba(0,128,128,1) 100%); /* safari5.1+,chrome10+ */
-    background: -o-radial-gradient(center, ellipse cover, rgba(79,182,255,1) 0%, rgba(0,128,128,1) 100%); /* opera 11.10+ */
-    background: -ms-radial-gradient(center, ellipse cover, rgba(79,182,255,1) 0%, rgba(0,128,128,1) 100%); /* ie10+ */
-    background:radial-gradient(ellipse at center, rgba(79,182,255,1) 0%, rgba(0,128,128,1) 100%); /* w3c */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4FB6FF', endColorstr='#008080',GradientType=0 ); /* ie6-9 */
-
+    background: #8e9eab; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #8e9eab , #eef2f3); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #8e9eab , #eef2f3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .login-container{
@@ -70,7 +65,7 @@
     .form-container{
         float:left;
         width: 100%;
-        background: #eeeff3;
+        background: #ededed;
         border-radius: 10px;
     }
     #login-form{
@@ -324,8 +319,8 @@ body .main-right-full{
         float: left;
         width: 100%;
         background-color: #fff;
-        padding: 10px;
-        border-radius: 3px;
+        padding: 15px 10px 25px;
+        border-radius: 5px;
         box-shadow: 0 0 8px 1px grey;
         .left-form-content, .right-form-content{
             width: 50%;
