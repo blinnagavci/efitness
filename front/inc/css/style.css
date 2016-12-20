@@ -585,16 +585,19 @@ h6 {
 .login-container .form-container h1 {
   font-size: 1.6em;
   margin: 10px 0;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 0.5px;
   color: #fff;
   position: relative;
   /*            i::before{
-                content: "\f023";
-                font-family: 'FontAwesome';
-                top: 0;
-                left: 0;  
-                margin-right: 5px;
-                color: #fff;
-            }*/
+                            content: "\f023";
+                            font-family: 'FontAwesome';
+                            top: 0;
+                            left: 0;  
+                            margin-right: 5px;
+                            color: #fff;
+                        }*/
   /*            &::before{
                             background-image: url('../../repository/favicon.ico');
                             background-size: 24px 24px;

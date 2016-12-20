@@ -4,6 +4,29 @@ $(document).ready(function () {
             $(this).find("ul").show();
         }
     });
+//    $("#dialog-confirm").dialog({
+//        autoOpen: false,
+//        resizable: false,
+//        height: "auto",
+//        width: 400,
+//        modal: false,
+//        buttons: {
+//            "Delete member": function () {
+//                callbackFunctionTrue();
+//                $(this).dialog("close");
+//            },
+//            Cancel: function () {
+//                callbackFunctionTrue();
+//                $(this).dialog("close");
+//            }
+//        },
+//        close: function (event, ui) {
+//            alert("Member has been successfully deleted.");
+//        }
+//    });
+//    $(".remove-member").click(function () {
+//        $("#dialog-confirm").dialog('open');
+//    });
     $(".main-left-after").width($('.main-left').width());
     $(".main-right").css("margin-left", $(".main-left").width());
     $(".main-right-full input, .main-right-full select").prop("disabled", true);

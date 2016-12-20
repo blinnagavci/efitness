@@ -43,16 +43,16 @@ require('inc/database/db_connect.php');
                             <a class="edit-member" href="member_edit.php?id=<?php echo $row["id"] ?>" name="edit-member">Edit</a>
                         </td>
                         <td class="buttons">
-                            <a class="remove-member" href='inc/database/remove_member.php?id=<?php echo $row['id'] ?>' name="remove-member"/>Delete</a>
+                            <a class="remove-member" onclick="return confirm('Are you sure you want to delete this member?');" href='inc/database/remove_member.php?id=<?php echo $row['id'] ?>' name="remove-member"/>Delete</a>
                         </td>  
                         <td class="buttons">
-                            <script type="text/javascript">
+            <!--                            <script type="text/javascript">
                                 function popupwindow(url, title, win, w, h) {
                                     var y = window.top.outerHeight / 2 + window.top.screenY - (h / 2);
                                     var x = window.top.outerWidth / 2 + window.top.screenX - (w / 2);
                                     return window.open('member_details.php', 'Member Details', 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=yes, resizable=yes, copyhistory=no, width=' + w + ', height=' + h + ', top=' + y + ', left=' + x);
                                 }
-                            </script>
+                            </script>-->
                             <a class="details-member" href='member_details.php?id=<?php echo $row["id"] ?>' name="details-member"/>Details</a>
                         </td>
                     </tr>
