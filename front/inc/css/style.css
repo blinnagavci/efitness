@@ -579,16 +579,39 @@ h6 {
 .login-container .form-container {
   float: left;
   width: 100%;
-  background: #ededed;
-  border-radius: 10px;
+  background: #3c8dbc;
+  border-radius: 5px;
 }
 .login-container .form-container h1 {
-  margin-bottom: 0px;
-  color: grey;
+  font-size: 1.6em;
+  margin: 10px 0;
+  color: #fff;
+  position: relative;
+  /*            i::before{
+                content: "\f023";
+                font-family: 'FontAwesome';
+                top: 0;
+                left: 0;  
+                margin-right: 5px;
+                color: #fff;
+            }*/
+  /*            &::before{
+                            background-image: url('../../repository/favicon.ico');
+                            background-size: 24px 24px;
+                            background-position: center center;
+                            display: inline-block;
+                            width: 24px;
+                            height: 24px;
+                            margin-right: 5px;
+                            content: "";
+                        }*/
 }
 .login-container #login-form {
-  margin: 10px 20px;
+  padding: 10px 20px;
   float: left;
+  background: white;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 .login-container span {
   position: relative;

@@ -20,7 +20,7 @@ if (isset($_REQUEST['submit_login'])) {
     <div class="login-container">
         <div class="center-login">
             <div class="form-container">
-                <h1>E-FITNESS</h1>
+                <h1>LOGIN</h1>
                 <form id="login-form" action="" method="POST">
                     <span class="login-username">
                         <input type="text" name="username" placeholder="Username" required> 
@@ -28,7 +28,7 @@ if (isset($_REQUEST['submit_login'])) {
                     <span class="login-password">
                         <input type="password" name="password" placeholder="Password" required> 
                     </span>
-                    <input type="submit" class="submit-login" value="Log In" name="submit_login"/>
+                    <input type="submit" class="submit-login" value="Login" name="submit_login"/>
                 </form>
             </div>
         </div>
