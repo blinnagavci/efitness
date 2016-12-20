@@ -59,7 +59,7 @@ require('inc/database/db_connect.php');
 
                 <?php } ?>
             </table>
-            <button class="generate-pdf">Export to PDF</button>
+<!--            <button class="generate-pdf">Export to PDF*</button>-->
         </div>
         <?php
     } else {
