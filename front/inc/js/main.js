@@ -42,10 +42,17 @@ $(document).ready(function () {
         changeMonth: true,
         yearRange: "-0:+50"
     });
+    $(".employee-date-picker").datepicker({
+        minDate: new Date(),
+        changeYear: true,
+        changeMonth: true,
+        yearRange: "-0:+50"
+    });
 //    $(".date-picker, .membership-date-picker").datepicker("option", "dateFormat", 'dd-mm-yy');
     $("span.date:after").click(function () {
-        $(".date-picker, .membership-date-picker").datepicker("show");
+        $(".date-picker, .membership-date-picker, .employee-date-picker ").datepicker("show");
     });
+
     validateForms();
     controlImg();
     $(".generate-pdf").click(function () {
@@ -114,6 +121,22 @@ function validateForms() {
         }
     });
     $("#login-form").validate({
+        errorPlacement: function () {
+            return false;
+        }
+    });
+    $("#employee-form").validate({
+        errorPlacement: function () {
+            return false;
+        }
+    });
+
+    $("#employee-edit-form").validate({
+        errorPlacement: function () {
+            return false;
+        }
+    });
+    $("#add-employee-contract").validate({
         errorPlacement: function () {
             return false;
         }

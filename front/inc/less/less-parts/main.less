@@ -281,6 +281,9 @@
                     &.members:before{
                         content: '\f0c0';
                     }
+                    &.employees:before{
+                        content: '\f0c0';
+                    }
                     &.settings:before{
                         content: "\f0ad";
                     }
@@ -310,7 +313,13 @@
                             &.member{
                                 font-size: 14px;
                                 &.member:before{
-                                    content: '\f007';
+                                    content: '\f234';
+                                }
+                            }
+                            &.employee{
+                                font-size: 14px;
+                                &.employee:before{
+                                    content: '\f234';
                                 }
                             }
                         }
@@ -518,7 +527,7 @@ body .main-right-full{
         .settings-add-ms{
             padding: 8px 23px;
         }
-        .member-table, .membership-table{
+        .member-table, .membership-table, .employee-table, .employee-contract-table{
             border: 1px solid #A9A9A9;
             width: 100%;
             display: table;
@@ -555,7 +564,7 @@ body .main-right-full{
             float: left;
             margin: 10px 0;
         }
-        .edit-member, .remove-member, .search-button, .details-member{
+        .edit-member, .remove-member, .search-button, .details-member, .edit-employee, .remove-employee, .details-employee{
             border-radius: 3px;
             padding: 6px 12px;
             color: #fff;
@@ -567,7 +576,7 @@ body .main-right-full{
                 color: #3c8dbc;
             }
         }
-        .remove-member{
+        .remove-member, .remove-employee{
             border-color: #FF0000;
             background-color: #FF0000;
             &:hover{
@@ -575,7 +584,7 @@ body .main-right-full{
                 color: #FF0000;
             }
         }
-        .details-member{
+        .details-member, .details-employee{
             border-color: #ffb701;
             background-color: #ffb701;
             &:hover{

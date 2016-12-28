@@ -807,6 +807,9 @@ h6 {
 .main-left ul li a i.members:before {
   content: '\f0c0';
 }
+.main-left ul li a i.employees:before {
+  content: '\f0c0';
+}
 .main-left ul li a i.settings:before {
   content: "\f0ad";
 }
@@ -836,7 +839,13 @@ h6 {
   font-size: 14px;
 }
 .main-left ul li ul li a i.member.member:before {
-  content: '\f007';
+  content: '\f234';
+}
+.main-left ul li ul li a i.employee {
+  font-size: 14px;
+}
+.main-left ul li ul li a i.employee.employee:before {
+  content: '\f234';
 }
 body .main-right-full {
   width: 100%;
@@ -1144,7 +1153,11 @@ body .main-right-full {
 .main-right .main-box .member-table,
 .main-right-full .main-box .member-table,
 .main-right .main-box .membership-table,
-.main-right-full .main-box .membership-table {
+.main-right-full .main-box .membership-table,
+.main-right .main-box .employee-table,
+.main-right-full .main-box .employee-table,
+.main-right .main-box .employee-contract-table,
+.main-right-full .main-box .employee-contract-table {
   border: 1px solid #A9A9A9;
   width: 100%;
   display: table;
@@ -1163,10 +1176,18 @@ body .main-right-full {
 .main-right-full .main-box .member-table td,
 .main-right .main-box .membership-table td,
 .main-right-full .main-box .membership-table td,
+.main-right .main-box .employee-table td,
+.main-right-full .main-box .employee-table td,
+.main-right .main-box .employee-contract-table td,
+.main-right-full .main-box .employee-contract-table td,
 .main-right .main-box .member-table th,
 .main-right-full .main-box .member-table th,
 .main-right .main-box .membership-table th,
-.main-right-full .main-box .membership-table th {
+.main-right-full .main-box .membership-table th,
+.main-right .main-box .employee-table th,
+.main-right-full .main-box .employee-table th,
+.main-right .main-box .employee-contract-table th,
+.main-right-full .main-box .employee-contract-table th {
   padding: 7px;
   border: 1px solid #A9A9A9;
   text-align: center;
@@ -1177,19 +1198,31 @@ body .main-right-full {
 .main-right .main-box .member-table td.buttons,
 .main-right-full .main-box .member-table td.buttons,
 .main-right .main-box .membership-table td.buttons,
-.main-right-full .main-box .membership-table td.buttons {
+.main-right-full .main-box .membership-table td.buttons,
+.main-right .main-box .employee-table td.buttons,
+.main-right-full .main-box .employee-table td.buttons,
+.main-right .main-box .employee-contract-table td.buttons,
+.main-right-full .main-box .employee-contract-table td.buttons {
   width: 50px;
 }
 .main-right .main-box .member-table td.buttons a,
 .main-right-full .main-box .member-table td.buttons a,
 .main-right .main-box .membership-table td.buttons a,
-.main-right-full .main-box .membership-table td.buttons a {
+.main-right-full .main-box .membership-table td.buttons a,
+.main-right .main-box .employee-table td.buttons a,
+.main-right-full .main-box .employee-table td.buttons a,
+.main-right .main-box .employee-contract-table td.buttons a,
+.main-right-full .main-box .employee-contract-table td.buttons a {
   float: left;
 }
 .main-right .main-box .member-table th,
 .main-right-full .main-box .member-table th,
 .main-right .main-box .membership-table th,
-.main-right-full .main-box .membership-table th {
+.main-right-full .main-box .membership-table th,
+.main-right .main-box .employee-table th,
+.main-right-full .main-box .employee-table th,
+.main-right .main-box .employee-contract-table th,
+.main-right-full .main-box .employee-contract-table th {
   font-weight: 600;
   background-color: #ecf0f5;
 }
@@ -1205,7 +1238,13 @@ body .main-right-full {
 .main-right .main-box .search-button,
 .main-right-full .main-box .search-button,
 .main-right .main-box .details-member,
-.main-right-full .main-box .details-member {
+.main-right-full .main-box .details-member,
+.main-right .main-box .edit-employee,
+.main-right-full .main-box .edit-employee,
+.main-right .main-box .remove-employee,
+.main-right-full .main-box .remove-employee,
+.main-right .main-box .details-employee,
+.main-right-full .main-box .details-employee {
   border-radius: 3px;
   padding: 6px 12px;
   color: #fff;
@@ -1223,27 +1262,41 @@ body .main-right-full {
 .main-right .main-box .search-button:hover,
 .main-right-full .main-box .search-button:hover,
 .main-right .main-box .details-member:hover,
-.main-right-full .main-box .details-member:hover {
+.main-right-full .main-box .details-member:hover,
+.main-right .main-box .edit-employee:hover,
+.main-right-full .main-box .edit-employee:hover,
+.main-right .main-box .remove-employee:hover,
+.main-right-full .main-box .remove-employee:hover,
+.main-right .main-box .details-employee:hover,
+.main-right-full .main-box .details-employee:hover {
   background: #fff;
   color: #3c8dbc;
 }
 .main-right .main-box .remove-member,
-.main-right-full .main-box .remove-member {
+.main-right-full .main-box .remove-member,
+.main-right .main-box .remove-employee,
+.main-right-full .main-box .remove-employee {
   border-color: #FF0000;
   background-color: #FF0000;
 }
 .main-right .main-box .remove-member:hover,
-.main-right-full .main-box .remove-member:hover {
+.main-right-full .main-box .remove-member:hover,
+.main-right .main-box .remove-employee:hover,
+.main-right-full .main-box .remove-employee:hover {
   background: #fff;
   color: #FF0000;
 }
 .main-right .main-box .details-member,
-.main-right-full .main-box .details-member {
+.main-right-full .main-box .details-member,
+.main-right .main-box .details-employee,
+.main-right-full .main-box .details-employee {
   border-color: #ffb701;
   background-color: #ffb701;
 }
 .main-right .main-box .details-member:hover,
-.main-right-full .main-box .details-member:hover {
+.main-right-full .main-box .details-member:hover,
+.main-right .main-box .details-employee:hover,
+.main-right-full .main-box .details-employee:hover {
   background: #fff;
   color: #ffb701;
 }

@@ -37,7 +37,7 @@ if (isset($_POST['edit_member_submit'])) {
     if (!$retval1) {
         die('Could not edit data.' . mysqli_connect_error());
     } else {
-        echo "<script type = 'text/javascript' > window . alert('Membership successfully edited')</script>";
+        echo "<script type = 'text/javascript' > window . alert('Member successfully edited')</script>";
     }
 
     mysqli_close($conn);

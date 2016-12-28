@@ -41,6 +41,32 @@ if (!isset($_SESSION['logged_in'])) {
             </ul>
         </li>
         <li>
+            <?php
+            $url = startsWith(getLastURLPart(), 'employee');
+            ?>
+            <a class="<?php
+            if ($url) {
+                active($url);
+            } active('search_employees') || active('search_employees_field.php?go')  ? 'active' : NULL
+            ?>" href="employees" title="Employees">
+                <i class="fa employees"></i>Employees
+            </a>
+            <ul>
+                <li>
+                    <a class="<?php active('employees') ? 'active' : NULL ?>" href="employees" title="Add Employees">
+                        <i class="fa employee"></i>
+                        Add Employees
+                    </a>
+                </li>
+                <li>
+                    <a class="<?php (active('search_employees') || active('search_employees_field.php?go')) ? 'active' : NULL ?>" href="search_employees" title="Search Employees">
+                        <i class="fa fa-search"></i>
+                        Search Employees
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li>
             <a class="<?php active('settings') ? 'active' : NULL ?>" href="settings">
                 <i class="fa settings"></i>Settings
             </a>
