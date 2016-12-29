@@ -30,7 +30,7 @@ require('inc/database/db_connect.php');
                                 <th>Gender</th>
                                 <th>Date of Birth</th>
                                 <th>Phone No.</th>
-                                <th colspan="3">Options</th>
+                                <th colspan="2">Options</th>
                             </tr>
                             <?php
                             while ($row = $result->fetch_assoc()) {
@@ -48,9 +48,9 @@ require('inc/database/db_connect.php');
                                     <td class="buttons">
                                         <a class="remove-employee" onclick="return confirm('Are you sure you want to delete this employee?');" href='inc/database/remove_employee.php?id=<?php echo $row['id'] ?>' name="remove-employee"/>Delete</a>
                                     </td>  
-                                    <td class="buttons">
+<!--                                    <td class="buttons">
                                         <a class="details-employee" href='employee_details.php?id=<?php echo $row["id"] ?>' name="details-employee"/>Details</a>
-                                    </td>
+                                    </td>-->
 
                                 <?php } ?>
                         </table>

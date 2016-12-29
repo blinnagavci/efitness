@@ -36,6 +36,37 @@ require('parts/navigation.php');
                 </form>  
             </div>
         </div>
+        <div class="right-employee-type">
+            <h2>Employee Type Settings</h2>
+            <div class="add-employee-type">  
+                <form class="add-employee-type-form" method="POST" action="inc/database/add_employee_type.php">
+                    <label class="settings-label">Employee Type</label>
+                    <input type="text" class="settings-input" name="employeetype_settings" id="employeetype_settings" placeholder="Enter Employee Type" required/>
+                    <input type="submit" class="settings-add-et" value="Add" name="add_employe_type_submit" id="add_employee_type_submit"/>
+                </form>
+            </div>
+            <div class="remove-employee-type">
+                <form class="remove-employee-type-form" action="inc/database/remove_employee_type.php" method="POST">
+                    <select name="remove_employee_type_select" class="settings-employee-type-select" required>
+                        <option value="select" disabled selected>Select</option> 
+                        <?php
+                        include('inc/database/db_connect.php');
+                        $sql = 'SELECT employee_type FROM employee_type WHERE status= "0"';
+                        $retval = mysqli_query($conn, $sql);
+                        if (!$retval) {
+                            echo ("Could not retrieve data" . mysql_error());
+                        }
+                        while ($row = $retval->fetch_assoc()) {
+                            $employeetype = $row['employee_type'];
+                            echo "<option value='$employeetype'>$employeetype</option>";
+                        }
+                        mysqli_close($conn);
+                        ?>
+                    </select>
+                    <input type="submit" class="settings-remove-et" value="Remove" name="remove_employee_type_submit" id="remove_employee_type_submit"/>
+                </form>  
+            </div>
+        </div>
     </div>
 </div>
 <?php

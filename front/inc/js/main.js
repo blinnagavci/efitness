@@ -141,6 +141,17 @@ function validateForms() {
             return false;
         }
     });
+    $(".add-employee-type-form").validate({
+        errorPlacement: function () {
+            return false;
+        }
+    });
+    
+    $(".remove-employee-type-form").validate({
+        errorPlacement: function () {
+            return false;
+        }
+    });
 }
 
 function controlImg() {

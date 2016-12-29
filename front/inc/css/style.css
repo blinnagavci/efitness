@@ -1126,7 +1126,11 @@ body .main-right-full {
 .main-right .main-box .settings-remove-ms,
 .main-right-full .main-box .settings-remove-ms,
 .main-right .main-box .settings-add-ms,
-.main-right-full .main-box .settings-add-ms {
+.main-right-full .main-box .settings-add-ms,
+.main-right .main-box .settings-add-et,
+.main-right-full .main-box .settings-add-et,
+.main-right .main-box .settings-remove-et,
+.main-right-full .main-box .settings-remove-et {
   border-radius: 3px;
   padding: 8px;
   float: left;
@@ -1142,12 +1146,18 @@ body .main-right-full {
 .main-right .main-box .settings-remove-ms:hover,
 .main-right-full .main-box .settings-remove-ms:hover,
 .main-right .main-box .settings-add-ms:hover,
-.main-right-full .main-box .settings-add-ms:hover {
+.main-right-full .main-box .settings-add-ms:hover,
+.main-right .main-box .settings-add-et:hover,
+.main-right-full .main-box .settings-add-et:hover,
+.main-right .main-box .settings-remove-et:hover,
+.main-right-full .main-box .settings-remove-et:hover {
   background: #fff;
   color: #3c8dbc;
 }
 .main-right .main-box .settings-add-ms,
-.main-right-full .main-box .settings-add-ms {
+.main-right-full .main-box .settings-add-ms,
+.main-right .main-box .settings-add-et,
+.main-right-full .main-box .settings-add-et {
   padding: 8px 23px;
 }
 .main-right .main-box .member-table,
@@ -1301,30 +1311,54 @@ body .main-right-full {
   color: #ffb701;
 }
 .main-right .left-membership,
-.main-right-full .left-membership {
+.main-right-full .left-membership,
+.main-right .right-employee-type,
+.main-right-full .right-employee-type {
   float: left;
   width: 33%;
   padding-left: 10px;
 }
 .main-right .left-membership input[type='submit'],
-.main-right-full .left-membership input[type='submit'] {
+.main-right-full .left-membership input[type='submit'],
+.main-right .right-employee-type input[type='submit'],
+.main-right-full .right-employee-type input[type='submit'] {
   height: 36px;
   width: 28%;
 }
 .main-right .left-membership .add-membership,
-.main-right-full .left-membership .add-membership {
+.main-right-full .left-membership .add-membership,
+.main-right .right-employee-type .add-membership,
+.main-right-full .right-employee-type .add-membership,
+.main-right .left-membership .add-employee-type,
+.main-right-full .left-membership .add-employee-type,
+.main-right .right-employee-type .add-employee-type,
+.main-right-full .right-employee-type .add-employee-type {
   float: left;
   width: 100%;
   margin: 5px;
 }
 .main-right .left-membership .remove-membership,
-.main-right-full .left-membership .remove-membership {
+.main-right-full .left-membership .remove-membership,
+.main-right .right-employee-type .remove-membership,
+.main-right-full .right-employee-type .remove-membership,
+.main-right .left-membership .remove-employee-type,
+.main-right-full .left-membership .remove-employee-type,
+.main-right .right-employee-type .remove-employee-type,
+.main-right-full .right-employee-type .remove-employee-type {
   float: left;
   width: 100%;
   margin: 5px;
 }
+.main-right .right-employee-type,
+.main-right-full .right-employee-type {
+  margin-left: 50px;
+  border-left: 1px solid grey;
+  padding-left: 40px;
+}
 .main-right .settings-membership-select,
-.main-right-full .settings-membership-select {
+.main-right-full .settings-membership-select,
+.main-right .settings-employee-type-select,
+.main-right-full .settings-employee-type-select {
   float: left;
   width: 70%;
   border-radius: 3px;
@@ -1338,7 +1372,9 @@ body .main-right-full {
   -o-transition: all 0.35s;
 }
 .main-right .settings-membership-select.error,
-.main-right-full .settings-membership-select.error {
+.main-right-full .settings-membership-select.error,
+.main-right .settings-employee-type-select.error,
+.main-right-full .settings-employee-type-select.error {
   border-color: red;
 }
 .main-right label.settings-label,

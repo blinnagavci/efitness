@@ -509,7 +509,7 @@ body .main-right-full{
             }
         }
 
-        .settings-remove-ms, .settings-add-ms{
+        .settings-remove-ms, .settings-add-ms, .settings-add-et, .settings-remove-et{
             border-radius: 3px;
             padding: 8px;
             float:left;
@@ -524,7 +524,7 @@ body .main-right-full{
             }
         }
 
-        .settings-add-ms{
+        .settings-add-ms, .settings-add-et{
             padding: 8px 23px;
         }
         .member-table, .membership-table, .employee-table, .employee-contract-table{
@@ -595,8 +595,9 @@ body .main-right-full{
 
 
     }
+    
 
-    .left-membership{
+    .left-membership, .right-employee-type{
         float:left;
         width:33%;
         padding-left: 10px;
@@ -604,19 +605,25 @@ body .main-right-full{
             height: 36px;
             width: 28%;
         }
-        .add-membership{
+        .add-membership, .add-employee-type{
             float:left;
             width: 100%;
             margin: 5px;
         }
-        .remove-membership{
+        .remove-membership, .remove-employee-type{
             float:left;
             width: 100%;
             margin:5px;
         }
     }
+    
+    .right-employee-type{
+        margin-left: 50px;
+        border-left: 1px solid grey;
+        padding-left: 40px;
+    }
 
-    .settings-membership-select{
+    .settings-membership-select, .settings-employee-type-select{
         float: left;
         width: 70%;
         border-radius: 3px;
