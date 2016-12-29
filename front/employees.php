@@ -3,7 +3,7 @@ require('parts/header.php');
 require('parts/navigation.php');
 ?>
 <div class="main-right">
-    <h1>Add Employees</h1>
+    <h1>Add Employee</h1>
     <div class="main-box">
         <form action='inc/database/add_employee.php' name='submit' id="employee-form" method="POST" enctype="multipart/form-data">
             <div class="left-form-content">
