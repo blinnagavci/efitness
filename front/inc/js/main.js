@@ -178,17 +178,17 @@ function controlImg() {
             var reader = new FileReader();
 
             reader.onload = function (e) {
-                $('#member-photo').attr('src', e.target.result);
+                $('#member-photo, #employee-photo').attr('src', e.target.result);
             },
                     reader.readAsDataURL(input.files[0]);
         }
     }
 
-    $("#member-upload").change(function () {
-        if ($('#member-upload').val() !== "") {
+    $("#member-upload, #employee-upload").change(function () {
+        if ($('#member-upload, #employee-upload').val() !== "") {
 
             $('#remove').show();
-            $('#member-photo').show('slow');
+            $('#member-photo, #employee-photo').show('slow');
         } else {
             $('#remove').hide();
         }
@@ -197,9 +197,9 @@ function controlImg() {
 
 
     $('#remove').click(function () {
-        $('#member-upload').val('');
+        $('#member-upload, #employee-upload').val('');
         $(this).hide();
-        $('#member-photo').attr('src', 'repository/no_image.png');
+        $('#member-photo, #employee-photo').attr('src', 'repository/no_image.png');
     });
 }
 
