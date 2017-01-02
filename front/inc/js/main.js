@@ -146,7 +146,7 @@ function validateForms() {
             return false;
         }
     });
-    
+
     $(".remove-employee-type-form").validate({
         errorPlacement: function () {
             return false;

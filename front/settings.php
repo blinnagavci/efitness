@@ -1,6 +1,9 @@
 <?php
 require('parts/header.php');
 require('parts/navigation.php');
+if (!($_SESSION['username'] == 'admin')) {
+    header('refresh: 0; url=./');
+}
 ?>
 <div class="main-right">
     <h1>Settings</h1>

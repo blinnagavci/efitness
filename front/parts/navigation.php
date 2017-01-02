@@ -47,7 +47,7 @@ if (!isset($_SESSION['logged_in'])) {
             <a class="<?php
             if ($url) {
                 active($url);
-            } active('search_employees') || active('search_employees_field.php?go')  ? 'active' : NULL
+            } active('search_employees') || active('search_employees_field.php?go') ? 'active' : NULL
             ?>" href="employees" title="Employees">
                 <i class="fa employees"></i>Employees
             </a>
@@ -66,11 +66,15 @@ if (!isset($_SESSION['logged_in'])) {
                 </li>
             </ul>
         </li>
-        <li>
-            <a class="<?php active('settings') ? 'active' : NULL ?>" href="settings">
-                <i class="fa settings"></i>Settings
-            </a>
-        </li>
+        <?php if ($_SESSION['username'] == 'admin') { ?>
+            <li>
+                <a class = "<?php active('settings') ? 'active' : NULL ?>" href = "settings">
+                    <i class = "fa settings"></i>Settings
+                </a>
+            </li>
+            <?php
+        }
+        ?>
     </ul>
     <div class="log-out">
         <a href="inc/database/logout.php" title="Log Out"><i class="fa log-out-icon"></i>Log Out
