@@ -12,7 +12,7 @@ if (isset($_REQUEST['submit_login'])) {
     if ($obj->Login("account", $username, $password)) {
         header('location: dashboard');
     } else {
-        echo"<script type='text/javascript'> window.alert('Invalid username or password!');</script>";
+        $msg = "<font color='#FF0000'>Invalid username or password</font>";
     }
 }
 ?>
@@ -22,6 +22,11 @@ if (isset($_REQUEST['submit_login'])) {
             <div class="form-container">
                 <h1>E-Fitness</h1>
                 <form id="login-form" action="" method="POST">
+                    <?php
+                    if (isset($_REQUEST['submit_login'])) {
+                        echo $msg;
+                    }
+                    ?>
                     <span class="login-username">
                         <input type="text" name="username" placeholder="Username" required> 
                     </span>
