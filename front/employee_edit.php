@@ -111,7 +111,8 @@ require('parts/navigation.php');
                 <label>Employee Photo</label>
                 <img id="employee-photo" src="repository/employee_photos/<?php echo $row['photo']; ?>" alt="Photo"/>
                 <label>Upload from Computer</label>
-                <input type="file" name="employee_upload" id="employee-upload"/>
+                <label for="employee-upload" class="add-photo" required>Upload Image</label>
+                <input type="file" style="display:none;" name="employee_upload" id="employee-upload" required/>
                 <input type="button" name="hide_button" id="remove" value="remove" class="hide"/>
                 <input type="submit" value="Submit" name="edit_employee_submit" id="employee_submit"/>
             </div>
