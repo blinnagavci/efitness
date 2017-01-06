@@ -161,15 +161,15 @@ function controlImg() {
             case 'jpg':
             case 'jpeg':
             case 'png':
-                $('#member-upload').attr('disabled', false);
+                $('#member-upload, #employee-upload').attr('disabled', false);
                 $("span.error").remove();
                 break;
             default:
                 if (!($("span.error").is(":visible"))) {
-                    $("#member-upload").after("<span class='error'>Wrong file format</span>");
+                    $("#member-upload, #employee-upload").after("<span class='error'>Wrong file format</span>");
                 }
-                $('#member-photo').attr('src', 'repository/no_image.png');
-                $("#member-upload").val('');
+                $('#member-photo, #employee-photo').attr('src', 'repository/no_image.png');
+                $("#member-upload, #employee-upload").val('');
         }
     });
     $('#remove').hide();

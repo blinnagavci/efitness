@@ -908,6 +908,32 @@ body .main-right-full {
 .main-right-full .main-box .right-form-content label:first-child {
   padding-top: 0;
 }
+.main-right .main-box .left-form-content label.add-photo,
+.main-right-full .main-box .left-form-content label.add-photo,
+.main-right .main-box .right-form-content label.add-photo,
+.main-right-full .main-box .right-form-content label.add-photo {
+  cursor: pointer;
+  border: 1px solid #3c8dbc;
+  border-radius: 3px;
+  padding: 7px 15px;
+  width: auto;
+  color: #fff;
+  border-color: #3c8dbc;
+  background-color: #3c8dbc;
+  font-size: 1em;
+  font-weight: normal;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+}
+.main-right .main-box .left-form-content label.add-photo:hover,
+.main-right-full .main-box .left-form-content label.add-photo:hover,
+.main-right .main-box .right-form-content label.add-photo:hover,
+.main-right-full .main-box .right-form-content label.add-photo:hover {
+  background: #fff;
+  color: #3c8dbc;
+}
 .main-right .main-box .left-form-content span.telephone,
 .main-right-full .main-box .left-form-content span.telephone,
 .main-right .main-box .right-form-content span.telephone,
@@ -940,7 +966,8 @@ body .main-right-full {
 .main-right .main-box .right-form-content span.error,
 .main-right-full .main-box .right-form-content span.error {
   float: left;
-  padding-top: 5px;
+  padding-top: 10px;
+  margin-left: 5px;
   color: red;
 }
 .main-right .main-box .left-form-content span.email,
@@ -1055,9 +1082,26 @@ body .main-right-full {
 .main-right-full .main-box .left-form-content input#remove,
 .main-right .main-box .right-form-content input#remove,
 .main-right-full .main-box .right-form-content input#remove {
-  width: 20%;
-  padding: 5px;
-  margin-top: 10px;
+  padding: 7px;
+  width: auto;
+  margin-left: 10px;
+  border: 1px solid #FF0000;
+  border-radius: 3px;
+  color: #fff;
+  background-color: #FF0000;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  font-size: 1em;
+  font-weight: normal;
+}
+.main-right .main-box .left-form-content input#remove:hover,
+.main-right-full .main-box .left-form-content input#remove:hover,
+.main-right .main-box .right-form-content input#remove:hover,
+.main-right-full .main-box .right-form-content input#remove:hover {
+  background: #fff;
+  color: #FF0000;
 }
 .main-right .main-box .left-form-content input.number::after,
 .main-right-full .main-box .left-form-content input.number::after,
@@ -1434,14 +1478,6 @@ body .main-right-full {
 .main-right input.search-box.error,
 .main-right-full input.search-box.error {
   border-color: red;
-}
-.main-right input.settings-input#remove,
-.main-right-full input.settings-input#remove,
-.main-right input.search-box#remove,
-.main-right-full input.search-box#remove {
-  width: 20%;
-  padding: 5px;
-  margin-top: 10px;
 }
 .main-right input.settings-input.number::after,
 .main-right-full input.settings-input.number::after,
