@@ -47,7 +47,7 @@ require('parts/navigation.php');
                 <label for="employee-upload" class="add-photo" required>Upload Image</label>
                 <input type="file" style="display:none;" name="employee_upload" id="employee-upload" required/>
                 <input type="button" name="hide_button" id="remove" value="Remove" class="hide"/>
-                <label>Employee Type</label>
+                <label class="no-padding-label">Employee Type</label>
                 <select name="employee_subscription" required>
                     <option value="select" disabled selected>Select</option>
                     <?php

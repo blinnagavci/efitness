@@ -29,7 +29,7 @@ if (!isset($_SESSION['logged_in'])) {
                 <li>
                     <a class="<?php active('members') ? 'active' : NULL ?>" href="members" title="Add Members">
                         <i class="fa member"></i>
-                        Add Members
+                        Add Member
                     </a>
                 </li>
                 <li>
@@ -55,7 +55,7 @@ if (!isset($_SESSION['logged_in'])) {
                 <li>
                     <a class="<?php active('employees') ? 'active' : NULL ?>" href="employees" title="Add Employees">
                         <i class="fa employee"></i>
-                        Add Employees
+                        Add Employee
                     </a>
                 </li>
                 <li>

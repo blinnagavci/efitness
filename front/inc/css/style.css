@@ -908,6 +908,12 @@ body .main-right-full {
 .main-right-full .main-box .right-form-content label:first-child {
   padding-top: 0;
 }
+.main-right .main-box .left-form-content label.no-padding-label,
+.main-right-full .main-box .left-form-content label.no-padding-label,
+.main-right .main-box .right-form-content label.no-padding-label,
+.main-right-full .main-box .right-form-content label.no-padding-label {
+  padding-top: 9px;
+}
 .main-right .main-box .left-form-content label.add-photo,
 .main-right-full .main-box .left-form-content label.add-photo,
 .main-right .main-box .right-form-content label.add-photo,
@@ -1113,7 +1119,7 @@ body .main-right-full {
 .main-right-full .main-box .left-form-content input[type="submit"],
 .main-right .main-box .right-form-content input[type="submit"],
 .main-right-full .main-box .right-form-content input[type="submit"] {
-  margin: 15px 0;
+  margin: 20px 0 15px 0;
   color: #fff;
   border-color: #3c8dbc;
   background-color: #3c8dbc;
