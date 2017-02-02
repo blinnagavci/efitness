@@ -70,6 +70,9 @@ if (!($_SESSION['username'] == 'admin')) {
                 </form>  
             </div>
         </div>
+        <div class="left-add-account">
+            
+        </div>
     </div>
 </div>
 <?php

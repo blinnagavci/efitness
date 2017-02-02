@@ -1036,6 +1036,17 @@ body .main-right-full {
 .main-right-full .main-box .right-form-content select.error {
   border-color: red;
 }
+.main-right .main-box .left-form-content select:hover,
+.main-right-full .main-box .left-form-content select:hover,
+.main-right .main-box .right-form-content select:hover,
+.main-right-full .main-box .right-form-content select:hover,
+.main-right .main-box .left-form-content select:focus,
+.main-right-full .main-box .left-form-content select:focus,
+.main-right .main-box .right-form-content select:focus,
+.main-right-full .main-box .right-form-content select:focus {
+  border-color: #719ece;
+  box-shadow: 0 0 5px #719ece;
+}
 .main-right .main-box .left-form-content input,
 .main-right-full .main-box .left-form-content input,
 .main-right .main-box .right-form-content input,
@@ -1363,7 +1374,9 @@ body .main-right-full {
 .main-right .left-membership,
 .main-right-full .left-membership,
 .main-right .right-employee-type,
-.main-right-full .right-employee-type {
+.main-right-full .right-employee-type,
+.main-right .left-add-account,
+.main-right-full .left-add-account {
   float: left;
   width: 50%;
   padding: 0 20px 0 10px;
@@ -1371,7 +1384,9 @@ body .main-right-full {
 .main-right .left-membership input[type='submit'],
 .main-right-full .left-membership input[type='submit'],
 .main-right .right-employee-type input[type='submit'],
-.main-right-full .right-employee-type input[type='submit'] {
+.main-right-full .right-employee-type input[type='submit'],
+.main-right .left-add-account input[type='submit'],
+.main-right-full .left-add-account input[type='submit'] {
   height: 36px;
   width: 28%;
 }
@@ -1379,10 +1394,14 @@ body .main-right-full {
 .main-right-full .left-membership .add-membership,
 .main-right .right-employee-type .add-membership,
 .main-right-full .right-employee-type .add-membership,
+.main-right .left-add-account .add-membership,
+.main-right-full .left-add-account .add-membership,
 .main-right .left-membership .add-employee-type,
 .main-right-full .left-membership .add-employee-type,
 .main-right .right-employee-type .add-employee-type,
-.main-right-full .right-employee-type .add-employee-type {
+.main-right-full .right-employee-type .add-employee-type,
+.main-right .left-add-account .add-employee-type,
+.main-right-full .left-add-account .add-employee-type {
   float: left;
   width: 100%;
   margin: 5px;
@@ -1391,10 +1410,14 @@ body .main-right-full {
 .main-right-full .left-membership .remove-membership,
 .main-right .right-employee-type .remove-membership,
 .main-right-full .right-employee-type .remove-membership,
+.main-right .left-add-account .remove-membership,
+.main-right-full .left-add-account .remove-membership,
 .main-right .left-membership .remove-employee-type,
 .main-right-full .left-membership .remove-employee-type,
 .main-right .right-employee-type .remove-employee-type,
-.main-right-full .right-employee-type .remove-employee-type {
+.main-right-full .right-employee-type .remove-employee-type,
+.main-right .left-add-account .remove-employee-type,
+.main-right-full .left-add-account .remove-employee-type {
   float: left;
   width: 100%;
   margin: 5px;
