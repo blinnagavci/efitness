@@ -152,6 +152,12 @@ function validateForms() {
             return false;
         }
     });
+    
+    $("#account-form").validate({
+        errorPlacement: function () {
+            return false;
+        }
+    });
 }
 
 function controlImg() {

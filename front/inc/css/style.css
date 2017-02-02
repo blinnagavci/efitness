@@ -1154,6 +1154,24 @@ body .main-right-full {
 .main-right-full .main-box #details {
   float: right;
 }
+.main-right .main-box .add-account-button,
+.main-right-full .main-box .add-account-button {
+  float: left;
+  border-radius: 3px;
+  padding: 7px 10px;
+  color: #fff;
+  border: 1px solid #3c8dbc;
+  background-color: #3c8dbc;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+}
+.main-right .main-box .add-account-button:hover,
+.main-right-full .main-box .add-account-button:hover {
+  background: #fff;
+  color: #3c8dbc;
+}
 .main-right .main-box .generate-pdf,
 .main-right-full .main-box .generate-pdf {
   float: left;
@@ -1304,7 +1322,11 @@ body .main-right-full {
 .main-right .main-box .remove-employee,
 .main-right-full .main-box .remove-employee,
 .main-right .main-box .details-employee,
-.main-right-full .main-box .details-employee {
+.main-right-full .main-box .details-employee,
+.main-right .main-box .edit-account,
+.main-right-full .main-box .edit-account,
+.main-right .main-box .remove-account,
+.main-right-full .main-box .remove-account {
   border-radius: 3px;
   padding: 6px 12px;
   color: #fff;
@@ -1328,21 +1350,29 @@ body .main-right-full {
 .main-right .main-box .remove-employee:hover,
 .main-right-full .main-box .remove-employee:hover,
 .main-right .main-box .details-employee:hover,
-.main-right-full .main-box .details-employee:hover {
+.main-right-full .main-box .details-employee:hover,
+.main-right .main-box .edit-account:hover,
+.main-right-full .main-box .edit-account:hover,
+.main-right .main-box .remove-account:hover,
+.main-right-full .main-box .remove-account:hover {
   background: #fff;
   color: #3c8dbc;
 }
 .main-right .main-box .remove-member,
 .main-right-full .main-box .remove-member,
 .main-right .main-box .remove-employee,
-.main-right-full .main-box .remove-employee {
+.main-right-full .main-box .remove-employee,
+.main-right .main-box .remove-account,
+.main-right-full .main-box .remove-account {
   border-color: #FF0000;
   background-color: #FF0000;
 }
 .main-right .main-box .remove-member:hover,
 .main-right-full .main-box .remove-member:hover,
 .main-right .main-box .remove-employee:hover,
-.main-right-full .main-box .remove-employee:hover {
+.main-right-full .main-box .remove-employee:hover,
+.main-right .main-box .remove-account:hover,
+.main-right-full .main-box .remove-account:hover {
   background: #fff;
   color: #FF0000;
 }

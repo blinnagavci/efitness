@@ -525,6 +525,21 @@ body .main-right-full{
         #details{
             float: right;
         }
+
+        .add-account-button{
+            float: left;
+            border-radius: 3px;
+            padding: 7px 10px;
+            color: #fff;
+            border: 1px solid #3c8dbc;
+            background-color: #3c8dbc;
+            .transition(all 0.2s);
+            &:hover{
+                background: #fff;
+                color: #3c8dbc;
+            }
+
+        }
         .generate-pdf{
             float: left;
             margin-top: 10px;
@@ -595,7 +610,7 @@ body .main-right-full{
             float: left;
             margin: 10px 0;
         }
-        .edit-member, .remove-member, .search-button, .details-member, .edit-employee, .remove-employee, .details-employee{
+        .edit-member, .remove-member, .search-button, .details-member, .edit-employee, .remove-employee, .details-employee, .edit-account, .remove-account{
             border-radius: 3px;
             padding: 6px 12px;
             color: #fff;
@@ -607,7 +622,7 @@ body .main-right-full{
                 color: #3c8dbc;
             }
         }
-        .remove-member, .remove-employee{
+        .remove-member, .remove-employee, .remove-account{
             border-color: #FF0000;
             background-color: #FF0000;
             &:hover{

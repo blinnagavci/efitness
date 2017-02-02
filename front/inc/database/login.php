@@ -25,6 +25,7 @@ class Crud {
             $rows = mysqli_fetch_assoc($query);
             $_SESSION['username'] = $rows['username'];
             $_SESSION['logged_in'] = TRUE;
+            $_SESSION['admin_status'] = $rows['admin_status'];
             return true;
         } else {
             return false;
