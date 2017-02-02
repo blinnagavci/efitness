@@ -66,11 +66,30 @@ if (!isset($_SESSION['logged_in'])) {
                 </li>
             </ul>
         </li>
-        <?php if ($_SESSION['username'] == 'admin') { ?>
+        <?php if ($_SESSION['admin_status'] == 0) { ?>
             <li>
-                <a class = "<?php active('settings') ? 'active' : NULL ?>" href = "settings">
+                <?php
+                $url = startsWith(getLastURLPart(), 'settings');
+                ?>
+                <a class="<?php
+                if ($url) {
+                    active($url);
+                } active('other_settings') || active('manage_accounts') || active('add_account') ? 'active' : NULL
+                ?>" href="manage_accounts" title="Settings">
                     <i class = "fa settings"></i>Settings
                 </a>
+                <ul>
+                    <li>
+                        <a class = "<?php active('manage_accounts') ? 'active' : NULL ?>" href = "manage_accounts">
+                            <i class = "fa settings"></i>Manage Accounts
+                        </a>
+                    </li>
+                    <li>
+                        <a class = "<?php active('other_settings') ? 'active' : NULL ?>" href = "other_settings">
+                            <i class = "fa settings"></i>Other
+                        </a>
+                    </li>
+                </ul>
             </li>
             <?php
         }
