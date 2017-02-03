@@ -30,7 +30,7 @@ require('inc/database/db_connect.php');
                     <tr>
                         <td><?php echo $row["id"] ?></td>
                         <td><?php echo $row['username'] ?></td>
-                        <td><?php echo $row['password'] ?></td>
+                        <td><?php echo '*******' ?></td>
                         <td><?php echo $row['email'] ?></td>
                         <td><?php
                             $status = $row['admin_status'];
