@@ -7,7 +7,7 @@ require('inc/database/db_connect.php');
 <div class="main-right">
 
     <?php
-    $sql = "SELECT id, username, password, email, admin_status FROM account";
+    $sql = "SELECT id, username, password, email, admin_status FROM account WHERE status='0'";
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {

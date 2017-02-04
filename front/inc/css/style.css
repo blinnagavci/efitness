@@ -850,6 +850,11 @@ h6 {
 body .main-right-full {
   width: 100%;
 }
+p.double-click {
+  font-size: 12px;
+  color: grey;
+  margin-bottom: -5px;
+}
 .main-right,
 .main-right-full {
   width: 85%;

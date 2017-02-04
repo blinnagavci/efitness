@@ -15,8 +15,8 @@ class Crud {
     }
 
     public function Login($table, $username, $password) {
-        //$password = sha1($password);
-        $sql = "SELECT * FROM $table WHERE username='$username' AND password = '$password'";
+        $password = sha1($password);
+        $sql = "SELECT * FROM $table WHERE username='$username' AND password = '$password' AND status='0'";
 
         $query = mysqli_query($this->conn, $sql);
 

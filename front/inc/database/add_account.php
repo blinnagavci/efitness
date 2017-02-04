@@ -10,8 +10,8 @@ if (isset($_POST['submit'])) {
     
     $password = sha1($temporary_password);
     
-    $sql = "INSERT INTO account (username, password, email, admin_status)
-    VALUES ('$username', '$password', '$email', '$accounttype')";
+    $sql = "INSERT INTO account (username, password, email, admin_status, status)
+    VALUES ('$username', '$password', '$email', '$accounttype', '0')";
     
     $retval1 = mysqli_query($conn, $sql);
 
