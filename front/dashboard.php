@@ -7,8 +7,8 @@ require('parts/navigation.php');
     <div class="welcome-container">
         <?php
         if (isset($_SESSION['logged_in'])) {
-            $username = $_SESSION['username'];
-            echo "<h4>Howdy, " . $username . "</h4>";
+//            $username = $_SESSION['username'];
+//            echo "<h4>Howdy, " . $username . "</h4>";
         }
         ?>
     </div>
