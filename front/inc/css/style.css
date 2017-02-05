@@ -1738,4 +1738,9 @@ p.double-click {
     padding: 0;
   }
 }
+@media screen and (max-width: 390px) {
+  .login-container .center-login {
+    width: 100%;
+  }
+}
 /*# sourceMappingURL=style.css.map */
