@@ -1730,5 +1730,12 @@ p.double-click {
   .main-right-full {
     padding: 10px;
   }
+  .main-right .main-box {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .main-right .main-box .left-form-content {
+    padding: 0;
+  }
 }
 /*# sourceMappingURL=style.css.map */
