@@ -74,8 +74,9 @@ $(document).ready(function () {
 });
 
 $(window).resize(function () {
-    $(".main-right").css("margin-left", $(".main-left").width());
+    $(".main-right").css("margin-left", $(".main-left").innerWidth());
 //    $(".main-left-after").width($('.main-left').width());
+
 });
 
 function validateForms() {
@@ -152,13 +153,13 @@ function validateForms() {
             return false;
         }
     });
-    
+
     $("#account-form").validate({
         errorPlacement: function () {
             return false;
         }
     });
-    
+
     $("#account-edit-form").validate({
         errorPlacement: function () {
             return false;

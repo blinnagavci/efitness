@@ -745,6 +745,11 @@ h6 {
   background-color: #1a2226;
   font-size: 14px;
 }
+.main-left img.hidden-img {
+  display: none;
+  width: 32px;
+  height: 32px;
+}
 .main-left ul {
   float: left;
   width: 100%;
@@ -804,7 +809,8 @@ h6 {
   margin-right: 7px;
   width: 15px;
 }
-.main-left ul li a i.members:before {
+.main-left ul li a i.members:before,
+.main-left ul li a i.accounts:before {
   content: '\f0c0';
 }
 .main-left ul li a i.employees:before {
@@ -815,6 +821,9 @@ h6 {
 }
 .main-left ul li a i.dashboard:before {
   content: "\f0e4";
+}
+.main-left ul li a i.cog:before {
+  content: "\f013";
 }
 .main-left ul li ul {
   display: none;
@@ -1244,6 +1253,11 @@ p.double-click {
 .main-right-full .main-box .settings-add-et {
   padding: 8px 23px;
 }
+.main-right .main-box .table-wrapper,
+.main-right-full .main-box .table-wrapper {
+  width: 100%;
+  float: left;
+}
 .main-right .main-box .member-table,
 .main-right-full .main-box .member-table,
 .main-right .main-box .membership-table,
@@ -1623,5 +1637,98 @@ p.double-click {
 .ui-datepicker select.ui-datepicker-month,
 .ui-datepicker select.ui-datepicker-year {
   background-color: #fff;
+}
+@media screen and (max-width: 850px) {
+  .main-left {
+    width: auto;
+  }
+  .main-left .full-width-text {
+    display: none;
+  }
+  .main-left img.hidden-img {
+    display: inline;
+  }
+  .main-left h2 {
+    width: auto;
+    float: none;
+  }
+  .main-left ul li {
+    width: auto;
+    float: none;
+  }
+  .main-left ul li ul {
+    float: none;
+  }
+  .main-left ul li ul li a {
+    padding-left: 25px;
+  }
+  .main-right {
+    width: auto;
+  }
+  .main-right .main-box .right-form-content,
+  .main-right .main-box .left-form-content {
+    width: 100%;
+    float: left;
+  }
+  .main-right .main-box .right-form-content label:first-child {
+    padding-top: 20px;
+  }
+  .main-right .main-box .table-wrapper .table-div .member-table {
+    float: none;
+  }
+  .main-right .left-membership,
+  .main-right .right-employee-type {
+    float: left;
+    width: 100%;
+    border-left: 0;
+  }
+  .main-right .right-employee-type {
+    margin-top: 15px;
+  }
+  .table-div {
+    width: 100%;
+    float: none;
+  }
+  #searchform {
+    width: 100%;
+    float: left;
+  }
+}
+@media screen and (max-width: 420px) {
+  .main-right .remove-membership input[type='submit'],
+  .main-right .add-membership input[type='submit'],
+  .main-right .add-employee-type input[type='submit'],
+  .main-right .remove-employee-type input[type='submit'] {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-top: 10px;
+  }
+  .main-right .remove-membership input[type='text'],
+  .main-right .add-membership input[type='text'],
+  .main-right .add-employee-type input[type='text'],
+  .main-right .remove-employee-type input[type='text'] {
+    width: 100%;
+    float: left;
+  }
+  .main-right .remove-membership select,
+  .main-right .add-membership select,
+  .main-right .add-employee-type select,
+  .main-right .remove-employee-type select {
+    width: 100%;
+    float: left;
+  }
+  .main-right .main-box .left-membership,
+  .main-right .main-box .right-employee-type {
+    padding: 0 10px 0 5px;
+  }
+  .main-right h2,
+  .main-right-full h2 {
+    font-size: 1.2em;
+  }
+  .main-right,
+  .main-right-full {
+    padding: 10px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

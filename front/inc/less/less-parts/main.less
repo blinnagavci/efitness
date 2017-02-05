@@ -212,6 +212,7 @@
                 color: #fff;
             }
         }
+
     }
     h2{
         text-transform: uppercase;
@@ -224,6 +225,11 @@
         float: left;
         background-color: #1a2226;
         font-size: 14px;
+    }
+    img.hidden-img{
+        display: none;
+        width: 32px;
+        height: 32px;
     }
     ul{
         float: left;
@@ -277,7 +283,7 @@
                     font-size: 15px;
                     margin-right: 7px;
                     width: 15px;
-                    &.members:before{
+                    &.members:before, &.accounts:before{
                         content: '\f0c0';
                     }
                     &.employees:before{
@@ -289,8 +295,11 @@
                     &.dashboard:before{
                         content: "\f0e4";
                     }
-
+                    &.cog:before{
+                        content: "\f013";
+                    }
                 }
+
             }
             ul{
                 display: none;
@@ -583,12 +592,16 @@ p.double-click{
         .settings-add-ms, .settings-add-et{
             padding: 8px 23px;
         }
+        .table-wrapper{
+            width: 100%;
+            float: left;
+        }
         .member-table, .membership-table, .employee-table, .employee-contract-table{
             border: 1px solid #A9A9A9;
             width: 100%;
             display: table;
             margin: 10px 0;
-            float:left;
+            float: left;
             td, th{
                 padding: 7px;
                 border: 1px solid #A9A9A9;

@@ -1,1 +1,94 @@
+@media screen and (max-width: 850px) {
+  .main-left {
+    width: auto;
+  }
+  .main-left .full-width-text {
+    display: none;
+  }
+  .main-left img.hidden-img {
+    display: inline;
+  }
+  .main-left h2 {
+    width: auto;
+    float: none;
+  }
+  .main-left ul li {
+    width: auto;
+    float: none;
+  }
+  .main-left ul li ul {
+    float: none;
+  }
+  .main-left ul li ul li a {
+    padding-left: 25px;
+  }
+  .main-right {
+    width: auto;
+  }
+  .main-right .main-box .right-form-content,
+  .main-right .main-box .left-form-content {
+    width: 100%;
+    float: left;
+  }
+  .main-right .main-box .right-form-content label:first-child {
+    padding-top: 20px;
+  }
+  .main-right .main-box .table-wrapper .table-div .member-table {
+    float: none;
+  }
+  .main-right .left-membership,
+  .main-right .right-employee-type {
+    float: left;
+    width: 100%;
+    border-left: 0;
+  }
+  .main-right .right-employee-type {
+    margin-top: 15px;
+  }
+  .table-div {
+    width: 100%;
+    float: none;
+  }
+  #searchform {
+    width: 100%;
+    float: left;
+  }
+}
+@media screen and (max-width: 420px) {
+  .main-right .remove-membership input[type='submit'],
+  .main-right .add-membership input[type='submit'],
+  .main-right .add-employee-type input[type='submit'],
+  .main-right .remove-employee-type input[type='submit'] {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-top: 10px;
+  }
+  .main-right .remove-membership input[type='text'],
+  .main-right .add-membership input[type='text'],
+  .main-right .add-employee-type input[type='text'],
+  .main-right .remove-employee-type input[type='text'] {
+    width: 100%;
+    float: left;
+  }
+  .main-right .remove-membership select,
+  .main-right .add-membership select,
+  .main-right .add-employee-type select,
+  .main-right .remove-employee-type select {
+    width: 100%;
+    float: left;
+  }
+  .main-right .main-box .left-membership,
+  .main-right .main-box .right-employee-type {
+    padding: 0 10px 0 5px;
+  }
+  .main-right h2,
+  .main-right-full h2 {
+    font-size: 1.2em;
+  }
+  .main-right,
+  .main-right-full {
+    padding: 10px;
+  }
+}
 /*# sourceMappingURL=responsive.css.map */

@@ -1,0 +1,81 @@
+@media screen and (max-width: 850px){
+    .main-left{
+        width: auto;
+        .full-width-text{
+            display: none;
+        }
+        img.hidden-img{
+            display: inline;
+        }
+        h2{
+            width: auto;
+            float: none;
+        }
+        ul li{
+            width: auto;
+            float: none;
+            ul{
+                float: none;
+                li a{
+                    padding-left: 25px;
+                }
+            }
+        }
+    }
+    .main-right{
+        width: auto;
+        .main-box .right-form-content, .main-box .left-form-content{
+            width: 100%;
+            float: left;
+        }
+        .main-box .right-form-content label:first-child{
+            padding-top: 20px;
+        }
+        .main-box .table-wrapper .table-div .member-table{
+            float: none;
+        }
+        .left-membership, .right-employee-type{
+            float: left;
+            width: 100%;
+            border-left: 0;
+        }
+        .right-employee-type{
+            margin-top: 15px;
+        }
+    }
+    .table-div{
+        width: 100%;
+        float: none;
+    }
+    #searchform{
+        width: 100%;
+        float: left;
+    }
+}
+@media screen and (max-width: 420px){
+    .main-right .remove-membership, .main-right .add-membership, .main-right .add-employee-type, .main-right .remove-employee-type{
+        input[type='submit']{
+            width: 100%;
+            float: left;
+            margin-left: 0;
+            margin-top: 10px;
+        }
+        input[type='text']{
+            width: 100%;
+            float: left;
+        }
+        select{
+            width: 100%;
+            float: left;
+        }
+    }
+    .main-right .main-box .left-membership,  .main-right .main-box .right-employee-type{
+        padding: 0 10px 0 5px;
+    }
+    .main-right h2, .main-right-full h2{
+        font-size: 1.2em;
+    }
+    .main-right, .main-right-full{
+        padding: 10px;
+    }
+}
