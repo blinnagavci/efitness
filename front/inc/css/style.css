@@ -1742,5 +1742,9 @@ p.double-click {
   .login-container .center-login {
     width: 100%;
   }
+  .login-container .form-container {
+    width: auto;
+    margin: 0 10px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
