@@ -40,9 +40,23 @@ require('parts/navigation.php');
                 </li>
                 <li>
                     <div class="most-popular-membership">
-                        <h2>Daily</h2>
-                        <i class="fa total-employees-icon"></i>
-                        <h3>Weekly membership</h3>
+                        <h2 class="not-increased">Daily</h2>
+                        <i class="fa popular-membership-icon"></i>
+                        <h3>Most popular membership</h3>
+                    </div>
+                </li>
+                <li>
+                    <div class="total-payments">
+                        <h2>9201</h2>
+                        <i class="fa total-payments-icon"></i>
+                        <h3>Total payments received</h3>
+                    </div>
+                </li>
+                <li>
+                    <div class="total-accounts">
+                        <h2>24</h2>
+                        <i class="fa total-accounts-icon"></i>
+                        <h3>Total accounts</h3>
                     </div>
                 </li>
             </ul>

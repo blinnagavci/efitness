@@ -1184,16 +1184,16 @@ p.double-click {
 .main-right .main-box .dashboard ul li,
 .main-right-full .main-box .dashboard ul li {
   float: left;
-  margin: 0 15px;
-  width: 15%;
+  padding: 0 15px;
+  width: 16.666%;
 }
 .main-right .main-box .dashboard ul li:first-child,
 .main-right-full .main-box .dashboard ul li:first-child {
-  margin-left: 0;
+  padding-left: 0;
 }
 .main-right .main-box .dashboard ul li:last-child,
 .main-right-full .main-box .dashboard ul li:last-child {
-  margin-right: 0;
+  padding-right: 25px;
 }
 .main-right .main-box .dashboard ul li .total-members,
 .main-right-full .main-box .dashboard ul li .total-members,
@@ -1202,7 +1202,11 @@ p.double-click {
 .main-right .main-box .dashboard ul li .total-employees,
 .main-right-full .main-box .dashboard ul li .total-employees,
 .main-right .main-box .dashboard ul li .most-popular-membership,
-.main-right-full .main-box .dashboard ul li .most-popular-membership {
+.main-right-full .main-box .dashboard ul li .most-popular-membership,
+.main-right .main-box .dashboard ul li .total-payments,
+.main-right-full .main-box .dashboard ul li .total-payments,
+.main-right .main-box .dashboard ul li .total-accounts,
+.main-right-full .main-box .dashboard ul li .total-accounts {
   border-radius: 5px;
   padding: 15px 20px;
   float: left;
@@ -1224,12 +1228,21 @@ p.double-click {
 .main-right-full .main-box .dashboard ul li .most-popular-membership {
   background-color: #9e9e9e;
 }
+.main-right .main-box .dashboard ul li .total-payments,
+.main-right-full .main-box .dashboard ul li .total-payments {
+  background-color: #66bb6a;
+}
+.main-right .main-box .dashboard ul li .total-accounts,
+.main-right-full .main-box .dashboard ul li .total-accounts {
+  background-color: #ee534f;
+}
 .main-right .main-box .dashboard h3,
 .main-right-full .main-box .dashboard h3 {
   font-weight: 400;
   color: #fff;
   font-size: 1em;
   float: left;
+  width: 100%;
 }
 .main-right .main-box .dashboard h2,
 .main-right-full .main-box .dashboard h2 {
@@ -1243,12 +1256,14 @@ p.double-click {
 .main-right .main-box .dashboard i,
 .main-right-full .main-box .dashboard i {
   float: right;
-  padding-top: 10px;
+  padding-top: 5px;
   font-size: 1.6em;
   color: #b1e5fb;
 }
 .main-right .main-box .dashboard i.today-members-icon::before,
-.main-right-full .main-box .dashboard i.today-members-icon::before {
+.main-right-full .main-box .dashboard i.today-members-icon::before,
+.main-right .main-box .dashboard i.total-accounts-icon::before,
+.main-right-full .main-box .dashboard i.total-accounts-icon::before {
   content: '\f0c0';
 }
 .main-right .main-box .dashboard i.weekly-joinings-icon::before,
@@ -1258,6 +1273,14 @@ p.double-click {
 .main-right .main-box .dashboard i.total-employees-icon::before,
 .main-right-full .main-box .dashboard i.total-employees-icon::before {
   content: '\f0f0';
+}
+.main-right .main-box .dashboard i.popular-membership-icon::before,
+.main-right-full .main-box .dashboard i.popular-membership-icon::before {
+  content: "\f073";
+}
+.main-right .main-box .dashboard i.total-payments-icon::before,
+.main-right-full .main-box .dashboard i.total-payments-icon::before {
+  content: "\f00c";
 }
 .main-right .main-box #details,
 .main-right-full .main-box #details {

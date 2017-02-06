@@ -547,15 +547,15 @@ p.double-click{
             width: 100%;
             ul li{
                 float: left;
-                margin: 0 15px;
-                width: 15%;
+                padding: 0 15px;
+                width: 16.666%;
                 &:first-child{
-                    margin-left: 0;
+                    padding-left: 0;
                 }
                 &:last-child{
-                    margin-right: 0;
+                    padding-right: 25px;
                 }
-                .total-members, .weekly-joinings, .total-employees, .most-popular-membership{ 
+                .total-members, .weekly-joinings, .total-employees, .most-popular-membership, .total-payments, .total-accounts{ 
                     border-radius: 5px;
                     padding: 15px 20px;
                     float: left;
@@ -573,6 +573,12 @@ p.double-click{
                 .most-popular-membership{
                     background-color: rgb(158, 158, 158);
                 }
+                .total-payments{
+                    background-color: rgb(102, 187, 106);
+                }
+                .total-accounts{
+                    background-color: rgb(238, 83, 79);
+                }
             }
 
             h3{
@@ -580,6 +586,7 @@ p.double-click{
                 color: #fff;
                 font-size: 1em;
                 float: left;
+                width: 100%;
             }
             h2{
                 font-size: 1.8em;
@@ -591,10 +598,10 @@ p.double-click{
             }
             i{
                 float: right;
-                padding-top: 10px;
+                padding-top: 5px;
                 font-size: 1.6em;
                 color: rgb(177, 229, 251);
-                &.today-members-icon::before{
+                &.today-members-icon::before, &.total-accounts-icon::before{
                     content: '\f0c0';
                 }
                 &.weekly-joinings-icon::before{
@@ -602,6 +609,12 @@ p.double-click{
                 }
                 &.total-employees-icon::before{
                     content: '\f0f0';
+                }
+                &.popular-membership-icon::before{
+                    content: "\f073";
+                }
+                &.total-payments-icon::before{
+                    content: "\f00c";
                 }
             }
         }
