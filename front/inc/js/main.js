@@ -4,6 +4,17 @@ $(document).ready(function () {
             $(this).find("ul").show();
         }
     });
+    $('.dashboard h2').each(function () {
+    $(this).prop('Counter',0).animate({
+        Counter: $(this).text()
+    }, {
+        duration: 1000,
+        easing: 'swing',
+        step: function (now) {
+            $(this).text(Math.ceil(now));
+        }
+    });
+});
 //    $("#dialog-confirm").dialog({
 //        autoOpen: false,
 //        resizable: false,

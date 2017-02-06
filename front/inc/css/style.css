@@ -1175,6 +1175,46 @@ p.double-click {
   height: 200px;
   margin-top: 5px;
 }
+.main-right .main-box .dashboard,
+.main-right-full .main-box .dashboard {
+  float: left;
+  margin: 10px;
+  width: 100%;
+}
+.main-right .main-box .dashboard .today-members,
+.main-right-full .main-box .dashboard .today-members {
+  background-color: #28b6f6;
+  border-radius: 5px;
+  padding: 15px 20px;
+  float: left;
+}
+.main-right .main-box .dashboard h3,
+.main-right-full .main-box .dashboard h3 {
+  font-weight: 400;
+  color: #fff;
+  font-size: 1em;
+  float: left;
+}
+.main-right .main-box .dashboard h2,
+.main-right-full .main-box .dashboard h2 {
+  font-size: 1.8em;
+  font-weight: bold;
+  color: #fff;
+  margin: 0;
+  width: 50%;
+  float: left;
+}
+.main-right .main-box .dashboard i.today-members-icon,
+.main-right-full .main-box .dashboard i.today-members-icon {
+  float: right;
+  padding-top: 10px;
+  font-size: 1.6em;
+  color: #b1e5fb;
+}
+.main-right .main-box .dashboard i.today-members-icon::before,
+.main-right-full .main-box .dashboard i.today-members-icon::before {
+  content: '\f0c0';
+}
 .main-right .main-box #details,
 .main-right-full .main-box #details {
   float: right;
