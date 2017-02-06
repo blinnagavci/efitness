@@ -1282,6 +1282,58 @@ p.double-click {
 .main-right-full .main-box .dashboard i.total-payments-icon::before {
   content: "\f00c";
 }
+.main-right .main-box .dashboard .last-members,
+.main-right-full .main-box .dashboard .last-members {
+  width: 50%;
+  float: left;
+  margin-top: 80px;
+  font-size: 1em;
+}
+.main-right .main-box .dashboard .last-members i.members-icon,
+.main-right-full .main-box .dashboard .last-members i.members-icon {
+  float: left;
+  color: black;
+  padding-right: 10px;
+}
+.main-right .main-box .dashboard .last-members i.members-icon::before,
+.main-right-full .main-box .dashboard .last-members i.members-icon::before {
+  content: '\f0c0';
+}
+.main-right .main-box .dashboard .last-members ul li,
+.main-right-full .main-box .dashboard .last-members ul li {
+  margin-top: 30px;
+  float: left;
+  width: 100%;
+  border: 1px solid lightgrey;
+  padding: 10px;
+  display: table;
+}
+.main-right .main-box .dashboard .last-members ul li .split-list,
+.main-right-full .main-box .dashboard .last-members ul li .split-list {
+  width: 25%;
+  float: left;
+}
+.main-right .main-box .dashboard .last-members ul li img,
+.main-right-full .main-box .dashboard .last-members ul li img {
+  display: block;
+  width: 100px;
+  height: 100px;
+  float: left;
+}
+.main-right .main-box .dashboard .last-members ul li span,
+.main-right-full .main-box .dashboard .last-members ul li span {
+  float: left;
+  width: 100%;
+  padding: 15px 0;
+}
+.main-right .main-box .dashboard .last-members h3,
+.main-right-full .main-box .dashboard .last-members h3 {
+  color: black;
+  width: auto;
+  font-size: 1.4em;
+  padding-top: 5px;
+  float: left;
+}
 .main-right .main-box #details,
 .main-right-full .main-box #details {
   float: right;

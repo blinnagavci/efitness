@@ -60,6 +60,40 @@ require('parts/navigation.php');
                     </div>
                 </li>
             </ul>
+            <div class="last-members">
+                <i class="fa members-icon"></i>
+                <h3>Members</h3>
+                <?php 
+                    $sql = "SELECT * FROM member order by id desc limit 4";
+                    $query = mysqli_query($conn, $sql);
+                ?>
+                <ul>
+                    <?php 
+                    while($row = mysqli_fetch_array($query)){
+                       
+                    
+                    ?>
+                    <li>
+                        <div class="split-list">
+                            <?php $imgsrc = 'repository/member_photos/' . $row["photo"];?>
+                            <img src="<?php echo $imgsrc; ?>" alt="Member Photo"/>
+                        </div>
+                        <div class="split-list">
+                            <span><?php echo $row['first_name'];?></span>
+                            <span><?php echo $row['last_name'];?></span>
+                        </div>
+                        <div class="split-list">
+                            <span><?php echo $row['gender'];?></span>
+                            <span><?php echo $row['email'];?></span>
+                        </div>
+                        <div class="split-list">
+                            <span>Membership type</span>
+                            <span>Daily</span>
+                        </div>
+                    </li>
+                    <?php } ?>
+                </ul>
+            </div>
         </div>
     </div>
     <div id="result"></div>
