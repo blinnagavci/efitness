@@ -1181,12 +1181,48 @@ p.double-click {
   margin: 10px;
   width: 100%;
 }
-.main-right .main-box .dashboard .today-members,
-.main-right-full .main-box .dashboard .today-members {
-  background-color: #28b6f6;
+.main-right .main-box .dashboard ul li,
+.main-right-full .main-box .dashboard ul li {
+  float: left;
+  margin: 0 15px;
+  width: 15%;
+}
+.main-right .main-box .dashboard ul li:first-child,
+.main-right-full .main-box .dashboard ul li:first-child {
+  margin-left: 0;
+}
+.main-right .main-box .dashboard ul li:last-child,
+.main-right-full .main-box .dashboard ul li:last-child {
+  margin-right: 0;
+}
+.main-right .main-box .dashboard ul li .total-members,
+.main-right-full .main-box .dashboard ul li .total-members,
+.main-right .main-box .dashboard ul li .weekly-joinings,
+.main-right-full .main-box .dashboard ul li .weekly-joinings,
+.main-right .main-box .dashboard ul li .total-employees,
+.main-right-full .main-box .dashboard ul li .total-employees,
+.main-right .main-box .dashboard ul li .most-popular-membership,
+.main-right-full .main-box .dashboard ul li .most-popular-membership {
   border-radius: 5px;
   padding: 15px 20px;
   float: left;
+  width: 100%;
+}
+.main-right .main-box .dashboard ul li .total-members,
+.main-right-full .main-box .dashboard ul li .total-members {
+  background-color: #28b6f6;
+}
+.main-right .main-box .dashboard ul li .weekly-joinings,
+.main-right-full .main-box .dashboard ul li .weekly-joinings {
+  background-color: #26a59a;
+}
+.main-right .main-box .dashboard ul li .total-employees,
+.main-right-full .main-box .dashboard ul li .total-employees {
+  background-color: #e8ae00;
+}
+.main-right .main-box .dashboard ul li .most-popular-membership,
+.main-right-full .main-box .dashboard ul li .most-popular-membership {
+  background-color: #9e9e9e;
 }
 .main-right .main-box .dashboard h3,
 .main-right-full .main-box .dashboard h3 {
@@ -1204,8 +1240,8 @@ p.double-click {
   width: 50%;
   float: left;
 }
-.main-right .main-box .dashboard i.today-members-icon,
-.main-right-full .main-box .dashboard i.today-members-icon {
+.main-right .main-box .dashboard i,
+.main-right-full .main-box .dashboard i {
   float: right;
   padding-top: 10px;
   font-size: 1.6em;
@@ -1214,6 +1250,14 @@ p.double-click {
 .main-right .main-box .dashboard i.today-members-icon::before,
 .main-right-full .main-box .dashboard i.today-members-icon::before {
   content: '\f0c0';
+}
+.main-right .main-box .dashboard i.weekly-joinings-icon::before,
+.main-right-full .main-box .dashboard i.weekly-joinings-icon::before {
+  content: '\f080';
+}
+.main-right .main-box .dashboard i.total-employees-icon::before,
+.main-right-full .main-box .dashboard i.total-employees-icon::before {
+  content: '\f0f0';
 }
 .main-right .main-box #details,
 .main-right-full .main-box #details {
