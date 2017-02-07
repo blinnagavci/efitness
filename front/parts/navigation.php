@@ -16,7 +16,8 @@ if (!isset($_SESSION['logged_in'])) {
         </div>
         <div class="welcome-wrapper">
         <p>Howdy, </p>
-        <p style="font-weight: bold;">labian</p>
+        <?php $username = $_SESSION['username'];?>
+        <p style="font-weight: bold;"><?php echo $username; ?></p>
         </div>
         <div class="welcome-wrapper">
             <a href="inc/database/logout.php" title="Log Out">
