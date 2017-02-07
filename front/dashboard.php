@@ -75,7 +75,7 @@ require('parts/navigation.php');
                 <li>
                     <div class="total-accounts">
                         <?php
-                        $result5 = mysqli_query($conn, "SELECT * FROM account");
+                        $result5 = mysqli_query($conn, "SELECT * FROM account WHERE status=0");
                         $numrows5 = mysqli_num_rows($result5);
                         echo "<h2>$numrows5</h2>";
                         ?>
