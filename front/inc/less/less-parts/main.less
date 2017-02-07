@@ -589,7 +589,7 @@ p.double-click{
                 width: 100%;
             }
             h2{
-                font-size: 1.8em;
+                font-size: 1.6em;
                 font-weight: bold;
                 color: #fff;
                 margin: 0;
@@ -617,11 +617,46 @@ p.double-click{
                     content: "\f00c";
                 }
             }
-            .last-members{
+
+            .last-members, .last-members-2{
                 width: 50%;
                 float: left;
-                margin-top: 80px;
+                margin-top: 40px;
+                padding-right: 10px;
                 font-size: 1em;
+                .wrap-latest{
+                    float: left;
+                    width: 100%;
+                    border: 1px solid lightgrey;
+                    border-radius: 3px;
+                    border-bottom: 0;
+                    padding: 10px;
+                    background: rgba(158, 158, 158, 0.1);
+                    border-bottom-right-radius: 0;
+                    border-bottom-left-radius: 0;
+                    .add-member{
+                        float: right;
+                        background-color: rgb(41, 95, 142);
+                        padding: 5px;
+                        border-radius: 3px;
+                        font-size: 0.8em;
+                        margin-top: 3px;
+                        color: #fff;
+                        .transition(background-color 0.2s ease-out);
+                        &:hover{
+                            background-color: rgb(51, 116, 174);
+                        }
+                        i.add-member-icon{
+                            float: left;
+                            font-size: 1em;
+                            padding-right: 3px;
+                            padding-top: 3px;
+                            &::before{
+                                content: '\f234';
+                            }
+                        }
+                    }
+                }
                 i.members-icon{
                     float: left;
                     color: black;
@@ -630,36 +665,51 @@ p.double-click{
                         content: '\f0c0';
                     }
                 }
-                ul li{
-                    margin-top: 30px;
+                ul {
                     float: left;
                     width: 100%;
                     border: 1px solid lightgrey;
-                    padding: 10px;
-                    display: table;
-                    .split-list{
-                        width: 25%;
-                        float: left;
-                    }
-                    img{
-                        display: block;
-                        width: 100px;
-                        height: 100px;
-                        float: left;
-                    }
-                    span{
+                    border-radius: 3px;
+                    border-top-left-radius: 0;
+                    border-top-right-radius: 0;
+                    li{
                         float: left;
                         width: 100%;
-                        padding: 15px 0;
+                        padding: 10px;
+                        background: rgba(158, 158, 158, 0.1);
+                        border-bottom: 1px solid lightgrey;
+                        &:last-child{
+                            border-bottom-color: transparent;
+                        }
+                        .split-list{
+                            width: 25%;
+                            float: left;
+                            text-align: center;
+                        }
+                        img{
+                            display: block;
+                            width: 100px;
+                            height: 100px;
+                            float: left;
+                        }
+                        span{
+                            float: left;
+                            width: 100%;
+                            padding: 15px 0;
+                            margin-top: 30px;
+                        }
                     }
                 }
                 h3{
                     color: black;
                     width: auto;
-                    font-size: 1.4em;
+                    font-size: 1.2em;
                     padding-top: 5px;
                     float: left;
                 }
+            }
+            .last-members-2{
+                padding-right: 20px;
             }
         }
         #details{

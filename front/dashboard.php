@@ -61,37 +61,73 @@ require('parts/navigation.php');
                 </li>
             </ul>
             <div class="last-members">
-                <i class="fa members-icon"></i>
-                <h3>Members</h3>
-                <?php 
-                    $sql = "SELECT * FROM member order by id desc limit 4";
-                    $query = mysqli_query($conn, $sql);
+                <div class="wrap-latest">
+                    <i class="fa members-icon"></i>
+                    <h3>Latest Members</h3>
+                    <a class="add-member" href="members" title="Add Member">
+                    <i class="fa add-member-icon"></i>
+                        Add
+                    </a>
+                 </div>
+                <?php
+                $sql = "SELECT * FROM member order by id desc limit 4";
+                $query = mysqli_query($conn, $sql);
                 ?>
                 <ul>
-                    <?php 
-                    while($row = mysqli_fetch_array($query)){
-                       
-                    
-                    ?>
-                    <li>
-                        <div class="split-list">
-                            <?php $imgsrc = 'repository/member_photos/' . $row["photo"];?>
-                            <img src="<?php echo $imgsrc; ?>" alt="Member Photo"/>
-                        </div>
-                        <div class="split-list">
-                            <span><?php echo $row['first_name'];?></span>
-                            <span><?php echo $row['last_name'];?></span>
-                        </div>
-                        <div class="split-list">
-                            <span><?php echo $row['gender'];?></span>
-                            <span><?php echo $row['email'];?></span>
-                        </div>
-                        <div class="split-list">
-                            <span>Membership type</span>
-                            <span>Daily</span>
-                        </div>
-                    </li>
-                    <?php } ?>
+                    <?php
+                    while ($row = mysqli_fetch_array($query)) {
+                        ?>
+                        <li>
+                            <div class="split-list">
+    <?php $imgsrc = 'repository/member_photos/' . $row["photo"]; ?>
+                                <img src="<?php echo $imgsrc; ?>" alt="Member Photo"/>
+                            </div>
+                            <div class="split-list">
+                                <span><?php echo $row['first_name'] . ' ' . $row['last_name']; ?></span>
+                            </div>
+                            <div class="split-list">
+                                <span><?php echo $row['gender']; ?></span>
+                            </div>
+                            <div class="split-list">
+                                <span><?php echo $row['city']; ?></span>
+                            </div>
+                        </li>
+<?php } ?>
+                </ul>
+            </div>
+            <div class="last-members-2">
+                <div class="wrap-latest">
+                    <i class="fa members-icon"></i>
+                    <h3>Latest Members</h3>
+                    <a class="add-member" href="members" title="Add Member">
+                    <i class="fa add-member-icon"></i>
+                        Add
+                    </a>
+                 </div>
+                <?php
+                $sql = "SELECT * FROM member order by id desc limit 4";
+                $query = mysqli_query($conn, $sql);
+                ?>
+                <ul>
+                    <?php
+                    while ($row = mysqli_fetch_array($query)) {
+                        ?>
+                        <li>
+                            <div class="split-list">
+    <?php $imgsrc = 'repository/member_photos/' . $row["photo"]; ?>
+                                <img src="<?php echo $imgsrc; ?>" alt="Member Photo"/>
+                            </div>
+                            <div class="split-list">
+                                <span><?php echo $row['first_name'] . ' ' . $row['last_name']; ?></span>
+                            </div>
+                            <div class="split-list">
+                                <span><?php echo $row['gender']; ?></span>
+                            </div>
+                            <div class="split-list">
+                                <span><?php echo $row['city']; ?></span>
+                            </div>
+                        </li>
+<?php } ?>
                 </ul>
             </div>
         </div>

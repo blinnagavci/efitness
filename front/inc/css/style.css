@@ -1246,7 +1246,7 @@ p.double-click {
 }
 .main-right .main-box .dashboard h2,
 .main-right-full .main-box .dashboard h2 {
-  font-size: 1.8em;
+  font-size: 1.6em;
   font-weight: bold;
   color: #fff;
   margin: 0;
@@ -1283,56 +1283,146 @@ p.double-click {
   content: "\f00c";
 }
 .main-right .main-box .dashboard .last-members,
-.main-right-full .main-box .dashboard .last-members {
+.main-right-full .main-box .dashboard .last-members,
+.main-right .main-box .dashboard .last-members-2,
+.main-right-full .main-box .dashboard .last-members-2 {
   width: 50%;
   float: left;
-  margin-top: 80px;
+  margin-top: 40px;
+  padding-right: 10px;
   font-size: 1em;
 }
+.main-right .main-box .dashboard .last-members .wrap-latest,
+.main-right-full .main-box .dashboard .last-members .wrap-latest,
+.main-right .main-box .dashboard .last-members-2 .wrap-latest,
+.main-right-full .main-box .dashboard .last-members-2 .wrap-latest {
+  float: left;
+  width: 100%;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+  border-bottom: 0;
+  padding: 10px;
+  background: rgba(158, 158, 158, 0.1);
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.main-right .main-box .dashboard .last-members .wrap-latest .add-member,
+.main-right-full .main-box .dashboard .last-members .wrap-latest .add-member,
+.main-right .main-box .dashboard .last-members-2 .wrap-latest .add-member,
+.main-right-full .main-box .dashboard .last-members-2 .wrap-latest .add-member {
+  float: right;
+  background-color: #295f8e;
+  padding: 5px;
+  border-radius: 3px;
+  font-size: 0.8em;
+  margin-top: 3px;
+  color: #fff;
+  -webkit-transition: background-color 0.2s ease-out;
+  -moz-transition: background-color 0.2s ease-out;
+  -ms-transition: background-color 0.2s ease-out;
+  -o-transition: background-color 0.2s ease-out;
+}
+.main-right .main-box .dashboard .last-members .wrap-latest .add-member:hover,
+.main-right-full .main-box .dashboard .last-members .wrap-latest .add-member:hover,
+.main-right .main-box .dashboard .last-members-2 .wrap-latest .add-member:hover,
+.main-right-full .main-box .dashboard .last-members-2 .wrap-latest .add-member:hover {
+  background-color: #3374ae;
+}
+.main-right .main-box .dashboard .last-members .wrap-latest .add-member i.add-member-icon,
+.main-right-full .main-box .dashboard .last-members .wrap-latest .add-member i.add-member-icon,
+.main-right .main-box .dashboard .last-members-2 .wrap-latest .add-member i.add-member-icon,
+.main-right-full .main-box .dashboard .last-members-2 .wrap-latest .add-member i.add-member-icon {
+  float: left;
+  font-size: 1em;
+  padding-right: 3px;
+  padding-top: 3px;
+}
+.main-right .main-box .dashboard .last-members .wrap-latest .add-member i.add-member-icon::before,
+.main-right-full .main-box .dashboard .last-members .wrap-latest .add-member i.add-member-icon::before,
+.main-right .main-box .dashboard .last-members-2 .wrap-latest .add-member i.add-member-icon::before,
+.main-right-full .main-box .dashboard .last-members-2 .wrap-latest .add-member i.add-member-icon::before {
+  content: '\f234';
+}
 .main-right .main-box .dashboard .last-members i.members-icon,
-.main-right-full .main-box .dashboard .last-members i.members-icon {
+.main-right-full .main-box .dashboard .last-members i.members-icon,
+.main-right .main-box .dashboard .last-members-2 i.members-icon,
+.main-right-full .main-box .dashboard .last-members-2 i.members-icon {
   float: left;
   color: black;
   padding-right: 10px;
 }
 .main-right .main-box .dashboard .last-members i.members-icon::before,
-.main-right-full .main-box .dashboard .last-members i.members-icon::before {
+.main-right-full .main-box .dashboard .last-members i.members-icon::before,
+.main-right .main-box .dashboard .last-members-2 i.members-icon::before,
+.main-right-full .main-box .dashboard .last-members-2 i.members-icon::before {
   content: '\f0c0';
 }
-.main-right .main-box .dashboard .last-members ul li,
-.main-right-full .main-box .dashboard .last-members ul li {
-  margin-top: 30px;
+.main-right .main-box .dashboard .last-members ul,
+.main-right-full .main-box .dashboard .last-members ul,
+.main-right .main-box .dashboard .last-members-2 ul,
+.main-right-full .main-box .dashboard .last-members-2 ul {
   float: left;
   width: 100%;
   border: 1px solid lightgrey;
+  border-radius: 3px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+.main-right .main-box .dashboard .last-members ul li,
+.main-right-full .main-box .dashboard .last-members ul li,
+.main-right .main-box .dashboard .last-members-2 ul li,
+.main-right-full .main-box .dashboard .last-members-2 ul li {
+  float: left;
+  width: 100%;
   padding: 10px;
-  display: table;
+  background: rgba(158, 158, 158, 0.1);
+  border-bottom: 1px solid lightgrey;
+}
+.main-right .main-box .dashboard .last-members ul li:last-child,
+.main-right-full .main-box .dashboard .last-members ul li:last-child,
+.main-right .main-box .dashboard .last-members-2 ul li:last-child,
+.main-right-full .main-box .dashboard .last-members-2 ul li:last-child {
+  border-bottom-color: transparent;
 }
 .main-right .main-box .dashboard .last-members ul li .split-list,
-.main-right-full .main-box .dashboard .last-members ul li .split-list {
+.main-right-full .main-box .dashboard .last-members ul li .split-list,
+.main-right .main-box .dashboard .last-members-2 ul li .split-list,
+.main-right-full .main-box .dashboard .last-members-2 ul li .split-list {
   width: 25%;
   float: left;
+  text-align: center;
 }
 .main-right .main-box .dashboard .last-members ul li img,
-.main-right-full .main-box .dashboard .last-members ul li img {
+.main-right-full .main-box .dashboard .last-members ul li img,
+.main-right .main-box .dashboard .last-members-2 ul li img,
+.main-right-full .main-box .dashboard .last-members-2 ul li img {
   display: block;
   width: 100px;
   height: 100px;
   float: left;
 }
 .main-right .main-box .dashboard .last-members ul li span,
-.main-right-full .main-box .dashboard .last-members ul li span {
+.main-right-full .main-box .dashboard .last-members ul li span,
+.main-right .main-box .dashboard .last-members-2 ul li span,
+.main-right-full .main-box .dashboard .last-members-2 ul li span {
   float: left;
   width: 100%;
   padding: 15px 0;
+  margin-top: 30px;
 }
 .main-right .main-box .dashboard .last-members h3,
-.main-right-full .main-box .dashboard .last-members h3 {
+.main-right-full .main-box .dashboard .last-members h3,
+.main-right .main-box .dashboard .last-members-2 h3,
+.main-right-full .main-box .dashboard .last-members-2 h3 {
   color: black;
   width: auto;
-  font-size: 1.4em;
+  font-size: 1.2em;
   padding-top: 5px;
   float: left;
+}
+.main-right .main-box .dashboard .last-members-2,
+.main-right-full .main-box .dashboard .last-members-2 {
+  padding-right: 20px;
 }
 .main-right .main-box #details,
 .main-right-full .main-box #details {
