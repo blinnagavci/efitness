@@ -723,7 +723,7 @@ h6 {
   float: left;
 }
 .main-left .welcome-navigation p {
-  padding-top: 5px;
+  padding-top: 6px;
   float: left;
   width: 100%;
   color: #a9c2ba;
@@ -1420,8 +1420,8 @@ p.double-click {
 .main-right .main-box .dashboard .last-members-2 ul li img,
 .main-right-full .main-box .dashboard .last-members-2 ul li img {
   display: block;
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
   float: left;
 }
 .main-right .main-box .dashboard .last-members ul li span,
@@ -1430,8 +1430,7 @@ p.double-click {
 .main-right-full .main-box .dashboard .last-members-2 ul li span {
   float: left;
   width: 100%;
-  padding: 15px 0;
-  margin-top: 30px;
+  margin-top: 35px;
 }
 .main-right .main-box .dashboard .last-members h3,
 .main-right-full .main-box .dashboard .last-members h3,
