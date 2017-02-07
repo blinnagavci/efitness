@@ -71,22 +71,22 @@ require('parts/navigation.php');
                 </li>
                 <li>
                     <div class="total-payments">
-<?php
-$result4 = mysqli_query($conn, "SELECT * FROM membership_payment");
-$numrows4 = mysqli_num_rows($result4);
-echo "<h2>$numrows4</h2>";
-?>
+                        <?php
+                        $result4 = mysqli_query($conn, "SELECT * FROM membership_payment");
+                        $numrows4 = mysqli_num_rows($result4);
+                        echo "<h2>$numrows4</h2>";
+                        ?>
                         <i class="fa total-payments-icon"></i>
                         <h3>Total payments received</h3>
                     </div>
                 </li>
                 <li>
                     <div class="total-accounts">
-<?php
-$result5 = mysqli_query($conn, "SELECT * FROM account WHERE status=0");
-$numrows5 = mysqli_num_rows($result5);
-echo "<h2>$numrows5</h2>";
-?>
+                        <?php
+                        $result5 = mysqli_query($conn, "SELECT * FROM account WHERE status=0");
+                        $numrows5 = mysqli_num_rows($result5);
+                        echo "<h2>$numrows5</h2>";
+                        ?>
                         <i class="fa total-accounts-icon"></i>
                         <h3>Total accounts &nbsp</h3>
                     </div>
@@ -101,17 +101,17 @@ echo "<h2>$numrows5</h2>";
                         Add
                     </a>
                 </div>
-<?php
-$sql = "SELECT * FROM member order by id desc limit 5";
-$query = mysqli_query($conn, $sql);
-?>
-                <ul>
                 <?php
-                while ($row = mysqli_fetch_array($query)) {
-                    ?>
+                $sql = "SELECT * FROM member order by id desc limit 5";
+                $query = mysqli_query($conn, $sql);
+                ?>
+                <ul>
+                    <?php
+                    while ($row = mysqli_fetch_array($query)) {
+                        ?>
                         <li>
                             <div class="split-list">
-    <?php $imgsrc = 'repository/member_photos/' . $row["photo"]; ?>
+                                <?php $imgsrc = 'repository/member_photos/' . $row["photo"]; ?>
                                 <img src="<?php echo $imgsrc; ?>" alt="Member Photo"/>
                             </div>
                             <div class="split-list">
@@ -124,42 +124,44 @@ $query = mysqli_query($conn, $sql);
                                 <span><?php echo $row['city']; ?></span>
                             </div>
                         </li>
-<?php } ?>
+                    <?php } ?>
                 </ul>
             </div>
             <div class="last-members-2">
                 <div class="wrap-latest">
-                    <i class="fa members-icon"></i>
-                    <h3>Latest Members</h3>
-                    <a class="add-member" href="members" title="Add Member">
-                        <i class="fa add-member-icon"></i>
-                        Add
-                    </a>
+                    <i class="fa total-payments-icon dashboard-icon"></i>
+                    <h3>Latest Payments</h3>
                 </div>
-<?php
-$sql = "SELECT * FROM member order by id desc limit 5";
-$query = mysqli_query($conn, $sql);
-?>
-                <ul>
                 <?php
-                while ($row = mysqli_fetch_array($query)) {
-                    ?>
+                $sql = "SELECT * FROM membership_payment order by id desc limit 5";
+                $query = mysqli_query($conn, $sql);
+                ?>
+                <ul>
+                    <?php
+                    while ($row = mysqli_fetch_array($query)) {
+                        ?>
                         <li>
                             <div class="split-list">
-    <?php $imgsrc = 'repository/member_photos/' . $row["photo"]; ?>
-                                <img src="<?php echo $imgsrc; ?>" alt="Member Photo"/>
+                                <span><?php echo $row['amount_of_payment'] . '€' ?></span>
                             </div>
                             <div class="split-list">
-                                <span><?php echo $row['first_name'] . ' ' . $row['last_name']; ?></span>
+                                <span><?php echo $row['start_date']; ?></span>
                             </div>
                             <div class="split-list">
-                                <span><?php echo $row['gender']; ?></span>
+                                <span><?php echo $row['end_date']; ?></span>
                             </div>
+                            <?php
+                            $temporaryID = $row['id_membership'];
+                            $mysql = mysqli_query($conn, "SELECT membership_type FROM membership WHERE id='$temporaryID'");
+                            $membershiprow = mysqli_fetch_row($mysql);
+                            $membershipID = $membershiprow[0];                            
+                            ?>
                             <div class="split-list">
-                                <span><?php echo $row['city']; ?></span>
+                                <span><?php echo $membershipID; ?></span>
                             </div>
+
                         </li>
-<?php } ?>
+                    <?php } ?>
                 </ul>
             </div>
         </div>

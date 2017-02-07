@@ -92,7 +92,7 @@ require('parts/navigation.php');
                             <td><?php echo $row["id"]; ?></td>
                             <td><?php echo $row['start_date']; ?></td>
                             <td><?php echo $row['end_date']; ?></td>
-                            <td><?php echo $row['amount_of_payment']; ?></td>
+                            <td><?php echo $row['amount_of_payment'] . '€'; ?></td>
                         </tr>
                         <?php
                     }

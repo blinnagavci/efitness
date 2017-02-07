@@ -1239,6 +1239,12 @@ p.double-click {
   margin: 10px;
   width: 100%;
 }
+.main-right .main-box .dashboard .dashboard-icon,
+.main-right-full .main-box .dashboard .dashboard-icon {
+  float: left;
+  color: black;
+  padding-right: 10px;
+}
 .main-right .main-box .dashboard ul li,
 .main-right-full .main-box .dashboard ul li {
   float: left;
@@ -1431,6 +1437,7 @@ p.double-click {
 .main-right .main-box .dashboard .last-members-2 ul li,
 .main-right-full .main-box .dashboard .last-members-2 ul li {
   float: left;
+  font-size: 18px;
   width: 100%;
   padding: 10px;
   background: rgba(158, 158, 158, 0.1);
@@ -1458,6 +1465,7 @@ p.double-click {
   width: 80px;
   height: 80px;
   float: left;
+  border-radius: 10px;
 }
 .main-right .main-box .dashboard .last-members ul li span,
 .main-right-full .main-box .dashboard .last-members ul li span,
@@ -1465,7 +1473,8 @@ p.double-click {
 .main-right-full .main-box .dashboard .last-members-2 ul li span {
   float: left;
   width: 100%;
-  margin-top: 35px;
+  margin-top: 30px;
+  margin-bottom: 27px;
 }
 .main-right .main-box .dashboard .last-members h3,
 .main-right-full .main-box .dashboard .last-members h3,
