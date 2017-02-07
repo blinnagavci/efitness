@@ -15,6 +15,6 @@ if (isset($_POST['remove_employee_type_submit'])) {
     }
 
     mysqli_close($conn);
-    header("refresh: 0; url = ../../settings");
+    header("refresh: 0; url = ../../other_settings");
 }
 

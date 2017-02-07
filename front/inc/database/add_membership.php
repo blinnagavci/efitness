@@ -18,6 +18,6 @@ if (isset($_POST['add_membership_submit'])) {
     }
 
     mysqli_close($conn);
-    header("refresh: 0; url = ../../settings");
+    header("refresh: 0; url = ../../other_settings");
 }
 
