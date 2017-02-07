@@ -141,6 +141,15 @@ require('parts/navigation.php');
                     while ($row = mysqli_fetch_array($query)) {
                         ?>
                         <li>
+                            <?php
+                            $temporaryID = $row['id_membership'];
+                            $mysql = mysqli_query($conn, "SELECT membership_type FROM membership WHERE id='$temporaryID'");
+                            $membershiprow = mysqli_fetch_row($mysql);
+                            $membershipID = $membershiprow[0];
+                            ?>
+                            <div class="split-list">
+                                <span><?php echo $membershipID; ?></span>
+                            </div>
                             <div class="split-list">
                                 <span><?php echo $row['amount_of_payment'] . '€' ?></span>
                             </div>
@@ -150,16 +159,6 @@ require('parts/navigation.php');
                             <div class="split-list">
                                 <span><?php echo $row['end_date']; ?></span>
                             </div>
-                            <?php
-                            $temporaryID = $row['id_membership'];
-                            $mysql = mysqli_query($conn, "SELECT membership_type FROM membership WHERE id='$temporaryID'");
-                            $membershiprow = mysqli_fetch_row($mysql);
-                            $membershipID = $membershiprow[0];                            
-                            ?>
-                            <div class="split-list">
-                                <span><?php echo $membershipID; ?></span>
-                            </div>
-
                         </li>
                     <?php } ?>
                 </ul>
