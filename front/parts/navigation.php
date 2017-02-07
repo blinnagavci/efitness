@@ -11,13 +11,13 @@ if (!isset($_SESSION['logged_in'])) {
         <img class="hidden-img" src="repository/favicon.ico" alt="E-Fitness">
     </h2>
     <div class="welcome-navigation">
-        <div class="welcome-wrapper">
-        <img src="repository/favicon.ico" title="E-Fitness"/>
+        <div class="welcome-wrapper-1">
+            <img src="repository/favicon.ico" title="E-Fitness"/>
         </div>
         <div class="welcome-wrapper">
-        <p>Howdy, </p>
-        <?php $username = $_SESSION['username'];?>
-        <p style="font-weight: bold;"><?php echo $username; ?></p>
+            <p>Howdy, </p>
+            <?php $username = $_SESSION['username']; ?>
+            <p style="font-weight: bold;"><?php echo $username; ?></p>
         </div>
         <div class="welcome-wrapper">
             <a href="inc/database/logout.php" title="Log Out">
@@ -114,7 +114,9 @@ if (!isset($_SESSION['logged_in'])) {
         ?>
     </ul>
     <div class="log-out">
-
+        <a class="responsive-logout" href="inc/database/logout.php" title="Log Out">
+            <i class="fa log-out-icon"></i>
+        </a>
     </div>
 </div>
 

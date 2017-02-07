@@ -190,10 +190,17 @@
         float: left;
         padding: 5px 0;
         width: 100%;
+        .welcome-wrapper-1{
+            float: left;
+            width: 25%;
+            text-align: center;
+            margin-right: 5px;
+        }
         .welcome-wrapper{
             float: left;
             width: 33%;
             text-align: center;
+
         }
         img{
             display: block;
@@ -213,6 +220,7 @@
         }
         a{
             padding: 15px 12px;
+            padding-right: 0;
             position: relative;
             float: right;
             border-left: 4px solid transparent;
@@ -230,6 +238,31 @@
             }
         }
 
+    }
+    .log-out{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        display: none;
+        a{
+            padding: 15px 12px;
+            padding-right: 0;
+            position: relative;
+            float: right;
+            border-left: 4px solid transparent;
+            color: #a9c2ba;
+            .transition(all 0.2s ease-out);
+            i{
+                font-size: 1.6em;
+                font-family: 'FontAwesome';
+                &.log-out-icon:before{
+                    content: "\f08b";
+                }
+            }
+            &:hover{
+                color: #fff;
+            }
+        }
     }
     h2{
         text-transform: uppercase;
@@ -643,7 +676,7 @@ p.double-click{
             .last-members, .last-members-2{
                 width: 50%;
                 float: left;
-                margin-top: 40px;
+                margin-top: 50px;
                 padding-right: 10px;
                 font-size: 1em;
                 .wrap-latest{

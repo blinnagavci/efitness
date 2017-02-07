@@ -20,35 +20,57 @@ require('parts/navigation.php');
                 </li>
                 <li>
                     <div class="weekly-joinings">
-                        <h2>200</h2>
+                        <?php
+                        $result2 = mysqli_query($conn, "SELECT count(*) as numRecords, YEARWEEK(date_added) as weekNum FROM member GROUP BY YEARWEEK(date_added)");
+                        while ($row = $result2->fetch_assoc()) {
+                            echo '<h2>' . $row["numRecords"] . '</h2>';
+                        }
+                        ?>
                         <i class="fa weekly-joinings-icon"></i>
                         <h3>Joined this week</h3>
                     </div>
                 </li>
                 <li>
                     <div class="total-employees">
-                        <h2>200</h2>
+                        <?php
+                        $result3 = mysqli_query($conn, "SELECT * FROM employee");
+                        $numrows3 = mysqli_num_rows($result3);
+                        echo "<h2>$numrows3</h2>";
+                        ?>
                         <i class="fa total-employees-icon"></i>
                         <h3>Total employees</h3>
                     </div>
                 </li>
                 <li>
+                    <?php
+                    $querymembership = "SELECT id_membership, COUNT(*) AS membership FROM membership_payment GROUP BY id_membership ORDER BY membership DESC LIMIT 1";
+                    $resultmembership = mysqli_query($conn, $querymembership);
+                    $result6 = mysqli_fetch_assoc($resultmembership);
+                    ?>
                     <div class="most-popular-membership">
-                        <h2 class="not-increased">Daily</h2>
+                        <h2 class="not-increased"><?php echo $result6['id_membership']; ?></h2>
                         <i class="fa popular-membership-icon"></i>
                         <h3>Most popular membership</h3>
                     </div>
                 </li>
                 <li>
                     <div class="total-payments">
-                        <h2>9201</h2>
+                        <?php
+                        $result4 = mysqli_query($conn, "SELECT * FROM membership_payment");
+                        $numrows4 = mysqli_num_rows($result4);
+                        echo "<h2>$numrows4</h2>";
+                        ?>
                         <i class="fa total-payments-icon"></i>
                         <h3>Total payments received</h3>
                     </div>
                 </li>
                 <li>
                     <div class="total-accounts">
-                        <h2>24</h2>
+                        <?php
+                        $result5 = mysqli_query($conn, "SELECT * FROM account");
+                        $numrows5 = mysqli_num_rows($result5);
+                        echo "<h2>$numrows5</h2>";
+                        ?>
                         <i class="fa total-accounts-icon"></i>
                         <h3>Total accounts</h3>
                     </div>
@@ -59,12 +81,12 @@ require('parts/navigation.php');
                     <i class="fa members-icon"></i>
                     <h3>Latest Members</h3>
                     <a class="add-member" href="members" title="Add Member">
-                    <i class="fa add-member-icon"></i>
+                        <i class="fa add-member-icon"></i>
                         Add
                     </a>
-                 </div>
+                </div>
                 <?php
-                $sql = "SELECT * FROM member order by id desc limit 4";
+                $sql = "SELECT * FROM member order by id desc limit 5";
                 $query = mysqli_query($conn, $sql);
                 ?>
                 <ul>
@@ -73,7 +95,7 @@ require('parts/navigation.php');
                         ?>
                         <li>
                             <div class="split-list">
-    <?php $imgsrc = 'repository/member_photos/' . $row["photo"]; ?>
+                                <?php $imgsrc = 'repository/member_photos/' . $row["photo"]; ?>
                                 <img src="<?php echo $imgsrc; ?>" alt="Member Photo"/>
                             </div>
                             <div class="split-list">
@@ -86,7 +108,7 @@ require('parts/navigation.php');
                                 <span><?php echo $row['city']; ?></span>
                             </div>
                         </li>
-<?php } ?>
+                    <?php } ?>
                 </ul>
             </div>
             <div class="last-members-2">
@@ -94,12 +116,12 @@ require('parts/navigation.php');
                     <i class="fa members-icon"></i>
                     <h3>Latest Members</h3>
                     <a class="add-member" href="members" title="Add Member">
-                    <i class="fa add-member-icon"></i>
+                        <i class="fa add-member-icon"></i>
                         Add
                     </a>
-                 </div>
+                </div>
                 <?php
-                $sql = "SELECT * FROM member order by id desc limit 4";
+                $sql = "SELECT * FROM member order by id desc limit 5";
                 $query = mysqli_query($conn, $sql);
                 ?>
                 <ul>
@@ -108,7 +130,7 @@ require('parts/navigation.php');
                         ?>
                         <li>
                             <div class="split-list">
-    <?php $imgsrc = 'repository/member_photos/' . $row["photo"]; ?>
+                                <?php $imgsrc = 'repository/member_photos/' . $row["photo"]; ?>
                                 <img src="<?php echo $imgsrc; ?>" alt="Member Photo"/>
                             </div>
                             <div class="split-list">
@@ -121,7 +143,7 @@ require('parts/navigation.php');
                                 <span><?php echo $row['city']; ?></span>
                             </div>
                         </li>
-<?php } ?>
+                    <?php } ?>
                 </ul>
             </div>
         </div>

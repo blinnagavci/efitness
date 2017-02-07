@@ -709,6 +709,12 @@ h6 {
   padding: 5px 0;
   width: 100%;
 }
+.main-left .welcome-navigation .welcome-wrapper-1 {
+  float: left;
+  width: 25%;
+  text-align: center;
+  margin-right: 5px;
+}
 .main-left .welcome-navigation .welcome-wrapper {
   float: left;
   width: 33%;
@@ -732,6 +738,7 @@ h6 {
 }
 .main-left .welcome-navigation a {
   padding: 15px 12px;
+  padding-right: 0;
   position: relative;
   float: right;
   border-left: 4px solid transparent;
@@ -749,6 +756,34 @@ h6 {
   content: "\f08b";
 }
 .main-left .welcome-navigation a:hover {
+  color: #fff;
+}
+.main-left .log-out {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: none;
+}
+.main-left .log-out a {
+  padding: 15px 12px;
+  padding-right: 0;
+  position: relative;
+  float: right;
+  border-left: 4px solid transparent;
+  color: #a9c2ba;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -ms-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+}
+.main-left .log-out a i {
+  font-size: 1.6em;
+  font-family: 'FontAwesome';
+}
+.main-left .log-out a i.log-out-icon:before {
+  content: "\f08b";
+}
+.main-left .log-out a:hover {
   color: #fff;
 }
 .main-left h2 {
@@ -1311,7 +1346,7 @@ p.double-click {
 .main-right-full .main-box .dashboard .last-members-2 {
   width: 50%;
   float: left;
-  margin-top: 40px;
+  margin-top: 50px;
   padding-right: 10px;
   font-size: 1em;
 }
@@ -1909,7 +1944,27 @@ p.double-click {
 .ui-datepicker select.ui-datepicker-year {
   background-color: #fff;
 }
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 1110px) {
+  .main-left .welcome-navigation .welcome-wrapper-1 {
+    margin-right: 10px;
+  }
+}
+@media screen and (max-width: 930px) {
+  .welcome-wrapper {
+    display: none;
+  }
+  .main-left .welcome-navigation {
+    display: none;
+  }
+  .main-left .log-out {
+    display: block;
+  }
+  .full-width-logout {
+    display: none;
+  }
+  .main-left h2.navigation-text {
+    display: none;
+  }
   .main-left {
     width: auto;
   }
