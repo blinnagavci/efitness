@@ -44,11 +44,19 @@ require('parts/navigation.php');
                 <li>
                     <?php
                     $querymembership = "SELECT id_membership, COUNT(*) AS membership FROM membership_payment GROUP BY id_membership ORDER BY membership DESC LIMIT 1";
+                    $queryyy = "SELECT id_membership FROM membership_payment GROUP BY id_membership HAVING COUNT(*) FROM membership_payment GROUP BY id_membership ORDER BY count(*) DESC LIMIT 1";
+
                     $resultmembership = mysqli_query($conn, $querymembership);
                     $result6 = mysqli_fetch_assoc($resultmembership);
+                    $result7 = $result6['id_membership'];
+                    $querymembershiptype = "SELECT membership_type from membership WHERE id = $result7";
+                    $result8 = mysqli_query($conn, $querymembershiptype);
+                    while ($row = $result8->fetch_assoc()) {
+                        $result9 = $row['membership_type'];
+                    }
                     ?>
                     <div class="most-popular-membership">
-                        <h2 class="not-increased"><?php echo $result6['id_membership']; ?></h2>
+                        <h2 class="not-increased"><?php echo $result9; ?></h2>
                         <i class="fa popular-membership-icon"></i>
                         <h3>Most popular membership</h3>
                     </div>
