@@ -15,7 +15,7 @@ require('parts/navigation.php');
                         echo "<h2>$numrows</h2>";
                         ?>
                         <i class="fa today-members-icon"></i>
-                        <h3>Total members</h3>
+                        <h3>Total members &nbsp &nbsp &nbsp &nbsp &nbsp</h3>
                     </div>
                 </li>
                 <li>
@@ -42,7 +42,7 @@ require('parts/navigation.php');
                         echo "<h2>$numrows3</h2>";
                         ?>
                         <i class="fa total-employees-icon"></i>
-                        <h3>Total employees</h3>
+                        <h3>Total employees &nbsp</h3>
                     </div>
                 </li>
                 <li>
@@ -88,7 +88,7 @@ $numrows5 = mysqli_num_rows($result5);
 echo "<h2>$numrows5</h2>";
 ?>
                         <i class="fa total-accounts-icon"></i>
-                        <h3>Total accounts</h3>
+                        <h3>Total accounts &nbsp</h3>
                     </div>
                 </li>
             </ul>
