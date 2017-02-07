@@ -22,8 +22,12 @@ require('parts/navigation.php');
                     <div class="weekly-joinings">
                         <?php
                         $result2 = mysqli_query($conn, "SELECT count(*) as numRecords, YEARWEEK(date_added) as weekNum FROM member GROUP BY YEARWEEK(date_added)");
-                        while ($row = $result2->fetch_assoc()) {
-                            echo '<h2>' . $row["numRecords"] . '</h2>';
+                        if (($result2->num_rows > 0)) {
+                            while ($row = $result2->fetch_assoc()) {
+                                echo '<h2>' . $row["numRecords"] . '</h2>';
+                            }
+                        } else {
+                            echo '<h2>0</h2>';
                         }
                         ?>
                         <i class="fa weekly-joinings-icon"></i>
@@ -47,12 +51,16 @@ require('parts/navigation.php');
                     $queryyy = "SELECT id_membership FROM membership_payment GROUP BY id_membership HAVING COUNT(*) FROM membership_payment GROUP BY id_membership ORDER BY count(*) DESC LIMIT 1";
 
                     $resultmembership = mysqli_query($conn, $querymembership);
-                    $result6 = mysqli_fetch_assoc($resultmembership);
-                    $result7 = $result6['id_membership'];
-                    $querymembershiptype = "SELECT membership_type from membership WHERE id = $result7";
-                    $result8 = mysqli_query($conn, $querymembershiptype);
-                    while ($row = $result8->fetch_assoc()) {
-                        $result9 = $row['membership_type'];
+                    if (($resultmembership->num_rows > 0)) {
+                        $result6 = mysqli_fetch_assoc($resultmembership);
+                        $result7 = $result6['id_membership'];
+                        $querymembershiptype = "SELECT membership_type from membership WHERE id = $result7";
+                        $result8 = mysqli_query($conn, $querymembershiptype);
+                        while ($row = $result8->fetch_assoc()) {
+                            $result9 = $row['membership_type'];
+                        }
+                    } else {
+                        $result9 = 'None';
                     }
                     ?>
                     <div class="most-popular-membership">
@@ -63,22 +71,22 @@ require('parts/navigation.php');
                 </li>
                 <li>
                     <div class="total-payments">
-                        <?php
-                        $result4 = mysqli_query($conn, "SELECT * FROM membership_payment");
-                        $numrows4 = mysqli_num_rows($result4);
-                        echo "<h2>$numrows4</h2>";
-                        ?>
+<?php
+$result4 = mysqli_query($conn, "SELECT * FROM membership_payment");
+$numrows4 = mysqli_num_rows($result4);
+echo "<h2>$numrows4</h2>";
+?>
                         <i class="fa total-payments-icon"></i>
                         <h3>Total payments received</h3>
                     </div>
                 </li>
                 <li>
                     <div class="total-accounts">
-                        <?php
-                        $result5 = mysqli_query($conn, "SELECT * FROM account WHERE status=0");
-                        $numrows5 = mysqli_num_rows($result5);
-                        echo "<h2>$numrows5</h2>";
-                        ?>
+<?php
+$result5 = mysqli_query($conn, "SELECT * FROM account WHERE status=0");
+$numrows5 = mysqli_num_rows($result5);
+echo "<h2>$numrows5</h2>";
+?>
                         <i class="fa total-accounts-icon"></i>
                         <h3>Total accounts</h3>
                     </div>
@@ -93,17 +101,17 @@ require('parts/navigation.php');
                         Add
                     </a>
                 </div>
-                <?php
-                $sql = "SELECT * FROM member order by id desc limit 5";
-                $query = mysqli_query($conn, $sql);
-                ?>
+<?php
+$sql = "SELECT * FROM member order by id desc limit 5";
+$query = mysqli_query($conn, $sql);
+?>
                 <ul>
-                    <?php
-                    while ($row = mysqli_fetch_array($query)) {
-                        ?>
+                <?php
+                while ($row = mysqli_fetch_array($query)) {
+                    ?>
                         <li>
                             <div class="split-list">
-                                <?php $imgsrc = 'repository/member_photos/' . $row["photo"]; ?>
+    <?php $imgsrc = 'repository/member_photos/' . $row["photo"]; ?>
                                 <img src="<?php echo $imgsrc; ?>" alt="Member Photo"/>
                             </div>
                             <div class="split-list">
@@ -116,7 +124,7 @@ require('parts/navigation.php');
                                 <span><?php echo $row['city']; ?></span>
                             </div>
                         </li>
-                    <?php } ?>
+<?php } ?>
                 </ul>
             </div>
             <div class="last-members-2">
@@ -128,17 +136,17 @@ require('parts/navigation.php');
                         Add
                     </a>
                 </div>
-                <?php
-                $sql = "SELECT * FROM member order by id desc limit 5";
-                $query = mysqli_query($conn, $sql);
-                ?>
+<?php
+$sql = "SELECT * FROM member order by id desc limit 5";
+$query = mysqli_query($conn, $sql);
+?>
                 <ul>
-                    <?php
-                    while ($row = mysqli_fetch_array($query)) {
-                        ?>
+                <?php
+                while ($row = mysqli_fetch_array($query)) {
+                    ?>
                         <li>
                             <div class="split-list">
-                                <?php $imgsrc = 'repository/member_photos/' . $row["photo"]; ?>
+    <?php $imgsrc = 'repository/member_photos/' . $row["photo"]; ?>
                                 <img src="<?php echo $imgsrc; ?>" alt="Member Photo"/>
                             </div>
                             <div class="split-list">
@@ -151,7 +159,7 @@ require('parts/navigation.php');
                                 <span><?php echo $row['city']; ?></span>
                             </div>
                         </li>
-                    <?php } ?>
+<?php } ?>
                 </ul>
             </div>
         </div>
