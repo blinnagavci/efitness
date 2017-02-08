@@ -72,6 +72,7 @@
     .table-div{
         width: 100%;
         float: none;
+        overflow-x: auto;
     }
     #searchform{
         width: 100%;
@@ -134,5 +135,11 @@
     }
     .main-right .main-box .dashboard .last-members h3, .main-right-full .main-box .dashboard .last-members h3, .main-right .main-box .dashboard .last-members-2 h3, .main-right-full .main-box .dashboard .last-members-2 h3{
         font-size: 1em;
+    }
+}
+
+@media screen and (max-width: 365px){
+    .main-right #searchform input.search-box, .main-right-full #searchform input.search-box{
+        width: 150px;
     }
 }

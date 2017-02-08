@@ -78,30 +78,32 @@ require('parts/navigation.php');
             }
             if ($result->num_rows > 0) {
                 ?>
-                <table class="employee-contract-table">
-                    <tr>
-                        <th>ID</th>
-                        <th>Start Date</th>
-                        <th>End Date</th>
-                        <th>Salary</th>
-                    </tr>
-                    <?php
-                    while ($row = $result->fetch_assoc()) {
-                        ?>
+                <div class="table-div">
+                    <table class="employee-contract-table">
                         <tr>
-                            <td><?php echo $row["id"]; ?></td>
-                            <td><?php echo $row['start_date']; ?></td>
-                            <td><?php echo $row['end_date']; ?></td>
-                            <td><?php echo $row['amount_of_salary'] . '€'; ?></td>
+                            <th>ID</th>
+                            <th>Start Date</th>
+                            <th>End Date</th>
+                            <th>Salary</th>
                         </tr>
                         <?php
+                        while ($row = $result->fetch_assoc()) {
+                            ?>
+                            <tr>
+                                <td><?php echo $row["id"]; ?></td>
+                                <td><?php echo $row['start_date']; ?></td>
+                                <td><?php echo $row['end_date']; ?></td>
+                                <td><?php echo $row['amount_of_salary'] . '€'; ?></td>
+                            </tr>
+                            <?php
+                        }
+                    } else {
+                        echo "No results";
                     }
-                } else {
-                    echo "No results";
-                }
-                $conn->close();
-                ?>
-            </table>
+                    $conn->close();
+                    ?>
+                </table>
+            </div>
         </div>
     </div>
 </div>
