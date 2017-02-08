@@ -133,6 +133,10 @@ require('parts/navigation.php');
                 <div class="wrap-latest">
                     <i class="fa total-payments-icon dashboard-icon"></i>
                     <h3>Latest Payments</h3>
+                    <a class="add-member" href="search_members" title="Add Member">
+                        <i class="fa add-member-icon"></i>
+                        Add
+                    </a>
                 </div>
                 <?php
                 $sql = "SELECT * FROM membership_payment order by id desc limit 5";
