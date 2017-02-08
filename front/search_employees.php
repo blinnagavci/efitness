@@ -9,11 +9,12 @@ require('inc/database/db_connect.php');
     $sql = "SELECT id, first_name, last_name, gender, birth_date, telephone_no FROM employee";
     $result = $conn->query($sql);
 
-    if ($result->num_rows > 0) {
-        // output data of each row
-        ?>
-        <h1>Search Employee</h1>
-        <div class="main-box">
+
+    // output data of each row
+    ?>
+    <h1>Search Employee</h1>
+    <div class="main-box">
+        <?php if ($result->num_rows > 0) { ?>
             <form id="searchform" method="post" action="search_employees_field.php?go"> 
                 <input type="text" name="name" class="search-box" placeholder="Search Employee..." required> 
                 <input type="submit" name="submit" value="Search" class="search-button"> 
@@ -52,12 +53,13 @@ require('inc/database/db_connect.php');
                     <?php } ?>
                 </table>
             </div>
-            <!--            <button class="generate-pdf">Export to PDF*</button>-->
-        </div>
-        <?php
-    } else {
-        echo "No results";
-    }
+            <?php
+        } else {
+            echo "No results";
+        }
+        ?>
+    </div>
+    <?php
     $conn->close();
     ?>
 </div>

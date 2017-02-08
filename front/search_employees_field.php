@@ -12,11 +12,12 @@ require('inc/database/db_connect.php');
                 $sql = "SELECT id, first_name, last_name, gender, birth_date, telephone_no FROM employee WHERE first_name LIKE '%" . $name . "%' OR last_name LIKE '%" . $name . "%'";
 
                 $result = $conn->query($sql);
-                if ($result->num_rows > 0) {
-                    // output data of each row
-                    ?>
-                    <h1>Search Employee</h1>
-                    <div class="main-box">
+
+                // output data of each row
+                ?>
+                <h1>Search Employee</h1>
+                <div class="main-box">
+                    <?php if ($result->num_rows > 0) { ?>
                         <form  method="post" action="search_employees_field.php?go"  id="searchform"> 
                             <input type="text" name="name" class="search-box" placeholder="Search Employee..."> 
                             <input type="submit" name="submit" value="Search" class="search-button"> 
@@ -55,11 +56,13 @@ require('inc/database/db_connect.php');
                                     <?php } ?>
                             </table>
                         </div>
-                    </div>
                     <?php
-                } else {
-                    echo "No results";
-                }
+                    } else {
+                        echo "No results";
+                    }
+                    ?>
+                </div>
+                <?php
             }
         }
     }
