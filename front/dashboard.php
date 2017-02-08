@@ -15,7 +15,8 @@ require('parts/navigation.php');
                         echo "<h2>$numrows</h2>";
                         ?>
                         <i class="fa today-members-icon"></i>
-                        <h3>Total members &nbsp &nbsp &nbsp &nbsp &nbsp</h3>
+                        <h3>&nbsp;</h3>
+                        <h3>Total members</h3>
                     </div>
                 </li>
                 <li>
@@ -88,7 +89,8 @@ require('parts/navigation.php');
                         echo "<h2>$numrows5</h2>";
                         ?>
                         <i class="fa total-accounts-icon"></i>
-                        <h3>Total accounts &nbsp</h3>
+                        <h3>&nbsp;</h3>
+                        <h3>Total accounts</h3>
                     </div>
                 </li>
             </ul>
@@ -117,10 +119,10 @@ require('parts/navigation.php');
                             <div class="split-list">
                                 <span><?php echo $row['first_name'] . ' ' . $row['last_name']; ?></span>
                             </div>
-                            <div class="split-list">
+                            <div class="split-list-full">
                                 <span><?php echo $row['gender']; ?></span>
                             </div>
-                            <div class="split-list">
+                            <div class="split-list-full">
                                 <span><?php echo $row['city']; ?></span>
                             </div>
                         </li>
@@ -153,10 +155,10 @@ require('parts/navigation.php');
                             <div class="split-list">
                                 <span><?php echo $row['amount_of_payment'] . '€' ?></span>
                             </div>
-                            <div class="split-list">
+                            <div class="split-list-full">
                                 <span><?php echo $row['start_date']; ?></span>
                             </div>
-                            <div class="split-list">
+                            <div class="split-list-full">
                                 <span><?php echo $row['end_date']; ?></span>
                             </div>
                         </li>

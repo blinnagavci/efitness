@@ -67,7 +67,7 @@ require('parts/navigation.php');
                 <input type="text" name="account_username" id="account_username" placeholder="Username" value='<?php echo $row['username']; ?>' required> 
                 <label>Password</label>
                 <input type="password" name="account_password" id="account_password" placeholder="New password" value='<?php echo $row['password']; ?>' readonly="true" ondblclick="this.readOnly = ''; value = '';" required>
-                <p class="double-click">Double click change password</p>
+                <p class="double-click">Double click to change the password</p>
 
                 <label>E-mail</label>
                 <span class="email">

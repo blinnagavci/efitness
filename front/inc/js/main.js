@@ -17,6 +17,14 @@ $(document).ready(function () {
             });
         }
     });
+    $listHeight = 0;
+    $(".last-members ul li").each(function () {
+        if ($(this).height() > $listHeight) {
+            $listHeight = $(this).height();
+        }
+    });
+    $(".last-members-2 ul li, .last-members ul li").height($listHeight);
+
 //    $("#dialog-confirm").dialog({
 //        autoOpen: false,
 //        resizable: false,
@@ -65,7 +73,7 @@ $(document).ready(function () {
     $("span.date:after").click(function () {
         $(".date-picker, .membership-date-picker, .employee-date-picker ").datepicker("show");
     });
-
+    controlSlider();
     validateForms();
     controlImg();
     $(".generate-pdf").click(function () {
@@ -89,7 +97,6 @@ $(document).ready(function () {
 $(window).resize(function () {
     $(".main-right").css("margin-left", $(".main-left").innerWidth());
 //    $(".main-left-after").width($('.main-left').width());
-
 });
 
 function validateForms() {
@@ -254,4 +261,40 @@ function generatePDF() {
                 pdf.save('MemberList.pdf');
             }, margins
             );
+}
+
+
+function controlSlider() {
+    if ($(window).width() < 1090) {
+        $(".dashboard>ul").slick({
+            dots: false,
+            arrows: false,
+            responsive: [
+                {
+                    breakpoint: 1090,
+                    settings: {
+                        arrows: false,
+                        dots: false,
+                        slidesToShow: 3
+                    }
+                },
+                {
+                    breakpoint: 660,
+                    settings: {
+                        arrows: false,
+                        dots: false,
+                        slidesToShow: 2
+                    }
+                },
+                {
+                    breakpoint: 420,
+                    settings: {
+                        arrows: false,
+                        dots: false,
+                        slidesToShow: 1
+                    }
+                }
+            ]
+        });
+    }
 }
