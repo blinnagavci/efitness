@@ -22,10 +22,11 @@ require('parts/navigation.php');
                 <li>
                     <div class="weekly-joinings">
                         <?php
-                        $result2 = mysqli_query($conn, "SELECT count(*) as numRecords, YEARWEEK(date_added) as weekNum FROM member GROUP BY YEARWEEK(date_added)");
+                        $result2 = mysqli_query($conn, "SELECT count(*) as numRecords FROM member WHERE date_added >= NOW() - INTERVAL 1 WEEK");
                         if (($result2->num_rows > 0)) {
                             while ($row = $result2->fetch_assoc()) {
                                 echo '<h2>' . $row["numRecords"] . '</h2>';
+                                
                             }
                         } else {
                             echo '<h2>0</h2>';
