@@ -1498,6 +1498,10 @@ p.double-click {
 .main-right-full .main-box .dashboard .last-members-2 ul li {
   padding-bottom: 10px;
 }
+.main-right .main-box .dashboard .last-members,
+.main-right-full .main-box .dashboard .last-members {
+  clear: left;
+}
 .main-right .main-box #details,
 .main-right-full .main-box #details {
   float: right;
