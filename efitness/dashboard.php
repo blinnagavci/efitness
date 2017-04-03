@@ -18,6 +18,7 @@ require('parts/navigation.php');
                         <h3>Total members registered</h3>
                     </div>
                 </li>
+                
                 <li>
                     <div class="weekly-joinings">
                         <?php
