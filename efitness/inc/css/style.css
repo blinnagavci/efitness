@@ -849,16 +849,6 @@ h6 {
   border-left: 4px solid #3c8dbc;
   color: #fff;
 }
-.main-left ul li a.active::after {
-  right: 0;
-  border: 9px solid transparent;
-  content: "";
-  position: absolute;
-  pointer-events: none;
-  border-right-color: #ecf0f5;
-  top: 50%;
-  margin-top: -9px;
-}
 .main-left ul li a:hover {
   color: #fff;
 }
@@ -893,8 +883,9 @@ h6 {
   display: none;
 }
 .main-left ul li ul li a {
+  font-weight: 600;
   padding-left: 30px;
-  font-size: 14px;
+  font-size: 13px;
   border-left: none;
 }
 .main-left ul li ul li a.active {
@@ -920,16 +911,16 @@ h6 {
 .main-left ul li ul li a i.employee.employee:before {
   content: '\f234';
 }
-.main-left ul li ul li a i.add-product {
+.main-left ul li ul li a i.add-item {
   font-size: 14px;
 }
-.main-left ul li ul li a i.add-product.add-product:before {
+.main-left ul li ul li a i.add-item.add-item:before {
   content: '\f0fe';
 }
-.main-left ul li ul li a i.remove-product {
+.main-left ul li ul li a i.remove-item {
   font-size: 14px;
 }
-.main-left ul li ul li a i.remove-product.remove-product:before {
+.main-left ul li ul li a i.remove-item.remove-item:before {
   content: '\f146';
 }
 body .main-right-full {
@@ -1257,8 +1248,8 @@ p.double-click {
   height: 200px;
   margin-top: 5px;
 }
-.main-right .main-box #product_description,
-.main-right-full .main-box #product_description {
+.main-right .main-box #item_description,
+.main-right-full .main-box #item_description {
   width: 100%;
   height: 130px;
   resize: vertical;
@@ -1629,8 +1620,8 @@ p.double-click {
 .main-right-full .main-box .employee-table,
 .main-right .main-box .employee-contract-table,
 .main-right-full .main-box .employee-contract-table,
-.main-right .main-box .product-table,
-.main-right-full .main-box .product-table {
+.main-right .main-box .item-table,
+.main-right-full .main-box .item-table {
   border: 1px solid #A9A9A9;
   width: 100%;
   display: table;
@@ -1653,8 +1644,8 @@ p.double-click {
 .main-right-full .main-box .employee-table td,
 .main-right .main-box .employee-contract-table td,
 .main-right-full .main-box .employee-contract-table td,
-.main-right .main-box .product-table td,
-.main-right-full .main-box .product-table td,
+.main-right .main-box .item-table td,
+.main-right-full .main-box .item-table td,
 .main-right .main-box .member-table th,
 .main-right-full .main-box .member-table th,
 .main-right .main-box .membership-table th,
@@ -1663,8 +1654,8 @@ p.double-click {
 .main-right-full .main-box .employee-table th,
 .main-right .main-box .employee-contract-table th,
 .main-right-full .main-box .employee-contract-table th,
-.main-right .main-box .product-table th,
-.main-right-full .main-box .product-table th {
+.main-right .main-box .item-table th,
+.main-right-full .main-box .item-table th {
   padding: 7px;
   border: 1px solid #A9A9A9;
   text-align: center;
@@ -1680,8 +1671,8 @@ p.double-click {
 .main-right-full .main-box .employee-table td.buttons,
 .main-right .main-box .employee-contract-table td.buttons,
 .main-right-full .main-box .employee-contract-table td.buttons,
-.main-right .main-box .product-table td.buttons,
-.main-right-full .main-box .product-table td.buttons {
+.main-right .main-box .item-table td.buttons,
+.main-right-full .main-box .item-table td.buttons {
   width: 50px;
 }
 .main-right .main-box .member-table td.buttons a,
@@ -1692,8 +1683,8 @@ p.double-click {
 .main-right-full .main-box .employee-table td.buttons a,
 .main-right .main-box .employee-contract-table td.buttons a,
 .main-right-full .main-box .employee-contract-table td.buttons a,
-.main-right .main-box .product-table td.buttons a,
-.main-right-full .main-box .product-table td.buttons a {
+.main-right .main-box .item-table td.buttons a,
+.main-right-full .main-box .item-table td.buttons a {
   float: left;
 }
 .main-right .main-box .member-table th,
@@ -1704,8 +1695,8 @@ p.double-click {
 .main-right-full .main-box .employee-table th,
 .main-right .main-box .employee-contract-table th,
 .main-right-full .main-box .employee-contract-table th,
-.main-right .main-box .product-table th,
-.main-right-full .main-box .product-table th {
+.main-right .main-box .item-table th,
+.main-right-full .main-box .item-table th {
   font-weight: 600;
   background-color: #ecf0f5;
 }
@@ -1732,10 +1723,10 @@ p.double-click {
 .main-right-full .main-box .edit-account,
 .main-right .main-box .remove-account,
 .main-right-full .main-box .remove-account,
-.main-right .main-box .add-inventory-product,
-.main-right-full .main-box .add-inventory-product,
-.main-right .main-box .remove-inventory-product,
-.main-right-full .main-box .remove-inventory-product {
+.main-right .main-box .add-inventory-item,
+.main-right-full .main-box .add-inventory-item,
+.main-right .main-box .remove-inventory-item,
+.main-right-full .main-box .remove-inventory-item {
   float: left;
   border-radius: 3px;
   padding: 6px 12px;
@@ -1765,10 +1756,10 @@ p.double-click {
 .main-right-full .main-box .edit-account:hover,
 .main-right .main-box .remove-account:hover,
 .main-right-full .main-box .remove-account:hover,
-.main-right .main-box .add-inventory-product:hover,
-.main-right-full .main-box .add-inventory-product:hover,
-.main-right .main-box .remove-inventory-product:hover,
-.main-right-full .main-box .remove-inventory-product:hover {
+.main-right .main-box .add-inventory-item:hover,
+.main-right-full .main-box .add-inventory-item:hover,
+.main-right .main-box .remove-inventory-item:hover,
+.main-right-full .main-box .remove-inventory-item:hover {
   background: #fff;
   color: #3c8dbc;
 }
@@ -1778,8 +1769,8 @@ p.double-click {
 .main-right-full .main-box .remove-employee,
 .main-right .main-box .remove-account,
 .main-right-full .main-box .remove-account,
-.main-right .main-box .remove-inventory-product,
-.main-right-full .main-box .remove-inventory-product {
+.main-right .main-box .remove-inventory-item,
+.main-right-full .main-box .remove-inventory-item {
   border-color: #FF0000;
   background-color: #FF0000;
 }
@@ -1789,8 +1780,8 @@ p.double-click {
 .main-right-full .main-box .remove-employee:hover,
 .main-right .main-box .remove-account:hover,
 .main-right-full .main-box .remove-account:hover,
-.main-right .main-box .remove-inventory-product:hover,
-.main-right-full .main-box .remove-inventory-product:hover {
+.main-right .main-box .remove-inventory-item:hover,
+.main-right-full .main-box .remove-inventory-item:hover {
   background: #fff;
   color: #FF0000;
 }
@@ -1808,8 +1799,8 @@ p.double-click {
   background: #fff;
   color: #ffb701;
 }
-.main-right .main-box .add-inventory-product,
-.main-right-full .main-box .add-inventory-product {
+.main-right .main-box .add-inventory-item,
+.main-right-full .main-box .add-inventory-item {
   margin: 20px 10px 0px 0px;
 }
 .main-right .left-membership,

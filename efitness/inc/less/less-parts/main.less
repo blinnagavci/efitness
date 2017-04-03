@@ -321,16 +321,7 @@
                     background-color: #1c282c;
                     border-left: 4px solid #3c8dbc;
                     color: #fff;
-                    &::after{
-                        right: 0;
-                        border: 9px solid transparent;
-                        content: "";
-                        position: absolute;
-                        pointer-events: none;
-                        border-right-color: #ecf0f5;
-                        top: 50%;
-                        margin-top: -9px;
-                    }
+                   
                 }
                 &:hover{
                     color: #fff;
@@ -367,8 +358,9 @@
                 display: none;
                 li{
                     a{
+                        font-weight: 600;
                         padding-left: 30px;
-                        font-size: 14px;
+                        font-size: 13px;
                         border-left: none;
                         &.active{
                             border-left: none;
@@ -393,16 +385,16 @@
                                 }
                             }
 
-                            &.add-product{
+                            &.add-item{
                                 font-size: 14px;
-                                &.add-product:before{
+                                &.add-item:before{
                                     content: '\f0fe';
                                 }
                             }
 
-                            &.remove-product{
+                            &.remove-item{
                                 font-size: 14px;
-                                &.remove-product:before{
+                                &.remove-item:before{
                                     content: '\f146';
                                 }
                             }
@@ -623,7 +615,7 @@ p.double-click{
                 margin-top: 5px;
             }
         }
-        #product_description{
+        #item_description{
             width: 100%;
             height: 130px;
             resize: vertical;
@@ -875,7 +867,7 @@ p.double-click{
             width: 100%;
             float: left;
         }
-        .member-table, .membership-table, .employee-table, .employee-contract-table, .product-table{
+        .member-table, .membership-table, .employee-table, .employee-contract-table, .item-table{
             border: 1px solid #A9A9A9;
             width: 100%;
             display: table;
@@ -913,7 +905,7 @@ p.double-click{
             margin: 10px 0;
         }
         .edit-member, .remove-member, .search-button, .details-member, .edit-employee, .remove-employee, 
-        .details-employee, .edit-account, .remove-account, .add-inventory-product, .remove-inventory-product{
+        .details-employee, .edit-account, .remove-account, .add-inventory-item, .remove-inventory-item{
             float:left;
             border-radius: 3px;
             padding: 6px 12px;
@@ -926,7 +918,7 @@ p.double-click{
                 color: #3c8dbc;
             }
         }
-        .remove-member, .remove-employee, .remove-account, .remove-inventory-product{
+        .remove-member, .remove-employee, .remove-account, .remove-inventory-item{
             border-color: #FF0000;
             background-color: #FF0000;
             &:hover{
@@ -943,7 +935,7 @@ p.double-click{
             }
         }
 
-        .add-inventory-product{
+        .add-inventory-item{
             margin: 20px 10px 0px 0px;
         }
     }

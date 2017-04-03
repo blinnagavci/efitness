@@ -4,6 +4,38 @@ $(document).ready(function () {
             $(this).find("ul").show();
         }
     });
+    $('.main-left>ul>li a').each(function () {
+        var innerList = $(this).parent().find("ul");
+        var innerList2 = $(this).parent();
+        if($(this).hasClass("active") && innerList.length > 0){
+            $(this).parent().addClass("down-arrow");
+        }
+        if (innerList.length > 0) {
+            if (!(innerList2.hasClass("down-arrow"))) {
+                innerList2.removeClass("down-arrow").addClass("right-arrow");
+            } else {
+                innerList2.removeClass("right-arrow").addClass("down-arrow");
+            }
+        }
+    });
+    $('.main-left>ul>li a').click(function () {
+        var innerList = $(this).parent().find("ul");
+        var innerList2 = $(this).parent();
+        innerList.slideToggle();
+        if (innerList.length > 0) {
+            if (innerList2.hasClass("down-arrow")) {
+                innerList2.removeClass("down-arrow").addClass("right-arrow");
+            } else {
+                innerList2.removeClass("right-arrow").addClass("down-arrow");
+            }
+        }
+        $(this).parent().siblings().find("ul").slideUp();
+        $(this).parent().siblings().each(function(){
+            if($(this).hasClass("down-arrow")){
+                $(this).removeClass("down-arrow").addClass("right-arrow");
+            }
+        });
+    });
     $('.dashboard h2').each(function () {
         if (!($(this).hasClass("not-increased"))) {
             $(this).prop('Counter', 0).animate({
@@ -69,14 +101,9 @@ $(document).ready(function () {
         changeMonth: true,
         yearRange: "-0:+50"
     });
-    $(".inventory-date-picker").datepicker({
-        minDate: new Date(),
-        changeYear: true,
-        changeMonth: true
-    });
 //    $(".date-picker, .membership-date-picker").datepicker("option", "dateFormat", 'dd-mm-yy');
     $("span.date:after").click(function () {
-        $(".date-picker, .membership-date-picker, .employee-date-picker, .inventory-date-picker").datepicker("show");
+        $(".date-picker, .membership-date-picker, .employee-date-picker ").datepicker("show");
     });
     controlSlider();
     validateForms();
@@ -96,6 +123,8 @@ $(document).ready(function () {
     $(document).on("focusout", ".readonly", function () {
         $(this).prop('readonly', false);
     });
+    
+    
 
 });
 
@@ -196,6 +225,8 @@ function validateForms() {
             return false;
         }
     });
+    
+    
 }
 
 function controlImg() {
