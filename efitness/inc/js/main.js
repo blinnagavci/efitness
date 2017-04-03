@@ -69,9 +69,14 @@ $(document).ready(function () {
         changeMonth: true,
         yearRange: "-0:+50"
     });
+    $(".inventory-date-picker").datepicker({
+        minDate: new Date(),
+        changeYear: true,
+        changeMonth: true
+    });
 //    $(".date-picker, .membership-date-picker").datepicker("option", "dateFormat", 'dd-mm-yy');
     $("span.date:after").click(function () {
-        $(".date-picker, .membership-date-picker, .employee-date-picker ").datepicker("show");
+        $(".date-picker, .membership-date-picker, .employee-date-picker, .inventory-date-picker").datepicker("show");
     });
     controlSlider();
     validateForms();
@@ -181,6 +186,12 @@ function validateForms() {
     });
 
     $("#account-edit-form").validate({
+        errorPlacement: function () {
+            return false;
+        }
+    });
+    
+    $("#inventory-form").validate({
         errorPlacement: function () {
             return false;
         }

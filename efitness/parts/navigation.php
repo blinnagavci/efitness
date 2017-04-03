@@ -84,6 +84,37 @@ if (!isset($_SESSION['logged_in'])) {
                 </li>
             </ul>
         </li>
+        <li>
+            <?php
+            $url = startsWith(getLastURLPart(), 'inventory');
+            ?>
+            <a class="<?php
+            if ($url) {
+                active($url);
+            } active('search_inventory') || active('inventory_remove_field.php?go') ? 'active' : NULL
+            ?>" href="inventory" title="Inventory">
+                <i class="fa inventory"></i><span class="full-width-text">Inventory</span>
+            </a>
+            <ul>
+                <li>
+                    <a class="<?php active('inventory') ? 'active' : NULL ?>" href="inventory" title="Add Product">
+                        <i class="fa add-product"></i>
+                        <span class="full-width-text">Add Product</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="<?php (active('search_inventory') || active('search_inventory_field.php?go')) ? 'active' : NULL ?>" href="search_inventory" title="Search Product">
+                        <i class="fa fa-search"></i>
+                        <span class="full-width-text">Search Product</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a class="<?php active('reports') ? 'active' : NULL ?>" href="reports" title="Reports">
+                <i class="fa reports"></i><span class="full-width-text">Reports</span>
+            </a>
+        </li>
         <?php if ($_SESSION['admin_status'] == 0) { ?>
             <li>
                 <?php
