@@ -4,6 +4,38 @@ $(document).ready(function () {
             $(this).find("ul").show();
         }
     });
+    $('.main-left>ul>li a').each(function () {
+        var innerList = $(this).parent().find("ul");
+        var innerList2 = $(this).parent();
+        if($(this).hasClass("active") && innerList.length > 0){
+            $(this).parent().addClass("down-arrow");
+        }
+        if (innerList.length > 0) {
+            if (!(innerList2.hasClass("down-arrow"))) {
+                innerList2.removeClass("down-arrow").addClass("right-arrow");
+            } else {
+                innerList2.removeClass("right-arrow").addClass("down-arrow");
+            }
+        }
+    });
+    $('.main-left>ul>li a').click(function () {
+        var innerList = $(this).parent().find("ul");
+        var innerList2 = $(this).parent();
+        innerList.slideToggle();
+        if (innerList.length > 0) {
+            if (innerList2.hasClass("down-arrow")) {
+                innerList2.removeClass("down-arrow").addClass("right-arrow");
+            } else {
+                innerList2.removeClass("right-arrow").addClass("down-arrow");
+            }
+        }
+        $(this).parent().siblings().find("ul").slideUp();
+        $(this).parent().siblings().each(function(){
+            if($(this).hasClass("down-arrow")){
+                $(this).removeClass("down-arrow").addClass("right-arrow");
+            }
+        });
+    });
     $('.dashboard h2').each(function () {
         if (!($(this).hasClass("not-increased"))) {
             $(this).prop('Counter', 0).animate({
@@ -17,8 +49,14 @@ $(document).ready(function () {
             });
         }
     });
+    $listHeight = 0;
+    $(".last-members ul li").each(function () {
+        if ($(this).height() > $listHeight) {
+            $listHeight = $(this).height();
+        }
+    });
+    $(".last-members-2 ul li, .last-members ul li").height($listHeight);
 
-    controlLists();
 //    $("#dialog-confirm").dialog({
 //        autoOpen: false,
 //        resizable: false,
@@ -85,13 +123,14 @@ $(document).ready(function () {
     $(document).on("focusout", ".readonly", function () {
         $(this).prop('readonly', false);
     });
+    
+    
 
 });
 
 $(window).resize(function () {
     $(".main-right").css("margin-left", $(".main-left").innerWidth());
 //    $(".main-left-after").width($('.main-left').width());
-    controlLists();
 });
 
 function validateForms() {
@@ -180,6 +219,14 @@ function validateForms() {
             return false;
         }
     });
+    
+    $("#inventory-form").validate({
+        errorPlacement: function () {
+            return false;
+        }
+    });
+    
+    
 }
 
 function controlImg() {
@@ -292,21 +339,4 @@ function controlSlider() {
             ]
         });
     }
-}
-
-function controlLists() {
-    $listHeight = 0;
-    $(".last-members ul li").each(function () {
-        if ($(this).height() > $listHeight) {
-            $listHeight = $(this).height();
-        }
-    });
-    $listHeight2 = 0;
-    $(".dashboard>ul li").each(function () {
-        if ($(this).height() > $listHeight2) {
-            $listHeight2 = $(this).height();
-        }
-    });
-    $(".dashboard>ul li").height($listHeight2);
-    $(".last-members-2 ul li, .last-members ul li").height($listHeight);
 }

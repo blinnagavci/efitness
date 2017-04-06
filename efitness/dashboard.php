@@ -15,24 +15,24 @@ require('parts/navigation.php');
                         echo "<h2>$numrows</h2>";
                         ?>
                         <i class="fa today-members-icon"></i>
-                        <h3>&nbsp;</h3>
-                        <h3>Total members</h3>
+                        <h3>Total members registered</h3>
                     </div>
                 </li>
+                
                 <li>
                     <div class="weekly-joinings">
                         <?php
-                        $result2 = mysqli_query($conn, "SELECT count(*) as numRecords, YEARWEEK(date_added) as weekNum FROM member GROUP BY YEARWEEK(date_added)");
+                        $result2 = mysqli_query($conn, "SELECT count(*) as numRecords FROM member WHERE date_added >= NOW() - INTERVAL 1 WEEK");
                         if (($result2->num_rows > 0)) {
                             while ($row = $result2->fetch_assoc()) {
                                 echo '<h2>' . $row["numRecords"] . '</h2>';
+                                
                             }
                         } else {
                             echo '<h2>0</h2>';
                         }
                         ?>
                         <i class="fa weekly-joinings-icon"></i>
-                        <h3>&nbsp;</h3>
                         <h3>Joined this week</h3>
                     </div>
                 </li>
@@ -44,8 +44,7 @@ require('parts/navigation.php');
                         echo "<h2>$numrows3</h2>";
                         ?>
                         <i class="fa total-employees-icon"></i>
-                        <h3>&nbsp;</h3>
-                        <h3>Total employees &nbsp</h3>
+                        <h3>Total employees registered</h3>
                     </div>
                 </li>
                 <li>
@@ -69,7 +68,6 @@ require('parts/navigation.php');
                     <div class="most-popular-membership">
                         <h2 class="not-increased"><?php echo $result9; ?></h2>
                         <i class="fa popular-membership-icon"></i>
-                        <h3>&nbsp;</h3>
                         <h3>Most popular membership</h3>
                     </div>
                 </li>
@@ -81,7 +79,6 @@ require('parts/navigation.php');
                         echo "<h2>$numrows4</h2>";
                         ?>
                         <i class="fa total-payments-icon"></i>
-                        <h3>&nbsp;</h3>
                         <h3>Total payments received</h3>
                     </div>
                 </li>
@@ -93,8 +90,7 @@ require('parts/navigation.php');
                         echo "<h2>$numrows5</h2>";
                         ?>
                         <i class="fa total-accounts-icon"></i>
-                        <h3>&nbsp;</h3>
-                        <h3>Total accounts</h3>
+                        <h3>Total accounts registered</h3>
                     </div>
                 </li>
             </ul>
