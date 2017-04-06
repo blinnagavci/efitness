@@ -32,6 +32,7 @@ require('parts/navigation.php');
                         }
                         ?>
                         <i class="fa weekly-joinings-icon"></i>
+                        <h3>&nbsp;</h3>
                         <h3>Joined this week</h3>
                     </div>
                 </li>
@@ -43,6 +44,7 @@ require('parts/navigation.php');
                         echo "<h2>$numrows3</h2>";
                         ?>
                         <i class="fa total-employees-icon"></i>
+                        <h3>&nbsp;</h3>
                         <h3>Total employees &nbsp</h3>
                     </div>
                 </li>
@@ -67,6 +69,7 @@ require('parts/navigation.php');
                     <div class="most-popular-membership">
                         <h2 class="not-increased"><?php echo $result9; ?></h2>
                         <i class="fa popular-membership-icon"></i>
+                        <h3>&nbsp;</h3>
                         <h3>Most popular membership</h3>
                     </div>
                 </li>
@@ -78,6 +81,7 @@ require('parts/navigation.php');
                         echo "<h2>$numrows4</h2>";
                         ?>
                         <i class="fa total-payments-icon"></i>
+                        <h3>&nbsp;</h3>
                         <h3>Total payments received</h3>
                     </div>
                 </li>

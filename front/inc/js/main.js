@@ -17,14 +17,8 @@ $(document).ready(function () {
             });
         }
     });
-    $listHeight = 0;
-    $(".last-members ul li").each(function () {
-        if ($(this).height() > $listHeight) {
-            $listHeight = $(this).height();
-        }
-    });
-    $(".last-members-2 ul li, .last-members ul li").height($listHeight);
 
+    controlLists();
 //    $("#dialog-confirm").dialog({
 //        autoOpen: false,
 //        resizable: false,
@@ -97,6 +91,7 @@ $(document).ready(function () {
 $(window).resize(function () {
     $(".main-right").css("margin-left", $(".main-left").innerWidth());
 //    $(".main-left-after").width($('.main-left').width());
+    controlLists();
 });
 
 function validateForms() {
@@ -297,4 +292,21 @@ function controlSlider() {
             ]
         });
     }
+}
+
+function controlLists() {
+    $listHeight = 0;
+    $(".last-members ul li").each(function () {
+        if ($(this).height() > $listHeight) {
+            $listHeight = $(this).height();
+        }
+    });
+    $listHeight2 = 0;
+    $(".dashboard>ul li").each(function () {
+        if ($(this).height() > $listHeight2) {
+            $listHeight2 = $(this).height();
+        }
+    });
+    $(".dashboard>ul li").height($listHeight2);
+    $(".last-members-2 ul li, .last-members ul li").height($listHeight);
 }
